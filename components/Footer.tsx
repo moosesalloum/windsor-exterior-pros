@@ -27,31 +27,33 @@ export default function Footer() {
   return (
     <footer className="bg-[#f8f7f5] border-t border-[rgba(200,122,32,0.2)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <Image
-                src="/logo-stacked.png"
-                alt="Windsor Exterior Pros"
-                width={100}
-                height={100}
-              />
+              <div className="flex justify-center md:justify-start">
+                <Image
+                  src="/logo-stacked.png"
+                  alt="Windsor Exterior Pros"
+                  width={180}
+                  height={180}
+                />
+              </div>
             </Link>
-            <p className="text-[#4a4540] text-sm leading-relaxed mb-4">
+            <p className="text-[#4a4540] text-sm leading-relaxed mb-4 text-center md:text-left">
               Windsor&rsquo;s Premier Exterior Contracting. Seamless eavestroughs, siding, soffit, fascia, roofing and more across Windsor and Essex County.
             </p>
-            <p className="text-xs text-[#4a4540]">
+            <p className="text-xs text-[#4a4540] text-center md:text-left">
               Licensed &amp; Insured &bull; WSIB Compliant
             </p>
           </div>
 
           {/* Services column */}
           <div>
-            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
               Services
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2.5 flex flex-col items-center md:items-start">
               {SERVICES.map((s) => (
                 <li key={s.href}>
                   <Link
@@ -67,10 +69,10 @@ export default function Footer() {
 
           {/* Service Areas column */}
           <div>
-            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
               Service Areas
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2.5 flex flex-col items-center md:items-start">
               {AREAS.map((a) => (
                 <li key={a.href}>
                   <Link
@@ -91,10 +93,10 @@ export default function Footer() {
 
           {/* Company + Contact column */}
           <div>
-            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
               Company
             </h3>
-            <ul className="space-y-2.5 mb-6">
+            <ul className="space-y-2.5 mb-6 flex flex-col items-center md:items-start">
               <li>
                 <Link href="/about" className="text-[#4a4540] hover:text-copper text-sm transition-colors">About Us</Link>
               </li>
@@ -112,10 +114,10 @@ export default function Footer() {
               </li>
             </ul>
 
-            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-3">
+            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-3 text-center md:text-left">
               Contact
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 flex flex-col items-center md:items-start">
               <li className="text-[#4a4540] text-sm">[Phone TBD]</li>
               <li>
                 <a
@@ -133,7 +135,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="bg-[#e8e4df] border-t border-[rgba(200,122,32,0.15)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col text-center md:flex-row md:text-left items-center justify-between gap-2">
           <p className="text-[#4a4540] text-xs">
             &copy; {year} Windsor Exterior Pros. All rights reserved.
           </p>
