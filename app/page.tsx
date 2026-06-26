@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HeroSection from "@/components/HeroSection";
+import StatsStrip from "@/components/StatsStrip";
 import ServiceCard from "@/components/ServiceCard";
+import ServicesGrid from "@/components/ServicesGrid";
 import TestimonialCard from "@/components/TestimonialCard";
 import LeadForm from "@/components/LeadForm";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -130,49 +133,9 @@ const SERVICES = [
   },
 ];
 
-const TRUST_ITEMS = [
-  {
-    icon: (
-      <svg className="w-6 h-6 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: "Licensed & Insured",
-    sub: "Fully licensed, WSIB compliant",
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-      </svg>
-    ),
-    title: "Free Estimates",
-    sub: "No obligation, written quotes",
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    title: "6+ Years Experience",
-    sub: "Hundreds of homes served",
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6 text-copper flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-    title: "Windsor-Essex Owned",
-    sub: "Local team, local pride",
-  },
-];
-
 const WHY_US = [
   {
-    title: "Premium materials and on-site seamless fabrication",
+    title: "On-Site Seamless Fabrication",
     desc: "We bring the eavestrough machine to your home and fabricate custom-fit gutters on the spot from .032 gauge aluminum. No pre-cut sections, no weak joints.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,8 +144,8 @@ const WHY_US = [
     ),
   },
   {
-    title: "No subcontractors on core work",
-    desc: "Your home gets our crew - the same experienced team that quoted you. We never hand off core exterior work to unknown third parties.",
+    title: "No Subcontractors",
+    desc: "Your home gets our crew — the same experienced team that quoted you. We never hand off core exterior work to unknown third parties.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
@@ -190,7 +153,7 @@ const WHY_US = [
     ),
   },
   {
-    title: "Free written estimates with no pressure",
+    title: "Free Written Estimates",
     desc: "We give you a detailed, itemized quote in writing. No high-pressure sales tactics, no bait-and-switch pricing. You decide if and when to proceed.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -199,11 +162,30 @@ const WHY_US = [
     ),
   },
   {
-    title: "Backed by a workmanship guarantee",
+    title: "Workmanship Guarantee",
     desc: "We stand behind every installation. If something isn't right, we come back and make it right. That's the Windsor Exterior Pros commitment.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Licensed and Insured",
+    desc: "Fully licensed and WSIB compliant. You're protected every step of the way when you work with Windsor Exterior Pros.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Local Windsor-Essex Owned",
+    desc: "We live and work in this community. Our reputation is built here, and we stand behind every job with local pride and accountability.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
   },
@@ -236,111 +218,75 @@ const ALL_AREAS = [
   "Harrow", "Tilbury", "McGregor", "Cottam", "Comber",
 ];
 
+function SectionEyebrow({ label }: { label: string }) {
+  return (
+    <div className="mb-3">
+      <span className="text-[#C87A20] text-sm font-semibold tracking-widest uppercase">
+        {label}
+      </span>
+    </div>
+  );
+}
+
+function SectionAccent() {
+  return <div className="w-16 h-1 bg-[#C87A20] mt-3 mb-6 mx-auto" />;
+}
+
 export default function HomePage() {
   return (
     <>
       <JsonLd data={homepageSchema} />
       <JsonLd data={websiteSchema} />
 
-      {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url(https://images.pexels.com/photos/10038012/pexels-photo-10038012.jpeg)" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-20">
-          <div className="inline-flex items-center gap-2 bg-copper/15 border border-copper/30 rounded-full px-4 py-1.5 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-copper animate-pulse" />
-            <span className="text-copper text-sm font-semibold">Windsor &amp; Essex County</span>
-          </div>
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-[#1A1A1A] leading-tight mb-5">
-            Windsor&rsquo;s Premium Exterior Contracting{" "}
-            <span className="text-copper">Specialists</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-[#1A1A1A]/75 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Seamless eavestroughs, siding, roofing and complete exterior transformations across Windsor
-            and Essex County. Licensed, insured, and locally owned.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-copper hover:bg-copper-light text-white font-heading font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg"
-            >
-              Get a Free Quote
-            </Link>
-            <Link
-              href="#services"
-              className="border-2 border-[#1A1A1A]/20 hover:border-copper text-[#1A1A1A] hover:text-copper font-heading font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200"
-            >
-              View Our Services
-            </Link>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#FAFAF8] to-transparent" />
-      </section>
+      <HeroSection />
 
-      {/* Trust Bar */}
-      <section className="bg-white border-y border-[#E8E4DF] py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {TRUST_ITEMS.map((item) => (
-              <div key={item.title} className="flex items-center gap-3">
-                {item.icon}
-                <div>
-                  <p className="font-heading font-bold text-text text-sm">{item.title}</p>
-                  <p className="text-muted text-xs mt-0.5">{item.sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StatsStrip />
 
       {/* Services Grid */}
-      <section id="services" className="py-20 bg-surface-2">
+      <section id="services" className="py-20 bg-[#F2F0ED]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-text mb-3">
+            <SectionEyebrow label="Our Services" />
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">
               Complete Exterior Services
             </h2>
-            <p className="text-muted max-w-2xl mx-auto">
-              From seamless eavestrough fabrication to full exterior renovations - we handle every
+            <SectionAccent />
+            <p className="text-[#6B6560] max-w-2xl mx-auto text-lg leading-relaxed">
+              From seamless eavestrough fabrication to full exterior renovations — we handle every
               aspect of your home&rsquo;s exterior with the same commitment to quality.
             </p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {SERVICES.map((svc, i) => (
-              <AnimatedSection key={svc.title} delay={i * 0.08}>
-                <ServiceCard {...svc} />
-              </AnimatedSection>
+          <ServicesGrid>
+            {SERVICES.map((svc) => (
+              <ServiceCard key={svc.title} {...svc} />
             ))}
-          </div>
+          </ServicesGrid>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-surface">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-text mb-3">
-              Why Windsor Exterior Pros
+            <SectionEyebrow label="Why Choose Us" />
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">
+              What Sets Windsor Exterior Pros Apart
             </h2>
-            <p className="text-muted max-w-xl mx-auto">
-              Not all exterior contractors are the same. Here&rsquo;s what sets us apart in Windsor and
-              Essex County.
+            <SectionAccent />
+            <p className="text-[#6B6560] max-w-xl mx-auto text-lg leading-relaxed">
+              Not all exterior contractors are the same. Here&rsquo;s what you can expect when you work with us.
             </p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {WHY_US.map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="flex gap-4 p-6 bg-white rounded-xl border border-[#E8E4DF] shadow-sm h-full">
-                  <div className="w-10 h-10 rounded-lg bg-copper/15 flex items-center justify-center text-copper flex-shrink-0">
+              <AnimatedSection key={item.title} delay={i * 0.08}>
+                <div className="flex gap-4 p-6 bg-[#F2F0ED] rounded-xl h-full">
+                  <div className="w-10 h-10 rounded-lg bg-[#C87A20] flex items-center justify-center text-white flex-shrink-0">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-text mb-1.5">{item.title}</h3>
-                    <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-[#1A1A1A] mb-1.5">{item.title}</h3>
+                    <p className="text-[#6B6560] text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -350,13 +296,15 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-surface-2">
+      <section className="py-20 bg-[#F2F0ED]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-text mb-3">
+            <SectionEyebrow label="Customer Reviews" />
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">
               What Windsor Homeowners Say
             </h2>
-            <p className="text-muted">Real customers, real results across Windsor-Essex.</p>
+            <SectionAccent />
+            <p className="text-[#6B6560] text-lg leading-relaxed">Real customers, real results across Windsor-Essex.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {TESTIMONIALS.map((t, i) => (
@@ -369,13 +317,15 @@ export default function HomePage() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-20 bg-surface">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-10">
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-text mb-3">
+            <SectionEyebrow label="Service Areas" />
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">
               Serving All of Windsor-Essex County
             </h2>
-            <p className="text-muted max-w-xl mx-auto">
+            <SectionAccent />
+            <p className="text-[#6B6560] max-w-xl mx-auto text-lg leading-relaxed">
               From Windsor to Leamington, we bring the same premium service to every corner of Essex
               County.
             </p>
@@ -385,7 +335,7 @@ export default function HomePage() {
               {ALL_AREAS.map((area) => (
                 <span
                   key={area}
-                  className="bg-white border border-[#E8E4DF] text-[#1A1A1A] text-sm font-semibold px-4 py-2 rounded-full"
+                  className="bg-[#F2F0ED] border border-[#E8E4DF] text-[#1A1A1A] text-sm font-semibold px-4 py-2 rounded-full"
                 >
                   {area}
                 </span>
@@ -394,7 +344,7 @@ export default function HomePage() {
             <p className="text-center mt-6">
               <Link
                 href="/service-areas"
-                className="text-copper hover:text-copper-light font-semibold transition-colors"
+                className="text-[#C87A20] hover:text-[#E09030] font-semibold transition-colors"
               >
                 View all service area details &rsaquo;
               </Link>

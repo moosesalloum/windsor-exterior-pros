@@ -1,5 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { ReactNode } from "react";
+import { motion, type Variants } from "framer-motion";
+
+const serviceCardVariant: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
 interface ServiceCardProps {
   icon: ReactNode;
@@ -17,32 +25,31 @@ export default function ServiceCard({
   featured = false,
 }: ServiceCardProps) {
   return (
-    <div
-      className={`group relative bg-white rounded-xl border border-[#E8E4DF] hover:border-copper shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden ${
+    <motion.div
+      variants={serviceCardVariant}
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.2 }}
+      className={`group relative bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden ${
         featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
       }`}
     >
-      <div
-        className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-copper to-copper-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        aria-hidden="true"
-      />
       <div className={`p-6 flex flex-col h-full ${featured ? "lg:p-8" : ""}`}>
-        <div className="w-12 h-12 rounded-lg bg-[#F2F0ED] flex items-center justify-center text-copper mb-4 group-hover:bg-copper group-hover:text-white transition-all duration-300">
+        <div className="w-12 h-12 rounded-full bg-[#C87A20] flex items-center justify-center text-white mb-4 flex-shrink-0">
           {icon}
         </div>
         <h3
-          className={`font-heading font-bold text-[#1A1A1A] mb-2 group-hover:text-copper transition-colors ${
-            featured ? "text-2xl" : "text-lg"
+          className={`font-heading font-bold text-[#1A1A1A] mb-2 ${
+            featured ? "text-2xl" : "text-xl"
           }`}
         >
           {title}
         </h3>
-        <p className={`text-muted leading-relaxed flex-grow ${featured ? "text-base" : "text-sm"}`}>
+        <p className={`text-[#6B6560] leading-relaxed flex-grow ${featured ? "text-base" : "text-base"}`}>
           {description}
         </p>
         <Link
           href={href}
-          className="mt-5 inline-flex items-center gap-2 text-copper font-semibold text-sm hover:text-copper-light transition-colors group/link"
+          className="mt-5 inline-flex items-center gap-2 text-[#C87A20] font-semibold text-sm hover:text-[#E09030] transition-colors group/link"
         >
           Learn More
           <svg
@@ -60,6 +67,6 @@ export default function ServiceCard({
           </svg>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
