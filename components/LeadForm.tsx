@@ -50,10 +50,13 @@ export default function LeadForm({
   const sectionClass = dark ? "bg-[#1A1A1A]" : "bg-[#F2F0ED]";
   const headingClass = dark ? "text-white" : "text-[#1A1A1A]";
   const subheadingClass = dark ? "text-[#9a9590]" : "text-muted";
-  const inputClass =
-    "w-full bg-white border border-[#E8E4DF] rounded-lg px-4 py-3 text-[#1A1A1A] placeholder-[#9a9590] focus:outline-none focus:border-[#C87A20] focus:ring-2 focus:ring-[#C87A20]/20 transition-colors text-sm";
-  const labelClass = "block text-sm font-semibold text-[#1A1A1A] mb-1.5";
-  const radioLabelClass = dark ? "text-[#9a9590] group-hover:text-[#1A1A1A]" : "text-muted group-hover:text-[#1A1A1A]";
+  const inputClass = dark
+    ? "w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-[#C87A20] focus:ring-2 focus:ring-[#C87A20]/20 transition-colors text-sm"
+    : "w-full bg-white border border-[#E8E4DF] rounded-lg px-4 py-3 text-[#1A1A1A] placeholder-[#9a9590] focus:outline-none focus:border-[#C87A20] focus:ring-2 focus:ring-[#C87A20]/20 transition-colors text-sm";
+  const labelClass = dark
+    ? "block text-sm font-semibold text-white mb-1.5"
+    : "block text-sm font-semibold text-[#1A1A1A] mb-1.5";
+  const radioLabelClass = dark ? "text-white/60 group-hover:text-white" : "text-muted group-hover:text-[#1A1A1A]";
 
   return (
     <section id="estimate" className={`${sectionClass} py-20`}>
@@ -90,7 +93,7 @@ export default function LeadForm({
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-xl border border-[#E8E4DF] shadow-sm p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-5"
+            className={`grid grid-cols-1 md:grid-cols-2 gap-5 ${dark ? "" : "bg-white rounded-xl border border-[#E8E4DF] shadow-sm p-6 md:p-8"}`}
           >
             <div className="md:col-span-1">
               <label className={labelClass}>

@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `url('https://images.pexels.com/photos/10038012/pexels-photo-10038012.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80')`,
+        backgroundImage: "url('https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -33,7 +33,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-7xl text-white leading-tight tracking-tight mb-5"
+          className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight mb-5"
         >
           Windsor&rsquo;s Premium Exterior Contracting{" "}
           <span className="text-[#E09030]">Specialists</span>
