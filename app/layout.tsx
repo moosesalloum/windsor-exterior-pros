@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/logo.jpeg",
-    apple: "/logo.jpeg",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
   alternates: {
     canonical: "https://windsorexteriorpros.ca",

@@ -32,11 +32,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/logo.jpeg"
+                src="/logo.png"
                 alt="Windsor Exterior Pros"
-                width={42}
-                height={42}
-                className="rounded-md"
+                width={48}
+                height={48}
+                className="h-12 w-auto"
               />
               <div className="leading-tight">
                 <span className="block font-heading font-bold text-text text-sm">Windsor Exterior Pros</span>

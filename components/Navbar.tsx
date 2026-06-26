@@ -76,11 +76,11 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0" onClick={closeMobile}>
           <Image
-            src="/logo.jpeg"
+            src="/logo.png"
             alt="Windsor Exterior Pros logo"
-            width={38}
-            height={38}
-            className="rounded-md"
+            width={48}
+            height={48}
+            className="h-12 w-auto"
           />
           <div className="hidden sm:block leading-tight">
             <span className="block font-heading font-bold text-text text-sm">Windsor Exterior Pros</span>
