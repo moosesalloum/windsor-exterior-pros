@@ -74,17 +74,22 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0" onClick={closeMobile}>
-          <Image
-            src="/logo.png"
-            alt="Windsor Exterior Pros logo"
-            width={48}
-            height={48}
-            className="h-12 w-auto"
-          />
-          <div className="hidden sm:block leading-tight">
-            <span className="block font-heading font-bold text-text text-sm">Windsor Exterior Pros</span>
-            <span className="block text-copper text-xs">Premium Exterior Contracting</span>
+        <Link href="/" className="flex items-center flex-shrink-0" onClick={closeMobile}>
+          <div className="bg-white rounded-xl px-3 py-1.5 flex items-center">
+            <Image
+              src="/logo-horizontal.jpeg"
+              alt="Windsor Exterior Pros logo"
+              width={220}
+              height={44}
+              className="h-11 w-auto hidden sm:block"
+            />
+            <Image
+              src="/logo-horizontal.jpeg"
+              alt="Windsor Exterior Pros logo"
+              width={180}
+              height={36}
+              className="h-9 w-auto sm:hidden"
+            />
           </div>
         </Link>
 

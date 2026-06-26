@@ -30,17 +30,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <Image
-                src="/logo.png"
-                alt="Windsor Exterior Pros"
-                width={48}
-                height={48}
-                className="h-12 w-auto"
-              />
-              <div className="leading-tight">
-                <span className="block font-heading font-bold text-text text-sm">Windsor Exterior Pros</span>
-                <span className="block text-copper text-xs">Premium Exterior Contracting</span>
+            <Link href="/" className="inline-block mb-4">
+              <div className="bg-white rounded-xl p-3 inline-flex items-center justify-center">
+                <Image
+                  src="/logo-stacked.png"
+                  alt="Windsor Exterior Pros"
+                  width={100}
+                  height={100}
+                />
               </div>
             </Link>
             <p className="text-muted text-sm leading-relaxed mb-4">
