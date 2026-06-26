@@ -27,10 +27,10 @@ export default function Footer() {
   return (
     <footer className="bg-[#f8f7f5] border-t border-[rgba(200,122,32,0.2)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" className="inline-block mb-4 w-full">
               <div className="flex justify-center md:justify-start">
                 <Image
                   src="/logo-stacked.png"
@@ -55,10 +55,10 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 flex flex-col items-center md:items-start">
               {SERVICES.map((s) => (
-                <li key={s.href}>
+                <li key={s.href} className="text-center md:text-left w-full">
                   <Link
                     href={s.href}
-                    className="text-[#4a4540] hover:text-copper text-sm transition-colors"
+                    className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left"
                   >
                     {s.name}
                   </Link>
@@ -74,17 +74,20 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 flex flex-col items-center md:items-start">
               {AREAS.map((a) => (
-                <li key={a.href}>
+                <li key={a.href} className="text-center md:text-left w-full">
                   <Link
                     href={a.href}
-                    className="text-[#4a4540] hover:text-copper text-sm transition-colors"
+                    className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left"
                   >
                     {a.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href="/service-areas" className="text-copper text-sm hover:text-copper-light transition-colors font-semibold">
+              <li className="text-center md:text-left w-full">
+                <Link
+                  href="/service-areas"
+                  className="block text-copper text-sm hover:text-copper-light transition-colors font-semibold text-center md:text-left"
+                >
                   View All Areas &rsaquo;
                 </Link>
               </li>
@@ -97,20 +100,20 @@ export default function Footer() {
               Company
             </h3>
             <ul className="space-y-2.5 mb-6 flex flex-col items-center md:items-start">
-              <li>
-                <Link href="/about" className="text-[#4a4540] hover:text-copper text-sm transition-colors">About Us</Link>
+              <li className="text-center md:text-left w-full">
+                <Link href="/about" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">About Us</Link>
               </li>
-              <li>
-                <Link href="/faq" className="text-[#4a4540] hover:text-copper text-sm transition-colors">FAQ</Link>
+              <li className="text-center md:text-left w-full">
+                <Link href="/faq" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">FAQ</Link>
               </li>
-              <li>
-                <Link href="/contact" className="text-[#4a4540] hover:text-copper text-sm transition-colors">Get a Quote</Link>
+              <li className="text-center md:text-left w-full">
+                <Link href="/contact" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">Get a Quote</Link>
               </li>
-              <li>
-                <Link href="/privacy" className="text-[#4a4540] hover:text-copper text-sm transition-colors">Privacy Policy</Link>
+              <li className="text-center md:text-left w-full">
+                <Link href="/privacy" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">Privacy Policy</Link>
               </li>
-              <li>
-                <Link href="/terms" className="text-[#4a4540] hover:text-copper text-sm transition-colors">Terms of Service</Link>
+              <li className="text-center md:text-left w-full">
+                <Link href="/terms" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">Terms of Service</Link>
               </li>
             </ul>
 
@@ -118,16 +121,16 @@ export default function Footer() {
               Contact
             </h3>
             <ul className="space-y-2 flex flex-col items-center md:items-start">
-              <li className="text-[#4a4540] text-sm">[Phone TBD]</li>
-              <li>
+              <li className="text-[#4a4540] text-sm text-center md:text-left w-full">[Phone TBD]</li>
+              <li className="text-center md:text-left w-full">
                 <a
                   href="mailto:info@windsorexteriorpros.com"
-                  className="text-[#4a4540] hover:text-copper text-sm transition-colors"
+                  className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left"
                 >
                   info@windsorexteriorpros.com
                 </a>
               </li>
-              <li className="text-[#4a4540] text-sm">Windsor, Ontario</li>
+              <li className="text-[#4a4540] text-sm text-center md:text-left w-full">Windsor, Ontario</li>
             </ul>
           </div>
         </div>
@@ -135,11 +138,11 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="bg-[#e8e4df] border-t border-[rgba(200,122,32,0.15)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col text-center md:flex-row md:text-left items-center justify-between gap-2">
-          <p className="text-[#4a4540] text-xs">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col items-center gap-2 md:flex-row md:justify-between">
+          <p className="text-[#4a4540] text-xs text-center md:text-left">
             &copy; {year} Windsor Exterior Pros. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex justify-center md:justify-end items-center gap-4">
             <Link href="/privacy" className="text-[#4a4540] hover:text-copper text-xs transition-colors">
               Privacy Policy
             </Link>
