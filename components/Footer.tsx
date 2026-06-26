@@ -25,25 +25,23 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1A1A1A] border-t border-[rgba(200,122,32,0.2)]">
+    <footer className="bg-[#f8f7f5] border-t border-[rgba(200,122,32,0.2)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <div className="bg-white rounded-xl p-3 inline-flex items-center justify-center">
-                <Image
-                  src="/logo-stacked.png"
-                  alt="Windsor Exterior Pros"
-                  width={100}
-                  height={100}
-                />
-              </div>
+              <Image
+                src="/logo-stacked.png"
+                alt="Windsor Exterior Pros"
+                width={100}
+                height={100}
+              />
             </Link>
-            <p className="text-[#9a9590] text-sm leading-relaxed mb-4">
+            <p className="text-[#4a4540] text-sm leading-relaxed mb-4">
               Windsor&rsquo;s Premier Exterior Contracting. Seamless eavestroughs, siding, soffit, fascia, roofing and more across Windsor and Essex County.
             </p>
-            <p className="text-xs text-[#9a9590]">
+            <p className="text-xs text-[#4a4540]">
               Licensed &amp; Insured &bull; WSIB Compliant
             </p>
           </div>
@@ -58,7 +56,7 @@ export default function Footer() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-[#9a9590] hover:text-copper text-sm transition-colors"
+                    className="text-[#4a4540] hover:text-copper text-sm transition-colors"
                   >
                     {s.name}
                   </Link>
@@ -77,7 +75,7 @@ export default function Footer() {
                 <li key={a.href}>
                   <Link
                     href={a.href}
-                    className="text-[#9a9590] hover:text-copper text-sm transition-colors"
+                    className="text-[#4a4540] hover:text-copper text-sm transition-colors"
                   >
                     {a.name}
                   </Link>
@@ -98,19 +96,19 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 mb-6">
               <li>
-                <Link href="/about" className="text-[#9a9590] hover:text-copper text-sm transition-colors">About Us</Link>
+                <Link href="/about" className="text-[#4a4540] hover:text-copper text-sm transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/faq" className="text-[#9a9590] hover:text-copper text-sm transition-colors">FAQ</Link>
+                <Link href="/faq" className="text-[#4a4540] hover:text-copper text-sm transition-colors">FAQ</Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#9a9590] hover:text-copper text-sm transition-colors">Get a Quote</Link>
+                <Link href="/contact" className="text-[#4a4540] hover:text-copper text-sm transition-colors">Get a Quote</Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-[#9a9590] hover:text-copper text-sm transition-colors">Privacy Policy</Link>
+                <Link href="/privacy" className="text-[#4a4540] hover:text-copper text-sm transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms" className="text-[#9a9590] hover:text-copper text-sm transition-colors">Terms of Service</Link>
+                <Link href="/terms" className="text-[#4a4540] hover:text-copper text-sm transition-colors">Terms of Service</Link>
               </li>
             </ul>
 
@@ -118,32 +116,32 @@ export default function Footer() {
               Contact
             </h3>
             <ul className="space-y-2">
-              <li className="text-[#9a9590] text-sm">[Phone TBD]</li>
+              <li className="text-[#4a4540] text-sm">[Phone TBD]</li>
               <li>
                 <a
                   href="mailto:info@windsorexteriorpros.com"
-                  className="text-[#9a9590] hover:text-copper text-sm transition-colors"
+                  className="text-[#4a4540] hover:text-copper text-sm transition-colors"
                 >
                   info@windsorexteriorpros.com
                 </a>
               </li>
-              <li className="text-[#9a9590] text-sm">Windsor, Ontario</li>
+              <li className="text-[#4a4540] text-sm">Windsor, Ontario</li>
             </ul>
           </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-[rgba(200,122,32,0.15)]">
+      <div className="bg-[#e8e4df] border-t border-[rgba(200,122,32,0.15)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[#9a9590] text-xs">
+          <p className="text-[#4a4540] text-xs">
             &copy; {year} Windsor Exterior Pros. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-[#9a9590] hover:text-copper text-xs transition-colors">
+            <Link href="/privacy" className="text-[#4a4540] hover:text-copper text-xs transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-[#9a9590] hover:text-copper text-xs transition-colors">
+            <Link href="/terms" className="text-[#4a4540] hover:text-copper text-xs transition-colors">
               Terms of Service
             </Link>
           </div>

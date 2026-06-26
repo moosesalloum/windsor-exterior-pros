@@ -5,21 +5,16 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url(https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80)",
-        }}
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.6) 100%)",
-        }}
-      />
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url('https://images.pexels.com/photos/10038012/pexels-photo-10038012.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="absolute inset-0 bg-black/55" />
 
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-20">
         <motion.div
