@@ -47,7 +47,7 @@ export default function RoofingPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url(https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -98,7 +98,7 @@ export default function RoofingPage() {
                   { name: "Roof Inspections", desc: "Honest, thorough inspections with photos and a written report. Know exactly what condition your roof is in." },
                   { name: "Ventilation", desc: "Ridge vents, soffit intake, attic ventilation corrections. Poor ventilation shortens roof life and increases energy costs." },
                 ].map((svc) => (
-                  <div key={svc.name} className="flex gap-3 p-4 bg-surface rounded-lg border border-[rgba(200,122,32,0.15)]">
+                  <div key={svc.name} className="flex gap-3 p-4 bg-surface rounded-lg border border-[#E8E4DF]">
                     <div className="w-2 h-2 rounded-full bg-copper flex-shrink-0 mt-2" />
                     <div>
                       <p className="font-semibold text-text text-sm mb-0.5">{svc.name}</p>
@@ -125,7 +125,7 @@ export default function RoofingPage() {
                   { label: "Quality Materials", sub: "No cut-rate products" },
                   { label: "Workmanship Guarantee", sub: "We stand behind our work" },
                 ].map((badge) => (
-                  <div key={badge.label} className="bg-surface p-3 rounded-lg border border-[rgba(200,122,32,0.2)]">
+                  <div key={badge.label} className="bg-surface p-3 rounded-lg border border-[#E8E4DF]">
                     <p className="font-heading font-bold text-text text-sm">{badge.label}</p>
                     <p className="text-muted text-xs mt-0.5">{badge.sub}</p>
                   </div>
@@ -144,7 +144,7 @@ export default function RoofingPage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-2">
             {ALL_AREAS.map((area) => (
-              <span key={area} className="bg-surface-2 border border-[rgba(200,122,32,0.2)] text-muted text-sm px-3 py-1.5 rounded-full">
+              <span key={area} className="bg-surface-2 border border-[#E8E4DF] text-muted text-sm px-3 py-1.5 rounded-full">
                 {area}
               </span>
             ))}

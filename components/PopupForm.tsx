@@ -62,7 +62,7 @@ export default function PopupForm() {
             exit={{ opacity: 0, y: 60 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
-            <div className="bg-surface w-full sm:max-w-lg sm:rounded-2xl rounded-t-2xl border border-[rgba(200,122,32,0.3)] shadow-2xl overflow-hidden">
+            <div className="bg-white w-full sm:max-w-lg sm:rounded-2xl rounded-t-2xl border border-[#E8E4DF] shadow-2xl overflow-hidden">
               {/* Header */}
               <div className="bg-gradient-to-r from-copper to-copper-light px-6 py-4 flex items-center justify-between">
                 <div>
@@ -104,7 +104,7 @@ export default function PopupForm() {
                         required
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full bg-surface-2 border border-[rgba(200,122,32,0.2)] rounded-lg px-4 py-2.5 text-text placeholder-muted focus:outline-none focus:border-copper transition-colors text-sm"
+                        className="w-full bg-[#F2F0ED] border border-[#E8E4DF] rounded-lg px-4 py-2.5 text-[#1A1A1A] placeholder-[#9a9590] focus:outline-none focus:border-[#C87A20] focus:ring-2 focus:ring-[#C87A20]/20 transition-colors text-sm"
                         placeholder="John Smith"
                       />
                     </div>
@@ -117,7 +117,7 @@ export default function PopupForm() {
                         required
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full bg-surface-2 border border-[rgba(200,122,32,0.2)] rounded-lg px-4 py-2.5 text-text placeholder-muted focus:outline-none focus:border-copper transition-colors text-sm"
+                        className="w-full bg-[#F2F0ED] border border-[#E8E4DF] rounded-lg px-4 py-2.5 text-[#1A1A1A] placeholder-[#9a9590] focus:outline-none focus:border-[#C87A20] focus:ring-2 focus:ring-[#C87A20]/20 transition-colors text-sm"
                         placeholder="(519) 555-0100"
                       />
                     </div>

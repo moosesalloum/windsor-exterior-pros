@@ -53,7 +53,7 @@ export default function LeamingtonPage() {
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={breadcrumbSchema} />
 
-      <section className="py-20 bg-surface border-b border-[rgba(200,122,32,0.2)]">
+      <section className="py-20 bg-surface border-b border-[#E8E4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -108,7 +108,7 @@ export default function LeamingtonPage() {
                   <Link
                     key={svc.href}
                     href={svc.href}
-                    className="flex items-center justify-between p-4 bg-surface rounded-lg border border-[rgba(200,122,32,0.2)] hover:border-copper group transition-all"
+                    className="flex items-center justify-between p-4 bg-surface rounded-lg border border-[#E8E4DF] hover:border-copper group transition-all"
                   >
                     <span className="font-semibold text-text group-hover:text-copper transition-colors">
                       {svc.name} - Leamington

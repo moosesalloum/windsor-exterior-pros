@@ -66,7 +66,7 @@ export default function SoffitFasciaPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url(https://images.pexels.com/photos/9733906/pexels-photo-9733906.jpeg)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -106,7 +106,7 @@ export default function SoffitFasciaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {WHY_MATTERS.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="flex gap-4 p-6 bg-surface rounded-xl border border-[rgba(200,122,32,0.2)]">
+                <div className="flex gap-4 p-6 bg-surface rounded-xl border border-[#E8E4DF]">
                   <div className="w-10 h-10 rounded-lg bg-copper/15 flex items-center justify-center text-copper flex-shrink-0">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -149,7 +149,7 @@ export default function SoffitFasciaPage() {
                   { name: "Rake Boards", desc: "The fascia along the sloped edges of your roofline. Often damaged by weather and often replaced alongside standard fascia." },
                   { name: "Full Replacement", desc: "When the underlying wood is compromised, we replace it before installing new aluminum - giving you a complete, long-term solution." },
                 ].map((item) => (
-                  <div key={item.name} className="flex gap-3 p-4 bg-surface-2 rounded-lg border border-[rgba(200,122,32,0.15)]">
+                  <div key={item.name} className="flex gap-3 p-4 bg-surface-2 rounded-lg border border-[#E8E4DF]">
                     <div className="w-2 h-2 rounded-full bg-copper flex-shrink-0 mt-2" />
                     <div>
                       <p className="font-semibold text-text text-sm mb-0.5">{item.name}</p>
@@ -171,7 +171,7 @@ export default function SoffitFasciaPage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-2">
             {ALL_AREAS.map((area) => (
-              <span key={area} className="bg-surface border border-[rgba(200,122,32,0.2)] text-muted text-sm px-3 py-1.5 rounded-full">
+              <span key={area} className="bg-surface border border-[#E8E4DF] text-muted text-sm px-3 py-1.5 rounded-full">
                 {area}
               </span>
             ))}

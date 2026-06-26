@@ -12,7 +12,7 @@ export default function TestimonialCard({
   rating = 5,
 }: TestimonialCardProps) {
   return (
-    <div className="bg-surface rounded-xl border border-[rgba(200,122,32,0.2)] p-6 flex flex-col gap-4">
+    <div className="bg-white rounded-xl border border-[#E8E4DF] shadow-sm p-6 flex flex-col gap-4">
       <div className="flex gap-0.5">
         {Array.from({ length: rating }).map((_, i) => (
           <svg key={i} className="w-5 h-5 text-copper fill-copper" viewBox="0 0 20 20">
@@ -20,11 +20,11 @@ export default function TestimonialCard({
           </svg>
         ))}
       </div>
-      <blockquote className="text-text leading-relaxed flex-grow">
+      <blockquote className="text-[#1A1A1A] leading-relaxed flex-grow">
         &ldquo;{quote}&rdquo;
       </blockquote>
       <div>
-        <p className="font-heading font-bold text-text text-sm">{name}</p>
+        <p className="font-heading font-bold text-[#1A1A1A] text-sm">{name}</p>
         <p className="text-copper text-xs mt-0.5">{location}</p>
       </div>
     </div>

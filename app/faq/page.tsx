@@ -107,7 +107,7 @@ export default function FAQPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="py-20 bg-surface border-b border-[rgba(200,122,32,0.2)]">
+      <section className="py-20 bg-surface border-b border-[#E8E4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -131,7 +131,7 @@ export default function FAQPage() {
           <div className="space-y-3">
             {FAQS.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.03}>
-                <details className="group bg-surface rounded-xl border border-[rgba(200,122,32,0.2)] overflow-hidden">
+                <details className="group bg-surface rounded-xl border border-[#E8E4DF] overflow-hidden">
                   <summary className="flex items-start justify-between gap-4 p-5 cursor-pointer list-none">
                     <span className="font-heading font-bold text-text group-hover:text-copper transition-colors">
                       {faq.q}
@@ -145,7 +145,7 @@ export default function FAQPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <div className="px-5 pb-5 text-muted text-sm leading-relaxed border-t border-[rgba(200,122,32,0.15)] pt-4">
+                  <div className="px-5 pb-5 text-muted text-sm leading-relaxed border-t border-[#E8E4DF] pt-4">
                     {faq.a}
                   </div>
                 </details>

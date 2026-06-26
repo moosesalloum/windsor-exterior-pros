@@ -56,7 +56,7 @@ export default function AboutPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="py-20 bg-surface border-b border-[rgba(200,122,32,0.2)]">
+      <section className="py-20 bg-surface border-b border-[#E8E4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -135,7 +135,7 @@ export default function AboutPage() {
               },
             ].map((member) => (
               <AnimatedSection key={member.role}>
-                <div className="bg-surface-2 rounded-xl border border-[rgba(200,122,32,0.2)] p-6 text-center">
+                <div className="bg-surface-2 rounded-xl border border-[#E8E4DF] p-6 text-center">
                   <div className="w-20 h-20 rounded-full bg-surface mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-10 h-10 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -163,7 +163,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {VALUES.map((v, i) => (
               <AnimatedSection key={v.title} delay={i * 0.1}>
-                <div className="bg-surface rounded-xl border border-[rgba(200,122,32,0.2)] p-6 h-full">
+                <div className="bg-surface rounded-xl border border-[#E8E4DF] p-6 h-full">
                   <div className="w-12 h-12 rounded-lg bg-copper/15 flex items-center justify-center text-copper mb-4">
                     {v.icon}
                   </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
       <section className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
-            <div className="bg-surface-2 rounded-xl border border-[rgba(200,122,32,0.2)] p-8 max-w-3xl">
+            <div className="bg-surface-2 rounded-xl border border-[#E8E4DF] p-8 max-w-3xl">
               <h2 className="font-heading font-bold text-xl text-text mb-4">
                 Licensed, Insured & WSIB Compliant
               </h2>

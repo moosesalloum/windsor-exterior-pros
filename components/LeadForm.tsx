@@ -47,20 +47,26 @@ export default function LeadForm({
     }
   }
 
-  const bg = dark ? "bg-surface-2" : "bg-surface";
+  const sectionClass = dark ? "bg-[#1A1A1A]" : "bg-[#F2F0ED]";
+  const headingClass = dark ? "text-white" : "text-[#1A1A1A]";
+  const subheadingClass = dark ? "text-[#9a9590]" : "text-muted";
+  const inputClass =
+    "w-full bg-white border border-[#E8E4DF] rounded-lg px-4 py-3 text-[#1A1A1A] placeholder-[#9a9590] focus:outline-none focus:border-[#C87A20] focus:ring-2 focus:ring-[#C87A20]/20 transition-colors text-sm";
+  const labelClass = "block text-sm font-semibold text-[#1A1A1A] mb-1.5";
+  const radioLabelClass = dark ? "text-[#9a9590] group-hover:text-[#1A1A1A]" : "text-muted group-hover:text-[#1A1A1A]";
 
   return (
-    <section id="estimate" className={`${dark ? "bg-surface" : "bg-bg"} py-20`}>
+    <section id="estimate" className={`${sectionClass} py-20`}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-text mb-3">
+          <h2 className={`font-heading font-extrabold text-3xl md:text-4xl mb-3 ${headingClass}`}>
             {heading}
           </h2>
-          <p className="text-muted">{subheading}</p>
+          <p className={subheadingClass}>{subheading}</p>
         </div>
 
         {status === "sent" ? (
-          <div className="text-center py-12 px-6 rounded-xl border border-copper bg-surface-2">
+          <div className="text-center py-12 px-6 rounded-xl border border-copper bg-white">
             <svg
               className="w-16 h-16 text-copper mx-auto mb-4"
               fill="none"
@@ -74,7 +80,7 @@ export default function LeadForm({
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <h3 className="font-heading font-bold text-2xl text-text mb-2">
+            <h3 className="font-heading font-bold text-2xl text-[#1A1A1A] mb-2">
               Request Received!
             </h3>
             <p className="text-muted">
@@ -82,9 +88,12 @@ export default function LeadForm({
             </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className={`${bg} rounded-xl border border-[rgba(200,122,32,0.2)] p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-5`}>
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-xl border border-[#E8E4DF] shadow-sm p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-5"
+          >
             <div className="md:col-span-1">
-              <label className="block text-sm font-semibold text-text mb-1.5">
+              <label className={labelClass}>
                 Your Name <span className="text-copper">*</span>
               </label>
               <input
@@ -92,13 +101,13 @@ export default function LeadForm({
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className="w-full bg-surface border border-[rgba(200,122,32,0.2)] rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-copper transition-colors"
+                className={inputClass}
                 placeholder="John Smith"
               />
             </div>
 
             <div className="md:col-span-1">
-              <label className="block text-sm font-semibold text-text mb-1.5">
+              <label className={labelClass}>
                 Phone Number <span className="text-copper">*</span>
               </label>
               <input
@@ -106,26 +115,26 @@ export default function LeadForm({
                 required
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                className="w-full bg-surface border border-[rgba(200,122,32,0.2)] rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-copper transition-colors"
+                className={inputClass}
                 placeholder="(519) 555-0100"
               />
             </div>
 
             <div className="md:col-span-2">
-              <label className="block text-sm font-semibold text-text mb-1.5">
+              <label className={labelClass}>
                 Email Address
               </label>
               <input
                 type="email"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full bg-surface border border-[rgba(200,122,32,0.2)] rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-copper transition-colors"
+                className={inputClass}
                 placeholder="john@example.com"
               />
             </div>
 
             <div className="md:col-span-2">
-              <label className="block text-sm font-semibold text-text mb-2">
+              <label className={labelClass}>
                 Service Needed
               </label>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -139,7 +148,7 @@ export default function LeadForm({
                       onChange={(e) => setForm({ ...form, service: e.target.value })}
                       className="w-4 h-4 accent-copper"
                     />
-                    <span className="text-sm text-muted group-hover:text-text transition-colors">
+                    <span className={`text-sm transition-colors ${radioLabelClass}`}>
                       {svc}
                     </span>
                   </label>
@@ -156,7 +165,7 @@ export default function LeadForm({
                 {status === "sending" ? "Sending..." : "Request My Free Quote"}
               </button>
               {status === "error" && (
-                <p className="text-red-400 text-sm text-center mt-2">
+                <p className="text-red-500 text-sm text-center mt-2">
                   Something went wrong. Please call or email us directly.
                 </p>
               )}

@@ -78,7 +78,7 @@ export default function ServiceAreasPage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="py-20 bg-surface border-b border-[rgba(200,122,32,0.2)]">
+      <section className="py-20 bg-surface border-b border-[#E8E4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -113,7 +113,7 @@ export default function ServiceAreasPage() {
               <AnimatedSection key={area.name} delay={i * 0.07}>
                 <Link
                   href={area.href}
-                  className="group block bg-surface rounded-xl border border-[rgba(200,122,32,0.2)] hover:border-copper p-6 transition-all duration-300"
+                  className="group block bg-surface rounded-xl border border-[#E8E4DF] hover:border-copper p-6 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="font-heading font-bold text-text text-xl group-hover:text-copper transition-colors">
@@ -169,7 +169,7 @@ export default function ServiceAreasPage() {
               {ALL_COMMUNITIES.map((community) => (
                 <span
                   key={community}
-                  className="bg-surface border border-[rgba(200,122,32,0.2)] text-text text-sm font-semibold px-4 py-2 rounded-full"
+                  className="bg-surface border border-[#E8E4DF] text-text text-sm font-semibold px-4 py-2 rounded-full"
                 >
                   {community}
                 </span>

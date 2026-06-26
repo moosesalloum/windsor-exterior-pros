@@ -248,17 +248,17 @@ export default function HomePage() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url(https://images.pexels.com/photos/10038012/pexels-photo-10038012.jpeg)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-bg" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 py-20">
-          <div className="inline-flex items-center gap-2 bg-copper/20 border border-copper/40 rounded-full px-4 py-1.5 mb-6">
+          <div className="inline-flex items-center gap-2 bg-copper/15 border border-copper/30 rounded-full px-4 py-1.5 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-copper animate-pulse" />
             <span className="text-copper text-sm font-semibold">Windsor &amp; Essex County</span>
           </div>
-          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-text leading-tight mb-5">
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-[#1A1A1A] leading-tight mb-5">
             Windsor&rsquo;s Premium Exterior Contracting{" "}
             <span className="text-copper">Specialists</span>
           </h1>
-          <p className="text-lg sm:text-xl text-text/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg sm:text-xl text-[#1A1A1A]/75 max-w-2xl mx-auto mb-8 leading-relaxed">
             Seamless eavestroughs, siding, roofing and complete exterior transformations across Windsor
             and Essex County. Licensed, insured, and locally owned.
           </p>
@@ -271,17 +271,17 @@ export default function HomePage() {
             </Link>
             <Link
               href="#services"
-              className="border-2 border-text/30 hover:border-copper text-text hover:text-copper font-heading font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200"
+              className="border-2 border-[#1A1A1A]/20 hover:border-copper text-[#1A1A1A] hover:text-copper font-heading font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200"
             >
               View Our Services
             </Link>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-bg to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#FAFAF8] to-transparent" />
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-surface border-y border-[rgba(200,122,32,0.2)] py-8">
+      <section className="bg-white border-y border-[#E8E4DF] py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {TRUST_ITEMS.map((item) => (
@@ -298,7 +298,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Grid */}
-      <section id="services" className="py-20 bg-bg">
+      <section id="services" className="py-20 bg-surface-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-text mb-3">
@@ -334,7 +334,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {WHY_US.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="flex gap-4 p-6 bg-surface-2 rounded-xl border border-[rgba(200,122,32,0.2)] h-full">
+                <div className="flex gap-4 p-6 bg-white rounded-xl border border-[#E8E4DF] shadow-sm h-full">
                   <div className="w-10 h-10 rounded-lg bg-copper/15 flex items-center justify-center text-copper flex-shrink-0">
                     {item.icon}
                   </div>
@@ -350,7 +350,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-bg">
+      <section className="py-20 bg-surface-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-text mb-3">
@@ -385,7 +385,7 @@ export default function HomePage() {
               {ALL_AREAS.map((area) => (
                 <span
                   key={area}
-                  className="bg-surface-2 border border-[rgba(200,122,32,0.2)] text-text text-sm font-semibold px-4 py-2 rounded-full"
+                  className="bg-white border border-[#E8E4DF] text-[#1A1A1A] text-sm font-semibold px-4 py-2 rounded-full"
                 >
                   {area}
                 </span>
@@ -407,7 +407,7 @@ export default function HomePage() {
       <LeadForm
         heading="Ready to Transform Your Home's Exterior?"
         subheading="Request a free, no-obligation estimate from Windsor's exterior pros. We serve all of Windsor and Essex County."
-        dark={false}
+        dark={true}
       />
     </>
   );

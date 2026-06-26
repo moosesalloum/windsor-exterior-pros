@@ -56,14 +56,14 @@ export default function ContactPage() {
   }
 
   const inputClass =
-    "w-full bg-surface border border-[rgba(200,122,32,0.2)] rounded-lg px-4 py-3 text-text placeholder-muted focus:outline-none focus:border-copper transition-colors text-sm";
+    "w-full bg-white border border-[#E8E4DF] rounded-lg px-4 py-3 text-[#1A1A1A] placeholder-[#9a9590] focus:outline-none focus:border-[#C87A20] focus:ring-2 focus:ring-[#C87A20]/20 transition-colors text-sm";
 
   const labelClass = "block text-sm font-semibold text-text mb-1.5";
 
   return (
     <>
       {/* Hero */}
-      <section className="py-20 bg-surface border-b border-[rgba(200,122,32,0.2)]">
+      <section className="py-20 bg-surface border-b border-[#E8E4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="bg-surface rounded-xl border border-[rgba(200,122,32,0.2)] p-5">
+                <div className="bg-surface rounded-xl border border-[#E8E4DF] p-5">
                   <h3 className="font-heading font-bold text-text mb-3">What to Expect</h3>
                   <ul className="space-y-2">
                     {[
@@ -180,7 +180,7 @@ export default function ContactPage() {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="bg-surface rounded-xl border border-[rgba(200,122,32,0.2)] p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-5"
+                  className="bg-surface rounded-xl border border-[#E8E4DF] p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-5"
                 >
                   <div>
                     <label className={labelClass}>First Name <span className="text-copper">*</span></label>

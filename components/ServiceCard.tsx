@@ -18,7 +18,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div
-      className={`group relative bg-surface rounded-xl border border-[rgba(200,122,32,0.2)] hover:border-copper transition-all duration-300 overflow-hidden ${
+      className={`group relative bg-white rounded-xl border border-[#E8E4DF] hover:border-copper shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden ${
         featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
       }`}
     >
@@ -27,11 +27,11 @@ export default function ServiceCard({
         aria-hidden="true"
       />
       <div className={`p-6 flex flex-col h-full ${featured ? "lg:p-8" : ""}`}>
-        <div className="w-12 h-12 rounded-lg bg-surface-2 flex items-center justify-center text-copper mb-4 group-hover:bg-copper group-hover:text-white transition-all duration-300">
+        <div className="w-12 h-12 rounded-lg bg-[#F2F0ED] flex items-center justify-center text-copper mb-4 group-hover:bg-copper group-hover:text-white transition-all duration-300">
           {icon}
         </div>
         <h3
-          className={`font-heading font-bold text-text mb-2 group-hover:text-copper transition-colors ${
+          className={`font-heading font-bold text-[#1A1A1A] mb-2 group-hover:text-copper transition-colors ${
             featured ? "text-2xl" : "text-lg"
           }`}
         >

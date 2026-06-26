@@ -66,7 +66,7 @@ export default function SidingPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url(https://images.pexels.com/photos/10038012/pexels-photo-10038012.jpeg)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -118,7 +118,7 @@ export default function SidingPage() {
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
                 {["Licensed & Insured", "Free Written Estimates", "No Subcontractors", "Workmanship Guarantee"].map((badge) => (
-                  <span key={badge} className="bg-surface border border-[rgba(200,122,32,0.2)] text-muted text-xs font-semibold px-3 py-1.5 rounded-full">
+                  <span key={badge} className="bg-surface border border-[#E8E4DF] text-muted text-xs font-semibold px-3 py-1.5 rounded-full">
                     {badge}
                   </span>
                 ))}
@@ -154,7 +154,7 @@ export default function SidingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {SIDING_TYPES.map((type, i) => (
               <AnimatedSection key={type.name} delay={i * 0.1}>
-                <div className="bg-surface-2 rounded-xl border border-[rgba(200,122,32,0.2)] p-6 h-full flex flex-col">
+                <div className="bg-surface-2 rounded-xl border border-[#E8E4DF] p-6 h-full flex flex-col">
                   <h3 className="font-heading font-bold text-xl text-text mb-3">{type.name}</h3>
                   <p className="text-muted text-sm leading-relaxed mb-4 flex-grow">{type.desc}</p>
                   <ul className="space-y-2">
@@ -182,7 +182,7 @@ export default function SidingPage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-2">
             {ALL_AREAS.map((area) => (
-              <span key={area} className="bg-surface border border-[rgba(200,122,32,0.2)] text-muted text-sm px-3 py-1.5 rounded-full">
+              <span key={area} className="bg-surface border border-[#E8E4DF] text-muted text-sm px-3 py-1.5 rounded-full">
                 {area}
               </span>
             ))}

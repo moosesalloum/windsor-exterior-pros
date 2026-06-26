@@ -58,7 +58,7 @@ export default function LaSallePage() {
       <JsonLd data={breadcrumbSchema} />
 
       {/* Hero */}
-      <section className="py-20 bg-surface border-b border-[rgba(200,122,32,0.2)]">
+      <section className="py-20 bg-surface border-b border-[#E8E4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -121,7 +121,7 @@ export default function LaSallePage() {
                   <Link
                     key={svc.href}
                     href={svc.href}
-                    className="flex items-center justify-between p-4 bg-surface rounded-lg border border-[rgba(200,122,32,0.2)] hover:border-copper group transition-all"
+                    className="flex items-center justify-between p-4 bg-surface rounded-lg border border-[#E8E4DF] hover:border-copper group transition-all"
                   >
                     <span className="font-semibold text-text group-hover:text-copper transition-colors">
                       {svc.name} - LaSalle
@@ -133,7 +133,7 @@ export default function LaSallePage() {
                 ))}
               </div>
 
-              <div className="mt-6 p-5 bg-surface rounded-xl border border-[rgba(200,122,32,0.2)]">
+              <div className="mt-6 p-5 bg-surface rounded-xl border border-[#E8E4DF]">
                 <div className="flex flex-wrap gap-3">
                   {["Licensed & Insured", "Free Estimates", "No Subcontractors", "Workmanship Guarantee"].map((badge) => (
                     <span key={badge} className="text-xs text-copper border border-copper/30 px-3 py-1 rounded-full">

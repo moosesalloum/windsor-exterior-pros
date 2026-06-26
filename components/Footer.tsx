@@ -25,7 +25,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-bg border-t border-[rgba(200,122,32,0.2)]">
+    <footer className="bg-[#1A1A1A] border-t border-[rgba(200,122,32,0.2)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
@@ -40,17 +40,17 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-muted text-sm leading-relaxed mb-4">
+            <p className="text-[#9a9590] text-sm leading-relaxed mb-4">
               Windsor&rsquo;s Premier Exterior Contracting. Seamless eavestroughs, siding, soffit, fascia, roofing and more across Windsor and Essex County.
             </p>
-            <p className="text-xs text-muted">
+            <p className="text-xs text-[#9a9590]">
               Licensed &amp; Insured &bull; WSIB Compliant
             </p>
           </div>
 
           {/* Services column */}
           <div>
-            <h3 className="font-heading font-bold text-text text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4">
               Services
             </h3>
             <ul className="space-y-2.5">
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-muted hover:text-copper text-sm transition-colors"
+                    className="text-[#9a9590] hover:text-copper text-sm transition-colors"
                   >
                     {s.name}
                   </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Service Areas column */}
           <div>
-            <h3 className="font-heading font-bold text-text text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4">
               Service Areas
             </h3>
             <ul className="space-y-2.5">
@@ -77,7 +77,7 @@ export default function Footer() {
                 <li key={a.href}>
                   <Link
                     href={a.href}
-                    className="text-muted hover:text-copper text-sm transition-colors"
+                    className="text-[#9a9590] hover:text-copper text-sm transition-colors"
                   >
                     {a.name}
                   </Link>
@@ -93,59 +93,57 @@ export default function Footer() {
 
           {/* Company + Contact column */}
           <div>
-            <h3 className="font-heading font-bold text-text text-sm uppercase tracking-wider mb-4">
+            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4">
               Company
             </h3>
             <ul className="space-y-2.5 mb-6">
               <li>
-                <Link href="/about" className="text-muted hover:text-copper text-sm transition-colors">About Us</Link>
+                <Link href="/about" className="text-[#9a9590] hover:text-copper text-sm transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/faq" className="text-muted hover:text-copper text-sm transition-colors">FAQ</Link>
+                <Link href="/faq" className="text-[#9a9590] hover:text-copper text-sm transition-colors">FAQ</Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted hover:text-copper text-sm transition-colors">Get a Quote</Link>
+                <Link href="/contact" className="text-[#9a9590] hover:text-copper text-sm transition-colors">Get a Quote</Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-muted hover:text-copper text-sm transition-colors">Privacy Policy</Link>
+                <Link href="/privacy" className="text-[#9a9590] hover:text-copper text-sm transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms" className="text-muted hover:text-copper text-sm transition-colors">Terms of Service</Link>
+                <Link href="/terms" className="text-[#9a9590] hover:text-copper text-sm transition-colors">Terms of Service</Link>
               </li>
             </ul>
 
-            <h3 className="font-heading font-bold text-text text-sm uppercase tracking-wider mb-3">
+            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-3">
               Contact
             </h3>
             <ul className="space-y-2">
-              <li className="text-muted text-sm">[Phone TBD]</li>
+              <li className="text-[#9a9590] text-sm">[Phone TBD]</li>
               <li>
                 <a
                   href="mailto:info@windsorexteriorpros.com"
-                  className="text-muted hover:text-copper text-sm transition-colors"
+                  className="text-[#9a9590] hover:text-copper text-sm transition-colors"
                 >
                   info@windsorexteriorpros.com
                 </a>
               </li>
-              <li className="text-muted text-sm">Windsor, Ontario</li>
+              <li className="text-[#9a9590] text-sm">Windsor, Ontario</li>
             </ul>
           </div>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div
-        className="border-t border-[rgba(200,122,32,0.15)]"
-      >
+      <div className="border-t border-[rgba(200,122,32,0.15)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-muted text-xs">
+          <p className="text-[#9a9590] text-xs">
             &copy; {year} Windsor Exterior Pros. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-muted hover:text-copper text-xs transition-colors">
+            <Link href="/privacy" className="text-[#9a9590] hover:text-copper text-xs transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-muted hover:text-copper text-xs transition-colors">
+            <Link href="/terms" className="text-[#9a9590] hover:text-copper text-xs transition-colors">
               Terms of Service
             </Link>
           </div>

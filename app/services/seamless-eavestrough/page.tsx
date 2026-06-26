@@ -127,7 +127,7 @@ export default function SeamlessEavestroughPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url(https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg)" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
@@ -235,7 +235,7 @@ export default function SeamlessEavestroughPage() {
                   desc: "Baked-on factory finish. Matches or complements virtually any exterior color scheme.",
                 },
               ].map((spec) => (
-                <div key={spec.label} className="bg-surface-2 rounded-xl border border-[rgba(200,122,32,0.2)] p-6">
+                <div key={spec.label} className="bg-surface-2 rounded-xl border border-[#E8E4DF] p-6">
                   <p className="text-copper font-heading font-bold text-sm uppercase tracking-wider mb-1">
                     {spec.label}
                   </p>
@@ -263,7 +263,7 @@ export default function SeamlessEavestroughPage() {
           <div className="space-y-4">
             {SERVICES_LIST.map((svc, i) => (
               <AnimatedSection key={svc.name} delay={i * 0.07}>
-                <div className="flex gap-4 p-5 bg-surface rounded-xl border border-[rgba(200,122,32,0.2)]">
+                <div className="flex gap-4 p-5 bg-surface rounded-xl border border-[#E8E4DF]">
                   <div className="w-8 h-8 rounded-full bg-copper flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
@@ -294,7 +294,7 @@ export default function SeamlessEavestroughPage() {
           <div className="space-y-3">
             {faqSchema.mainEntity.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
-                <details className="group bg-surface-2 rounded-xl border border-[rgba(200,122,32,0.2)] overflow-hidden">
+                <details className="group bg-surface-2 rounded-xl border border-[#E8E4DF] overflow-hidden">
                   <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none text-text font-semibold hover:text-copper transition-colors">
                     {faq.name}
                     <svg
@@ -306,7 +306,7 @@ export default function SeamlessEavestroughPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </summary>
-                  <div className="px-5 pb-5 text-muted text-sm leading-relaxed border-t border-[rgba(200,122,32,0.15)] pt-4">
+                  <div className="px-5 pb-5 text-muted text-sm leading-relaxed border-t border-[#E8E4DF] pt-4">
                     {faq.acceptedAnswer.text}
                   </div>
                 </details>
@@ -324,7 +324,7 @@ export default function SeamlessEavestroughPage() {
           </h2>
           <div className="flex flex-wrap justify-center gap-2">
             {ALL_AREAS.map((area) => (
-              <span key={area} className="bg-surface border border-[rgba(200,122,32,0.2)] text-muted text-sm px-3 py-1.5 rounded-full">
+              <span key={area} className="bg-surface border border-[#E8E4DF] text-muted text-sm px-3 py-1.5 rounded-full">
                 {area}
               </span>
             ))}

@@ -67,49 +67,46 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-surface/95 backdrop-blur-md shadow-xl" : "bg-bg/80 backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#E8E4DF] transition-shadow duration-300 ${
+        scrolled ? "shadow-md" : "shadow-sm"
       }`}
-      style={{ borderBottom: "1px solid var(--border-copper)" }}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0" onClick={closeMobile}>
-          <div className="bg-white rounded-xl px-3 py-1.5 flex items-center">
-            <Image
-              src="/logo-horizontal.jpeg"
-              alt="Windsor Exterior Pros logo"
-              width={220}
-              height={44}
-              className="h-11 w-auto hidden sm:block"
-            />
-            <Image
-              src="/logo-horizontal.jpeg"
-              alt="Windsor Exterior Pros logo"
-              width={180}
-              height={36}
-              className="h-9 w-auto sm:hidden"
-            />
-          </div>
+          <Image
+            src="/logo-horizontal.jpeg"
+            alt="Windsor Exterior Pros logo"
+            width={220}
+            height={44}
+            className="h-11 w-auto hidden sm:block"
+          />
+          <Image
+            src="/logo-horizontal.jpeg"
+            alt="Windsor Exterior Pros logo"
+            width={180}
+            height={36}
+            className="h-9 w-auto sm:hidden"
+          />
         </Link>
 
         {/* Desktop navigation */}
         <div className="hidden lg:flex items-center gap-7">
           {/* Services dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-text hover:text-copper transition-colors text-sm font-semibold py-2">
+            <button className="flex items-center gap-1 text-[#1A1A1A] hover:text-copper transition-colors text-sm font-semibold py-2">
               Services
               <ChevronDown className="transition-transform group-hover:rotate-180 duration-200" />
             </button>
             <div
-              className="absolute top-full left-0 mt-1 w-58 bg-surface rounded-xl shadow-2xl border border-[rgba(200,122,32,0.2)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2"
+              className="absolute top-full left-0 mt-1 w-58 bg-white rounded-xl shadow-lg border border-[#E8E4DF] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2"
               style={{ minWidth: "220px" }}
             >
               {SERVICES.map((s) => (
                 <Link
                   key={s.href}
                   href={s.href}
-                  className="block px-4 py-2.5 text-sm text-muted hover:text-copper hover:bg-surface-2 transition-colors"
+                  className="block px-4 py-2.5 text-sm text-muted hover:text-copper hover:bg-[#F2F0ED] transition-colors"
                 >
                   {s.name}
                 </Link>
@@ -119,17 +116,17 @@ export default function Navbar() {
 
           {/* Service Areas dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 text-text hover:text-copper transition-colors text-sm font-semibold py-2">
+            <button className="flex items-center gap-1 text-[#1A1A1A] hover:text-copper transition-colors text-sm font-semibold py-2">
               Service Areas
               <ChevronDown className="transition-transform group-hover:rotate-180 duration-200" />
             </button>
             <div
-              className="absolute top-full left-0 mt-1 bg-surface rounded-xl shadow-2xl border border-[rgba(200,122,32,0.2)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2"
+              className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-lg border border-[#E8E4DF] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2"
               style={{ minWidth: "190px" }}
             >
               <Link
                 href="/service-areas"
-                className="block px-4 py-2.5 text-sm text-copper font-semibold hover:bg-surface-2 transition-colors border-b border-[rgba(200,122,32,0.15)] mb-1"
+                className="block px-4 py-2.5 text-sm text-copper font-semibold hover:bg-[#F2F0ED] transition-colors border-b border-[#E8E4DF] mb-1"
               >
                 All Service Areas
               </Link>
@@ -137,7 +134,7 @@ export default function Navbar() {
                 <Link
                   key={a.href}
                   href={a.href}
-                  className="block px-4 py-2.5 text-sm text-muted hover:text-copper hover:bg-surface-2 transition-colors"
+                  className="block px-4 py-2.5 text-sm text-muted hover:text-copper hover:bg-[#F2F0ED] transition-colors"
                 >
                   {a.name}
                 </Link>
@@ -145,10 +142,10 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/about" className="text-text hover:text-copper transition-colors text-sm font-semibold">
+          <Link href="/about" className="text-[#1A1A1A] hover:text-copper transition-colors text-sm font-semibold">
             About
           </Link>
-          <Link href="/faq" className="text-text hover:text-copper transition-colors text-sm font-semibold">
+          <Link href="/faq" className="text-[#1A1A1A] hover:text-copper transition-colors text-sm font-semibold">
             FAQ
           </Link>
           <Link
@@ -161,7 +158,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden text-text hover:text-copper transition-colors p-1"
+          className="lg:hidden text-[#1A1A1A] hover:text-copper transition-colors p-1"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -172,20 +169,20 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div
-          className="lg:hidden bg-surface border-t border-[rgba(200,122,32,0.2)]"
+          className="lg:hidden bg-white border-t border-[#E8E4DF]"
           style={{ maxHeight: "calc(100vh - 4rem)", overflowY: "auto" }}
         >
           <div className="px-4 py-4 space-y-1">
             <div>
               <button
-                className="w-full flex items-center justify-between text-text font-semibold py-3 text-sm hover:text-copper transition-colors"
+                className="w-full flex items-center justify-between text-[#1A1A1A] font-semibold py-3 text-sm hover:text-copper transition-colors"
                 onClick={() => setServicesOpen(!servicesOpen)}
               >
                 Services
                 <ChevronDown className={`transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
               </button>
               {servicesOpen && (
-                <div className="pl-4 pb-2 space-y-0.5 border-l border-[rgba(200,122,32,0.2)] ml-2">
+                <div className="pl-4 pb-2 space-y-0.5 border-l border-[#E8E4DF] ml-2">
                   {SERVICES.map((s) => (
                     <Link
                       key={s.href}
@@ -202,14 +199,14 @@ export default function Navbar() {
 
             <div>
               <button
-                className="w-full flex items-center justify-between text-text font-semibold py-3 text-sm hover:text-copper transition-colors"
+                className="w-full flex items-center justify-between text-[#1A1A1A] font-semibold py-3 text-sm hover:text-copper transition-colors"
                 onClick={() => setAreasOpen(!areasOpen)}
               >
                 Service Areas
                 <ChevronDown className={`transition-transform duration-200 ${areasOpen ? "rotate-180" : ""}`} />
               </button>
               {areasOpen && (
-                <div className="pl-4 pb-2 space-y-0.5 border-l border-[rgba(200,122,32,0.2)] ml-2">
+                <div className="pl-4 pb-2 space-y-0.5 border-l border-[#E8E4DF] ml-2">
                   <Link
                     href="/service-areas"
                     className="block py-2 text-sm text-copper font-semibold"
@@ -233,14 +230,14 @@ export default function Navbar() {
 
             <Link
               href="/about"
-              className="block text-text font-semibold py-3 text-sm hover:text-copper transition-colors border-t border-[rgba(200,122,32,0.1)]"
+              className="block text-[#1A1A1A] font-semibold py-3 text-sm hover:text-copper transition-colors border-t border-[#E8E4DF]"
               onClick={closeMobile}
             >
               About
             </Link>
             <Link
               href="/faq"
-              className="block text-text font-semibold py-3 text-sm hover:text-copper transition-colors"
+              className="block text-[#1A1A1A] font-semibold py-3 text-sm hover:text-copper transition-colors"
               onClick={closeMobile}
             >
               FAQ
