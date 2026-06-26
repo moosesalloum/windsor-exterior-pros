@@ -213,17 +213,30 @@ const TESTIMONIALS = [
 ];
 
 const ALL_AREAS = [
-  "Windsor", "LaSalle", "Tecumseh", "Amherstburg", "Essex",
-  "Lakeshore", "Leamington", "Kingsville", "Belle River",
-  "Harrow", "Tilbury", "McGregor", "Cottam", "Comber",
+  { name: "Windsor", href: "/service-areas" },
+  { name: "LaSalle", href: "/service-areas/lasalle" },
+  { name: "Tecumseh", href: "/service-areas/tecumseh" },
+  { name: "Amherstburg", href: "/service-areas/amherstburg" },
+  { name: "Essex", href: "/service-areas/essex" },
+  { name: "Lakeshore", href: "/service-areas/lakeshore" },
+  { name: "Leamington", href: "/service-areas/leamington" },
+  { name: "Kingsville", href: "/service-areas/kingsville" },
+  { name: "Belle River", href: "/service-areas" },
+  { name: "Harrow", href: "/service-areas" },
+  { name: "Tilbury", href: "/service-areas" },
+  { name: "McGregor", href: "/service-areas" },
+  { name: "Cottam", href: "/service-areas" },
+  { name: "Comber", href: "/service-areas" },
 ];
 
 function SectionEyebrow({ label }: { label: string }) {
   return (
-    <div className="mb-3">
+    <div className="mb-3 flex items-center justify-center gap-3">
+      <span className="w-8 h-px bg-[#C87A20]" aria-hidden="true" />
       <span className="text-[#C87A20] text-sm font-semibold tracking-widest uppercase">
         {label}
       </span>
+      <span className="w-8 h-px bg-[#C87A20]" aria-hidden="true" />
     </div>
   );
 }
@@ -331,17 +344,31 @@ export default function HomePage() {
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto">
               {ALL_AREAS.map((area) => (
-                <span
-                  key={area}
-                  className="bg-[#F2F0ED] border border-[#E8E4DF] text-[#1A1A1A] text-sm font-semibold px-4 py-2 rounded-full"
+                <Link
+                  key={area.name}
+                  href={area.href}
+                  className="flex items-center gap-2 text-[#1A1A1A] hover:text-[#C87A20] transition-colors group"
                 >
-                  {area}
-                </span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="text-[#C87A20] flex-shrink-0"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span className="font-medium">{area.name}</span>
+                </Link>
               ))}
             </div>
-            <p className="text-center mt-6">
+            <p className="text-center mt-8">
               <Link
                 href="/service-areas"
                 className="text-[#C87A20] hover:text-[#E09030] font-semibold transition-colors"

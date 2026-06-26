@@ -51,9 +51,9 @@ export default function StatsStrip() {
   return (
     <section className="bg-[#1A1A1A] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
           {STATS.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center gap-1">
+            <div key={stat.label} className="flex flex-col items-center gap-1 py-6 md:py-0 px-6">
               <span className="text-4xl md:text-5xl font-extrabold text-[#C87A20] font-heading">
                 <CountUp end={stat.end} suffix={stat.suffix} />
               </span>

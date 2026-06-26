@@ -33,7 +33,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight mb-5"
+          className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight mb-5"
         >
           Windsor&rsquo;s Premium Exterior Contracting{" "}
           <span className="text-[#E09030]">Specialists</span>

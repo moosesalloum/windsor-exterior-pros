@@ -121,7 +121,11 @@ export default function Footer() {
               Contact
             </h3>
             <ul className="space-y-2 flex flex-col items-center md:items-start">
-              <li className="text-[#4a4540] text-sm text-center md:text-left w-full">[Phone TBD]</li>
+              <li className="text-center md:text-left w-full">
+                <Link href="/contact" className="block text-[#C87A20] hover:text-[#E09030] text-sm font-semibold transition-colors">
+                  Free Estimates — Call Today
+                </Link>
+              </li>
               <li className="text-center md:text-left w-full">
                 <a
                   href="mailto:info@windsorexteriorpros.com"

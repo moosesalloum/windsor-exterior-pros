@@ -29,12 +29,13 @@ export default function ServiceCard({
       variants={serviceCardVariant}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
-      className={`group relative bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden ${
+      className={`group relative bg-white rounded-lg border border-[#E8E4DF] shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden ${
         featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
       }`}
     >
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#C87A20] opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
       <div className={`p-6 flex flex-col h-full ${featured ? "lg:p-8" : ""}`}>
-        <div className="w-12 h-12 rounded-full bg-[#C87A20] flex items-center justify-center text-white mb-4 flex-shrink-0">
+        <div className="w-12 h-12 rounded-lg bg-[#C87A20] flex items-center justify-center text-white mb-4 flex-shrink-0">
           {icon}
         </div>
         <h3

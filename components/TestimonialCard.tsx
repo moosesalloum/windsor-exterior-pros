@@ -22,7 +22,7 @@ export default function TestimonialCard({
       </div>
       <div className="relative">
         <span
-          className="absolute -top-3 -left-1 text-6xl text-[#C87A20] opacity-25 font-serif leading-none select-none"
+          className="absolute -top-4 -left-1 text-8xl text-[#C87A20] opacity-20 font-serif leading-none select-none"
           aria-hidden="true"
         >
           &ldquo;
@@ -33,7 +33,7 @@ export default function TestimonialCard({
       </div>
       <div>
         <p className="font-heading font-bold text-[#1A1A1A] text-sm">{name}</p>
-        <p className="text-[#C87A20] text-xs mt-0.5">{location}</p>
+        <p className="text-[#6B6560] text-xs mt-0.5">{location}</p>
       </div>
     </div>
   );
