@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg')",
+        backgroundImage: "url('/hero-exterior.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
