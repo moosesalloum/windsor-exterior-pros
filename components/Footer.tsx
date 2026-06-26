@@ -123,7 +123,7 @@ export default function Footer() {
             <ul className="space-y-2 flex flex-col items-center md:items-start">
               <li className="text-center md:text-left w-full">
                 <Link href="/contact" className="block text-[#C87A20] hover:text-[#E09030] text-sm font-semibold transition-colors">
-                  Free Estimates — Call Today
+                  Free Estimates, Call Today
                 </Link>
               </li>
               <li className="text-center md:text-left w-full">
