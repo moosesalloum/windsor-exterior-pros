@@ -213,20 +213,20 @@ const TESTIMONIALS = [
 ];
 
 const ALL_AREAS = [
-  { name: "Windsor", href: "/service-areas" },
-  { name: "LaSalle", href: "/service-areas/lasalle" },
-  { name: "Tecumseh", href: "/service-areas/tecumseh" },
-  { name: "Amherstburg", href: "/service-areas/amherstburg" },
-  { name: "Essex", href: "/service-areas/essex" },
-  { name: "Lakeshore", href: "/service-areas/lakeshore" },
-  { name: "Leamington", href: "/service-areas/leamington" },
-  { name: "Kingsville", href: "/service-areas/kingsville" },
-  { name: "Belle River", href: "/service-areas" },
-  { name: "Harrow", href: "/service-areas" },
-  { name: "Tilbury", href: "/service-areas" },
-  { name: "McGregor", href: "/service-areas" },
-  { name: "Cottam", href: "/service-areas" },
-  { name: "Comber", href: "/service-areas" },
+  { name: "Windsor", slug: "windsor" },
+  { name: "LaSalle", slug: "lasalle" },
+  { name: "Tecumseh", slug: "tecumseh" },
+  { name: "Amherstburg", slug: "amherstburg" },
+  { name: "Essex", slug: "essex" },
+  { name: "Lakeshore", slug: "lakeshore" },
+  { name: "Leamington", slug: "leamington" },
+  { name: "Kingsville", slug: "kingsville" },
+  { name: "Belle River", slug: "belle-river" },
+  { name: "Harrow", slug: "harrow" },
+  { name: "Tilbury", slug: "tilbury" },
+  { name: "McGregor", slug: "mcgregor" },
+  { name: "Cottam", slug: "cottam" },
+  { name: "Comber", slug: "comber" },
 ];
 
 function SectionEyebrow({ label }: { label: string }) {
@@ -332,7 +332,7 @@ export default function HomePage() {
       {/* Service Areas */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-10">
+          <AnimatedSection className="text-center mb-8">
             <SectionEyebrow label="Service Areas" />
             <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">
               Serving All of Windsor-Essex County
@@ -344,27 +344,17 @@ export default function HomePage() {
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
               {ALL_AREAS.map((area) => (
                 <Link
-                  key={area.name}
-                  href={area.href}
-                  className="flex items-center gap-2 text-[#1A1A1A] hover:text-[#C87A20] transition-colors group"
+                  key={area.slug}
+                  href={`/service-areas/${area.slug}`}
+                  className="group flex flex-col items-center gap-1.5 p-3 bg-white rounded-lg border border-[#E8E4DF] hover:border-[#C87A20] hover:shadow-sm transition-all duration-200 text-center"
                 >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="text-[#C87A20] flex-shrink-0"
-                    aria-hidden="true"
-                  >
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
+                  <svg className="w-4 h-4 text-[#C87A20] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
-                  <span className="font-medium">{area.name}</span>
+                  <span className="text-xs font-semibold text-[#2C2C2C] group-hover:text-[#C87A20] transition-colors leading-tight">{area.name}</span>
                 </Link>
               ))}
             </div>
