@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   description:
     "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in LaSalle Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
   alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/lasalle" },
+  openGraph: {
+    title: "Exterior Contractors LaSalle Ontario | Windsor Exterior Pros",
+    description: "Trusted exterior contractors serving LaSalle. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
+    images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exterior Contractors LaSalle Ontario | Windsor Exterior Pros",
+    description: "Exterior contracting services in LaSalle. Free estimates, licensed & insured.",
+    images: ["/windsor-exterior-pros-social.jpg"],
+  },
 };
 
 const localBusinessSchema = {

@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   description:
     "Seamless eavestrough, siding, soffit & fascia, and roofing in Kingsville Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
   alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/kingsville" },
+  openGraph: {
+    title: "Exterior Contractors Kingsville Ontario | Windsor Exterior Pros",
+    description: "Trusted exterior contractors serving Kingsville. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
+    images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exterior Contractors Kingsville Ontario | Windsor Exterior Pros",
+    description: "Exterior contracting services in Kingsville. Free estimates, licensed & insured.",
+    images: ["/windsor-exterior-pros-social.jpg"],
+  },
 };
 
 const localBusinessSchema = {

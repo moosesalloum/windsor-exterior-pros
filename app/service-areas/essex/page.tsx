@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   description:
     "Seamless eavestrough, siding, soffit & fascia, and roofing in Essex Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
   alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/essex" },
+  openGraph: {
+    title: "Exterior Contractors Essex Ontario | Windsor Exterior Pros",
+    description: "Trusted exterior contractors serving Essex. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
+    images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exterior Contractors Essex Ontario | Windsor Exterior Pros",
+    description: "Exterior contracting services in Essex. Free estimates, licensed & insured.",
+    images: ["/windsor-exterior-pros-social.jpg"],
+  },
 };
 
 const localBusinessSchema = {

@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   description:
     "Seamless eavestrough, siding, soffit & fascia, and roofing in Lakeshore Ontario including Belle River. Windsor Exterior Pros - free estimates, licensed & insured.",
   alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/lakeshore" },
+  openGraph: {
+    title: "Exterior Contractors Lakeshore Ontario | Windsor Exterior Pros",
+    description: "Trusted exterior contractors serving Lakeshore including Belle River. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
+    images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exterior Contractors Lakeshore Ontario | Windsor Exterior Pros",
+    description: "Exterior contracting services in Lakeshore. Free estimates, licensed & insured.",
+    images: ["/windsor-exterior-pros-social.jpg"],
+  },
 };
 
 const localBusinessSchema = {
