@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Exterior Contractors Tilbury Ontario | Windsor Exterior Pros",
   description:
     "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in Tilbury Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/tilbury" },
+  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/tilbury" },
   openGraph: {
     title: "Exterior Contractors Tilbury Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Tilbury. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -27,8 +27,8 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Tilbury Ontario including seamless eavestrough, siding, soffit and fascia, roofing, and more.",
-  url: "https://windsorexteriorpros.ca/service-areas/tilbury",
-  email: "info@windsorexteriorpros.ca",
+  url: "https://windsorexteriorpros.com/service-areas/tilbury",
+  email: "info@windsorexteriorpros.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Tilbury",
@@ -47,9 +47,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Tilbury", item: "https://windsorexteriorpros.ca/service-areas/tilbury" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Tilbury", item: "https://windsorexteriorpros.com/service-areas/tilbury" },
   ],
 };
 

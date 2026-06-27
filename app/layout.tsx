@@ -23,12 +23,12 @@ export const metadata: Metadata = {
   },
   description:
     "Windsor's trusted exterior contractors. Seamless eavestrough installation, siding, soffit & fascia, roofing and more across Windsor and Essex County. Free estimates.",
-  metadataBase: new URL("https://windsorexteriorpros.ca"),
+  metadataBase: new URL("https://windsorexteriorpros.com"),
   openGraph: {
     title: "Windsor Exterior Pros | Seamless Eavestrough & Exterior Contractors Windsor Ontario",
     description:
       "Windsor's trusted exterior contractors. Seamless eavestrough installation, siding, soffit & fascia, roofing and more across Windsor and Essex County. Free estimates.",
-    url: "https://windsorexteriorpros.ca",
+    url: "https://windsorexteriorpros.com",
     siteName: "Windsor Exterior Pros",
     locale: "en_CA",
     type: "website",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://windsorexteriorpros.ca",
+    canonical: "https://windsorexteriorpros.com",
   },
 };
 

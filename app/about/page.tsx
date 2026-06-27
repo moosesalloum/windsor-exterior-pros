@@ -8,15 +8,15 @@ export const metadata: Metadata = {
   title: "About Windsor Exterior Pros | Windsor-Essex Exterior Contractors",
   description:
     "Learn about Windsor Exterior Pros - locally owned exterior contracting serving Windsor and Essex County. 6+ years experience, no subcontractors, quality-first approach.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/about" },
+  alternates: { canonical: "https://windsorexteriorpros.com/about" },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "About", item: "https://windsorexteriorpros.ca/about" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "About", item: "https://windsorexteriorpros.com/about" },
   ],
 };
 

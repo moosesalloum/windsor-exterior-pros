@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Service Areas - Windsor & Essex County Exterior Contractors",
   description:
     "Windsor Exterior Pros serves all of Windsor and Essex County. Seamless eavestrough, siding, roofing, soffit & fascia across LaSalle, Tecumseh, Amherstburg, Leamington and more.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas" },
+  alternates: { canonical: "https://windsorexteriorpros.com/service-areas" },
   openGraph: {
     title: "Service Areas - Windsor & Essex County Exterior Contractors",
     description: "Windsor Exterior Pros serves all of Windsor and Essex County. Seamless eavestrough, siding, roofing, soffit & fascia. Free estimates.",
@@ -26,8 +26,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
   ],
 };
 

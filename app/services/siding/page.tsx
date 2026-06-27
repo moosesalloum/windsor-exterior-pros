@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Professional Siding Installation Windsor Ontario",
   description:
     "Vinyl, fiber cement, and board & batten siding installation in Windsor Ontario. Expert craftsmanship, free estimates, licensed & insured. Serving all of Essex County.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/services/siding" },
+  alternates: { canonical: "https://windsorexteriorpros.com/services/siding" },
   openGraph: {
     title: "Professional Siding Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Vinyl, fiber cement, and board & batten siding that protects your home and transforms curb appeal. Free estimates across Windsor-Essex.",
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Siding", item: "https://windsorexteriorpros.ca/services/siding" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Siding", item: "https://windsorexteriorpros.com/services/siding" },
   ],
 };
 

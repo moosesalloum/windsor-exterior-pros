@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Soffit & Fascia Installation Windsor Ontario",
   description:
     "Professional soffit and fascia installation in Windsor Ontario. Protect your roofline from moisture, pests, and rot. Free estimates. Licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/services/soffit-fascia" },
+  alternates: { canonical: "https://windsorexteriorpros.com/services/soffit-fascia" },
   openGraph: {
     title: "Soffit & Fascia Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Aluminum soffit and fascia installation to protect your roofline and improve attic ventilation. Free estimates across Windsor-Essex.",
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Soffit & Fascia", item: "https://windsorexteriorpros.ca/services/soffit-fascia" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Soffit & Fascia", item: "https://windsorexteriorpros.com/services/soffit-fascia" },
   ],
 };
 

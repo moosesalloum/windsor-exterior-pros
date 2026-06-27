@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy | Windsor Exterior Pros",
   description: "Privacy policy for Windsor Exterior Pros. How we collect, use, and protect your personal information.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/privacy" },
+  alternates: { canonical: "https://windsorexteriorpros.com/privacy" },
   robots: { index: false, follow: false },
 };
 
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
             <p>
               We retain your personal information for as long as necessary to provide our services
               and comply with legal obligations. If you would like your information removed from our
-              records, please contact us at info@windsorexteriorpros.ca.
+              records, please contact us at info@windsorexteriorpros.com.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
             <p>
               Under Canadian privacy law (PIPEDA), you have the right to access, correct, or
               request deletion of your personal information held by Windsor Exterior Pros. To
-              exercise these rights, please contact us at info@windsorexteriorpros.ca.
+              exercise these rights, please contact us at info@windsorexteriorpros.com.
             </p>
           </div>
 
@@ -99,8 +99,8 @@ export default function PrivacyPage() {
             <p>
               If you have questions about this privacy policy or our data practices, please contact
               us at{" "}
-              <a href="mailto:info@windsorexteriorpros.ca" className="text-copper hover:text-copper-light">
-                info@windsorexteriorpros.ca
+              <a href="mailto:info@windsorexteriorpros.com" className="text-copper hover:text-copper-light">
+                info@windsorexteriorpros.com
               </a>.
             </p>
           </div>

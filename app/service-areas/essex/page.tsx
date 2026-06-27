@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Exterior Contractors Essex Ontario | Windsor Exterior Pros",
   description:
     "Seamless eavestrough, siding, soffit & fascia, and roofing in Essex Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/essex" },
+  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/essex" },
   openGraph: {
     title: "Exterior Contractors Essex Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Essex. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -27,8 +27,8 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Essex Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.ca/service-areas/essex",
-  email: "info@windsorexteriorpros.ca",
+  url: "https://windsorexteriorpros.com/service-areas/essex",
+  email: "info@windsorexteriorpros.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Essex",
@@ -43,9 +43,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Essex", item: "https://windsorexteriorpros.ca/service-areas/essex" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Essex", item: "https://windsorexteriorpros.com/service-areas/essex" },
   ],
 };
 

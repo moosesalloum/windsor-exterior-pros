@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Window & Door Installation Windsor Ontario",
   description:
     "Energy-efficient replacement windows and entry doors in Windsor Ontario. Improve comfort, security, and curb appeal. Free estimates. Licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/services/windows-doors" },
+  alternates: { canonical: "https://windsorexteriorpros.com/services/windows-doors" },
   openGraph: {
     title: "Window & Door Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Energy-efficient replacement windows and entry doors. Improve comfort, security, and curb appeal in Windsor-Essex. Free estimates.",
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Windows & Doors", item: "https://windsorexteriorpros.ca/services/windows-doors" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Windows & Doors", item: "https://windsorexteriorpros.com/services/windows-doors" },
   ],
 };
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Get a Free Estimate | Windsor Exterior Pros",
     description:
       "Request a free estimate for exterior work in Windsor-Essex. Eavestrough, siding, roofing, soffit & fascia, windows & doors, landscaping.",
-    url: "https://windsorexteriorpros.ca/contact",
+    url: "https://windsorexteriorpros.com/contact",
     images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros - Free Estimate" }],
   },
   twitter: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Free estimates for eavestrough, siding, roofing, and more in Windsor-Essex Ontario.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
-  alternates: { canonical: "https://windsorexteriorpros.ca/contact" },
+  alternates: { canonical: "https://windsorexteriorpros.com/contact" },
 };
 
 export default function ContactPage() {

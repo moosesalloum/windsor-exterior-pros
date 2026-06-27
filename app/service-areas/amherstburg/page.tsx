@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Exterior Contractors Amherstburg Ontario | Windsor Exterior Pros",
   description:
     "Seamless eavestrough, siding, soffit & fascia, and roofing in Amherstburg Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/amherstburg" },
+  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/amherstburg" },
   openGraph: {
     title: "Exterior Contractors Amherstburg Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Amherstburg. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -27,8 +27,8 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Amherstburg Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.ca/service-areas/amherstburg",
-  email: "info@windsorexteriorpros.ca",
+  url: "https://windsorexteriorpros.com/service-areas/amherstburg",
+  email: "info@windsorexteriorpros.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Amherstburg",
@@ -47,9 +47,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Amherstburg", item: "https://windsorexteriorpros.ca/service-areas/amherstburg" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Amherstburg", item: "https://windsorexteriorpros.com/service-areas/amherstburg" },
   ],
 };
 

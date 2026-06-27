@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Exterior Contractors Lakeshore Ontario | Windsor Exterior Pros",
   description:
     "Seamless eavestrough, siding, soffit & fascia, and roofing in Lakeshore Ontario including Belle River. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/lakeshore" },
+  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/lakeshore" },
   openGraph: {
     title: "Exterior Contractors Lakeshore Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Lakeshore including Belle River. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -27,8 +27,8 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Lakeshore Ontario including Belle River. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.ca/service-areas/lakeshore",
-  email: "info@windsorexteriorpros.ca",
+  url: "https://windsorexteriorpros.com/service-areas/lakeshore",
+  email: "info@windsorexteriorpros.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lakeshore",
@@ -43,9 +43,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Lakeshore", item: "https://windsorexteriorpros.ca/service-areas/lakeshore" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Lakeshore", item: "https://windsorexteriorpros.com/service-areas/lakeshore" },
   ],
 };
 

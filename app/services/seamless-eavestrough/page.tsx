@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Seamless Eavestrough Installation Windsor Ontario",
   description:
     "Professional seamless eavestrough installation in Windsor Ontario. Custom on-site fabrication, 20+ colors, 5\" and 6\" K-style aluminum. Free estimates. Licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/services/seamless-eavestrough" },
+  alternates: { canonical: "https://windsorexteriorpros.com/services/seamless-eavestrough" },
   openGraph: {
     title: "Seamless Eavestrough Installation Windsor Ontario | Windsor Exterior Pros",
     description:
@@ -28,8 +28,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Seamless Eavestrough", item: "https://windsorexteriorpros.ca/services/seamless-eavestrough" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Seamless Eavestrough", item: "https://windsorexteriorpros.com/services/seamless-eavestrough" },
   ],
 };
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Exterior Contractors Harrow Ontario | Windsor Exterior Pros",
   description:
     "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in Harrow Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/harrow" },
+  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/harrow" },
   openGraph: {
     title: "Exterior Contractors Harrow Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Harrow. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -27,8 +27,8 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Harrow Ontario including seamless eavestrough, siding, soffit and fascia, roofing, and more.",
-  url: "https://windsorexteriorpros.ca/service-areas/harrow",
-  email: "info@windsorexteriorpros.ca",
+  url: "https://windsorexteriorpros.com/service-areas/harrow",
+  email: "info@windsorexteriorpros.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Harrow",
@@ -47,9 +47,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Harrow", item: "https://windsorexteriorpros.ca/service-areas/harrow" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Harrow", item: "https://windsorexteriorpros.com/service-areas/harrow" },
   ],
 };
 

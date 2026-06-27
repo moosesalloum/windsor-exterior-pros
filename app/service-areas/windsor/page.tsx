@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Exterior Contractors Windsor Ontario | Windsor Exterior Pros",
   description:
     "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in Windsor Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/windsor" },
+  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/windsor" },
   openGraph: {
     title: "Exterior Contractors Windsor Ontario | Windsor Exterior Pros",
     description: "Windsor's trusted exterior contractors. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -27,8 +27,8 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Windsor Ontario including seamless eavestrough, siding, soffit and fascia, roofing, and more.",
-  url: "https://windsorexteriorpros.ca/service-areas/windsor",
-  email: "info@windsorexteriorpros.ca",
+  url: "https://windsorexteriorpros.com/service-areas/windsor",
+  email: "info@windsorexteriorpros.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Windsor",
@@ -47,9 +47,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Windsor", item: "https://windsorexteriorpros.ca/service-areas/windsor" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Windsor", item: "https://windsorexteriorpros.com/service-areas/windsor" },
   ],
 };
 

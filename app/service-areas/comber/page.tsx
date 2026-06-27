@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Exterior Contractors Comber Ontario | Windsor Exterior Pros",
   description:
     "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in Comber Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/comber" },
+  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/comber" },
   openGraph: {
     title: "Exterior Contractors Comber Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Comber. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -27,8 +27,8 @@ const localBusinessSchema = {
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Comber Ontario including seamless eavestrough, siding, soffit and fascia, roofing, and more.",
-  url: "https://windsorexteriorpros.ca/service-areas/comber",
-  email: "info@windsorexteriorpros.ca",
+  url: "https://windsorexteriorpros.com/service-areas/comber",
+  email: "info@windsorexteriorpros.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Comber",
@@ -47,9 +47,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Comber", item: "https://windsorexteriorpros.ca/service-areas/comber" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Comber", item: "https://windsorexteriorpros.com/service-areas/comber" },
   ],
 };
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "FAQ - Eavestrough & Exterior Contracting Windsor Ontario",
   description:
     "Frequently asked questions about eavestrough, siding, soffit & fascia, and exterior contracting in Windsor Ontario. Pricing, materials, timelines, and more.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/faq" },
+  alternates: { canonical: "https://windsorexteriorpros.com/faq" },
 };
 
 const FAQS = [
@@ -74,7 +74,7 @@ const FAQS = [
   },
   {
     q: "How do I get a quote?",
-    a: "The easiest way is to request a free estimate through our website or by email at info@windsorexteriorpros.ca. We'll schedule a time to come to your property, assess what's needed, and leave you with a written, itemized quote. No obligation to proceed.",
+    a: "The easiest way is to request a free estimate through our website or by email at info@windsorexteriorpros.com. We'll schedule a time to come to your property, assess what's needed, and leave you with a written, itemized quote. No obligation to proceed.",
   },
 ];
 
@@ -95,8 +95,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "FAQ", item: "https://windsorexteriorpros.ca/faq" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "FAQ", item: "https://windsorexteriorpros.com/faq" },
   ],
 };
 

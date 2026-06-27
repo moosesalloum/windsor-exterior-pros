@@ -111,8 +111,8 @@ export default function ContactForm() {
                       </div>
                       <div>
                         <p className="font-semibold text-text text-sm">Email</p>
-                        <a href="mailto:info@windsorexteriorpros.ca" className="text-copper text-sm hover:text-copper-light transition-colors">
-                          info@windsorexteriorpros.ca
+                        <a href="mailto:info@windsorexteriorpros.com" className="text-copper text-sm hover:text-copper-light transition-colors">
+                          info@windsorexteriorpros.com
                         </a>
                       </div>
                     </div>
@@ -273,7 +273,7 @@ export default function ContactForm() {
                     </button>
                     {status === "error" && (
                       <p className="text-red-400 text-sm text-center mt-2">
-                        Something went wrong. Please email us at info@windsorexteriorpros.ca.
+                        Something went wrong. Please email us at info@windsorexteriorpros.com.
                       </p>
                     )}
                   </div>
