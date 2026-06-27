@@ -24,7 +24,7 @@ const homepageSchema = {
     "Windsor's premium exterior contracting specialists. Seamless eavestrough installation, siding, soffit and fascia, roofing, landscaping, and windows and doors across Windsor and Essex County, Ontario.",
   url: "https://windsorexteriorpros.ca",
   telephone: "[PLACEHOLDER]",
-  email: "info@windsorexteriorpros.com",
+  email: "info@windsorexteriorpros.ca",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Windsor",
@@ -56,11 +56,6 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "Windsor Exterior Pros",
   url: "https://windsorexteriorpros.ca",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://windsorexteriorpros.ca/?s={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const SERVICES = [

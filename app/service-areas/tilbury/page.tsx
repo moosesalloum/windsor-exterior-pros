@@ -5,31 +5,42 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors Tecumseh Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors Tilbury Ontario | Windsor Exterior Pros",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, and roofing in Tecumseh Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/tecumseh" },
+    "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in Tilbury Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
+  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/tilbury" },
+  openGraph: {
+    title: "Exterior Contractors Tilbury Ontario | Windsor Exterior Pros",
+    description: "Trusted exterior contractors serving Tilbury. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
+    images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exterior Contractors Tilbury Ontario | Windsor Exterior Pros",
+    description: "Exterior contracting services in Tilbury. Free estimates, licensed & insured.",
+    images: ["/windsor-exterior-pros-social.jpg"],
+  },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in Tecumseh Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.ca/service-areas/tecumseh",
+  description: "Exterior contracting services in Tilbury Ontario including seamless eavestrough, siding, soffit and fascia, roofing, and more.",
+  url: "https://windsorexteriorpros.ca/service-areas/tilbury",
   email: "info@windsorexteriorpros.ca",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Tecumseh",
+    addressLocality: "Tilbury",
     addressRegion: "Ontario",
     addressCountry: "CA",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 42.3168,
-    longitude: -82.9196,
+    latitude: 42.2667,
+    longitude: -82.4333,
   },
-  areaServed: "Tecumseh, Ontario",
+  areaServed: "Tilbury, Ontario",
 };
 
 const breadcrumbSchema = {
@@ -38,7 +49,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
     { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Tecumseh", item: "https://windsorexteriorpros.ca/service-areas/tecumseh" },
+    { "@type": "ListItem", position: 3, name: "Tilbury", item: "https://windsorexteriorpros.ca/service-areas/tilbury" },
   ],
 };
 
@@ -51,7 +62,7 @@ const SERVICES = [
   { name: "Windows & Doors", href: "/services/windows-doors" },
 ];
 
-export default function TecumsehPage() {
+export default function TilburyPage() {
   return (
     <>
       <JsonLd data={localBusinessSchema} />
@@ -64,19 +75,25 @@ export default function TecumsehPage() {
             <span className="mx-2">/</span>
             <Link href="/service-areas" className="hover:text-copper transition-colors">Service Areas</Link>
             <span className="mx-2">/</span>
-            <span className="text-copper">Tecumseh</span>
+            <span className="text-copper">Tilbury</span>
           </nav>
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-text max-w-2xl leading-tight mb-4">
             Exterior Contractors in{" "}
-            <span className="text-copper">Tecumseh, Ontario</span>
+            <span className="text-copper">Tilbury, Ontario</span>
           </h1>
           <p className="text-muted text-lg max-w-2xl mb-6">
-            Premier exterior contracting for Tecumseh homeowners. Seamless eavestrough installation,
-            siding, soffit & fascia, roofing, and more. Free estimates, no obligation.
+            Windsor Exterior Pros serves Tilbury homeowners with the same premium exterior
+            contracting that&rsquo;s built our reputation across Windsor-Essex County. Free estimates,
+            no subcontractors on core work, and a workmanship guarantee on every job.
           </p>
-          <Link href="/contact" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors inline-block">
-            Get a Free Tecumseh Estimate
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/contact" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors">
+              Get a Free Tilbury Estimate
+            </Link>
+            <Link href="/services/seamless-eavestrough" className="border border-text/30 hover:border-copper text-text hover:text-copper font-semibold px-6 py-3 rounded-lg transition-colors">
+              Our Primary Service
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -85,28 +102,24 @@ export default function TecumsehPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
             <AnimatedSection>
               <h2 className="font-heading font-extrabold text-3xl text-text mb-5">
-                Exterior Services in Tecumseh
+                Serving Tilbury Homeowners
               </h2>
               <div className="space-y-4 text-muted leading-relaxed">
                 <p>
-                  Tecumseh is a community of well-kept homes and homeowners who take pride in their
-                  properties. We work regularly throughout Tecumseh on seamless eavestrough
-                  installations, soffit and fascia replacement, and roofing projects for homes in all
-                  stages of their lifecycle.
+                  Tilbury is a community in Chatham-Kent close to the Essex County border, and we
+                  regularly serve homeowners here who want the same quality exterior work available
+                  to Windsor-Essex residents. From seamless eavestrough to siding and roofing, our
+                  team brings the same workmanship standards to every job.
                 </p>
                 <p>
-                  Whether your home is a newer build east of Manning Road or an established property
-                  in older Tecumseh, our approach is the same: assess honestly, quote fairly, and
-                  install correctly the first time. No subcontractors, no shortcuts.
-                </p>
-                <p>
-                  We carry full liability insurance and WSIB coverage on all jobs in Tecumseh. Your
-                  free estimate includes a written, itemized breakdown with no hidden fees.
+                  We provide a free on-site estimate, give you a written quote, and never pressure
+                  you to proceed. Licensed, insured, and WSIB compliant - always.
                 </p>
               </div>
             </AnimatedSection>
+
             <AnimatedSection delay={0.1}>
-              <h2 className="font-heading font-bold text-xl text-text mb-5">Services in Tecumseh</h2>
+              <h2 className="font-heading font-bold text-xl text-text mb-5">Services in Tilbury</h2>
               <div className="space-y-3">
                 {SERVICES.map((svc) => (
                   <Link
@@ -115,7 +128,7 @@ export default function TecumsehPage() {
                     className="flex items-center justify-between p-4 bg-surface rounded-lg border border-[#E8E4DF] hover:border-copper group transition-all"
                   >
                     <span className="font-semibold text-text group-hover:text-copper transition-colors">
-                      {svc.name} - Tecumseh
+                      {svc.name} - Tilbury
                     </span>
                     <svg className="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -123,13 +136,23 @@ export default function TecumsehPage() {
                   </Link>
                 ))}
               </div>
+
+              <div className="mt-6 p-5 bg-surface rounded-xl border border-[#E8E4DF]">
+                <div className="flex flex-wrap gap-3">
+                  {["Licensed & Insured", "Free Estimates", "No Subcontractors", "Workmanship Guarantee"].map((badge) => (
+                    <span key={badge} className="text-xs text-copper border border-copper/30 px-3 py-1 rounded-full">
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
       <LeadForm
-        heading="Free Estimate for Tecumseh Homeowners"
+        heading="Free Estimate for Tilbury Homeowners"
         subheading="Request a free, written estimate with no obligation. We come to you."
       />
     </>

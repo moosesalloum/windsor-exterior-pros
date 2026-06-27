@@ -10,6 +10,17 @@ export const metadata: Metadata = {
   description:
     "Vinyl, fiber cement, and board & batten siding installation in Windsor Ontario. Expert craftsmanship, free estimates, licensed & insured. Serving all of Essex County.",
   alternates: { canonical: "https://windsorexteriorpros.ca/services/siding" },
+  openGraph: {
+    title: "Professional Siding Installation Windsor Ontario | Windsor Exterior Pros",
+    description: "Vinyl, fiber cement, and board & batten siding that protects your home and transforms curb appeal. Free estimates across Windsor-Essex.",
+    images: [{ url: "/vinyl-siding-installation-windsor-ontario.jpg", width: 1920, height: 1080, alt: "Vinyl siding installation Windsor Ontario" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional Siding Installation Windsor Ontario | Windsor Exterior Pros",
+    description: "Vinyl, fiber cement, and board & batten siding installation. Free estimates across Windsor and Essex County.",
+    images: ["/vinyl-siding-installation-windsor-ontario.jpg"],
+  },
 };
 
 const breadcrumbSchema = {
@@ -17,8 +28,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://windsorexteriorpros.ca/services" },
-    { "@type": "ListItem", position: 3, name: "Siding", item: "https://windsorexteriorpros.ca/services/siding" },
+    { "@type": "ListItem", position: 2, name: "Siding", item: "https://windsorexteriorpros.ca/services/siding" },
   ],
 };
 
@@ -29,6 +39,69 @@ const serviceSchema = {
   provider: { "@type": "LocalBusiness", name: "Windsor Exterior Pros" },
   areaServed: "Windsor, Ontario",
   description: "Professional siding installation in Windsor Ontario. Vinyl, fiber cement, and board & batten options.",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What type of siding is best for Windsor Ontario homes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Vinyl siding is by far the most popular choice in Windsor-Essex because it handles our climate extremes well - hot humid summers, freeze-thaw winters, and the occasional ice storm. It doesn't rot, never needs painting, and holds its colour for decades. Fiber cement (James Hardie) is a premium alternative that's harder and more fire-resistant, though it requires more maintenance. We'll help you pick the right product for your home's style and your long-term goals.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does siding installation take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most Windsor residential siding jobs take 2 to 5 days depending on the size of the home, the number of details (dormers, bay windows, trim work), and whether we're removing old siding first. We give you a realistic timeline during the estimate and stick to it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you install siding over existing siding?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In some cases, yes - vinyl siding can be installed over existing wood siding if the substrate is solid and flat. However, we often recommend removing old siding first so we can inspect the sheathing and house wrap underneath, address any moisture damage, and ensure a flat, solid base. Covering up hidden rot or mold is never a good idea long-term.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does new siding improve energy efficiency?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, especially if you're replacing older siding that has gaps, missing caulking, or damaged house wrap underneath. New siding with proper insulation backing and a continuous air barrier can noticeably reduce drafts and heating/cooling costs in Windsor's climate. Insulated vinyl siding adds a layer of rigid foam behind the panels for even better thermal performance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What causes siding to crack or warp on Windsor homes?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The most common causes in our area are: impact damage (hail, flying debris during storms), improper installation that doesn't allow for thermal expansion, age-related brittleness, and prolonged moisture exposure from missing or failed caulking. Cheap siding products also tend to warp or fade faster in Windsor's temperature swings. Quality installation matters as much as the product.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you handle siding repairs or only full replacements?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We do both. If you have localized damage - storm damage, a cracked section, or impact damage from a lawn mower or vehicle - we can often replace just those panels. We'll give you an honest assessment of whether a targeted repair makes sense or whether the overall condition of your siding makes full replacement the better value.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What siding colours are available in Windsor?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We carry a wide range of vinyl and fiber cement siding in dozens of colours - from classic whites and beiges to bold greys, charcoals, and deep blues that are trending in Windsor-Essex right now. We bring samples to your estimate appointment so you can see how colours look against your trim, roofline, and landscaping.",
+      },
+    },
+  ],
 };
 
 const ALL_AREAS = [
@@ -54,17 +127,24 @@ const SIDING_TYPES = [
   },
 ];
 
+const RELATED_SERVICES = [
+  { name: "Soffit & Fascia", desc: "Protect your roofline and improve attic ventilation with new aluminum soffit and fascia.", href: "/services/soffit-fascia" },
+  { name: "Windows & Doors", desc: "Energy-efficient replacement windows and entry doors to complete your home's exterior.", href: "/services/windows-doors" },
+  { name: "Seamless Eavestrough", desc: "Custom-fabricated on-site. Zero seams means zero leak points on Windsor homes.", href: "/services/seamless-eavestrough" },
+];
+
 export default function SidingPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
 
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(https://images.pexels.com/photos/10038012/pexels-photo-10038012.jpeg)" }}
+          style={{ backgroundImage: "url(/vinyl-siding-installation-windsor-ontario.jpg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,9 +180,9 @@ export default function SidingPage() {
               </h2>
               <div className="space-y-4 text-muted leading-relaxed">
                 <p>
-                  Your home's siding is its first line of defense against Windsor's weather - and its
+                  Your home&rsquo;s siding is its first line of defense against Windsor&rsquo;s weather - and its
                   biggest visual statement to the neighborhood. Worn, faded, or damaged siding affects
-                  both your home's protection and its value.
+                  both your home&rsquo;s protection and its value.
                 </p>
                 <p>
                   Windsor Exterior Pros installs siding the right way - with proper moisture barriers,
@@ -127,7 +207,7 @@ export default function SidingPage() {
             <AnimatedSection delay={0.15}>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="https://images.pexels.com/photos/10038012/pexels-photo-10038012.jpeg"
+                  src="/vinyl-siding-installation-windsor-ontario.jpg"
                   alt="Professional siding installation Windsor Ontario"
                   fill
                   className="object-cover"
@@ -168,6 +248,61 @@ export default function SidingPage() {
                     ))}
                   </ul>
                 </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-16 bg-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="mb-8">
+            <h2 className="font-heading font-extrabold text-2xl text-text mb-2">Related Services</h2>
+            <p className="text-muted">Other exterior services we provide across Windsor-Essex.</p>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {RELATED_SERVICES.map((svc, i) => (
+              <AnimatedSection key={svc.href} delay={i * 0.08}>
+                <Link href={svc.href} className="group block bg-surface rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
+                  <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
+                  <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
+                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-20 bg-surface">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-12">
+            <h2 className="font-heading font-extrabold text-3xl text-text mb-3">
+              Siding FAQ - Windsor Ontario
+            </h2>
+            <p className="text-muted">Common questions from Windsor homeowners about siding installation and repairs.</p>
+          </AnimatedSection>
+          <div className="space-y-3">
+            {faqSchema.mainEntity.map((faq, i) => (
+              <AnimatedSection key={i} delay={i * 0.05}>
+                <details className="group bg-surface-2 rounded-xl border border-[#E8E4DF] overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none text-text font-semibold hover:text-copper transition-colors">
+                    {faq.name}
+                    <svg
+                      className="w-5 h-5 flex-shrink-0 text-copper transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-5 text-muted text-sm leading-relaxed border-t border-[#E8E4DF] pt-4">
+                    {faq.acceptedAnswer.text}
+                  </div>
+                </details>
               </AnimatedSection>
             ))}
           </div>

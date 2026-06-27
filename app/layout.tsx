@@ -34,16 +34,24 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.pexels.com/photos/10038012/pexels-photo-10038012.jpeg",
+        url: "/windsor-exterior-pros-social.jpg",
         width: 1200,
         height: 630,
         alt: "Windsor Exterior Pros - Premium Exterior Contracting",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Windsor Exterior Pros | Seamless Eavestrough & Exterior Contractors Windsor Ontario",
+    description:
+      "Windsor's trusted exterior contractors. Seamless eavestrough installation, siding, soffit & fascia, roofing and more across Windsor and Essex County. Free estimates.",
+    images: ["/windsor-exterior-pros-social.jpg"],
+  },
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
   alternates: {
     canonical: "https://windsorexteriorpros.ca",

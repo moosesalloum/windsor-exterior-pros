@@ -17,7 +17,7 @@ const localBusinessSchema = {
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Amherstburg Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
   url: "https://windsorexteriorpros.ca/service-areas/amherstburg",
-  email: "info@windsorexteriorpros.com",
+  email: "info@windsorexteriorpros.ca",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Amherstburg",

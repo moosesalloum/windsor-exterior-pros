@@ -14,7 +14,13 @@ export const metadata: Metadata = {
     title: "Seamless Eavestrough Installation Windsor Ontario | Windsor Exterior Pros",
     description:
       "Windsor's seamless eavestrough specialists. Custom-formed on-site, zero joints, zero leaks. Free estimates across Windsor and Essex County.",
-    images: [{ url: "https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg" }],
+    images: [{ url: "/seamless-eavestrough-installation-windsor-ontario.jpg", width: 1920, height: 1080, alt: "Seamless eavestrough installation Windsor Ontario" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Seamless Eavestrough Installation Windsor Ontario | Windsor Exterior Pros",
+    description: "Custom seamless eavestrough fabricated on-site. Zero seams, zero leaks. Free estimates across Windsor-Essex.",
+    images: ["/seamless-eavestrough-installation-windsor-ontario.jpg"],
   },
 };
 
@@ -23,8 +29,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://windsorexteriorpros.ca/services" },
-    { "@type": "ListItem", position: 3, name: "Seamless Eavestrough", item: "https://windsorexteriorpros.ca/services/seamless-eavestrough" },
+    { "@type": "ListItem", position: 2, name: "Seamless Eavestrough", item: "https://windsorexteriorpros.ca/services/seamless-eavestrough" },
   ],
 };
 
@@ -44,10 +49,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does eavestrough installation cost in Windsor Ontario?",
+      name: "What are signs my eavestroughs need to be replaced?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Eavestrough installation costs in Windsor typically range from $8 to $20 per linear foot for seamless aluminum, depending on the size, profile, and complexity of the job. The best way to get an accurate price is a free on-site estimate - we provide written, itemized quotes with no obligation.",
+        text: "Key warning signs include: visible cracks or holes, rust or peeling paint on the eavestrough exterior, sagging sections pulling away from the fascia, water spilling over the sides during rain, standing water or puddles along your foundation after rain, and rotting fascia board behind the gutter. In Windsor, freeze-thaw cycles through winter can accelerate damage - if your eavestroughs are 20+ years old and showing any of these signs, replacement is usually the smarter call.",
       },
     },
     {
@@ -114,6 +119,12 @@ const ALL_AREAS = [
   "Lakeshore", "Leamington", "Kingsville", "Belle River", "Harrow", "Tilbury",
 ];
 
+const RELATED_SERVICES = [
+  { name: "Soffit & Fascia", desc: "Protect your roofline and improve attic ventilation with new aluminum soffit and fascia.", href: "/services/soffit-fascia" },
+  { name: "Roofing", desc: "Shingle replacement and repairs from experienced local roofers. Free inspections.", href: "/services/roofing" },
+  { name: "Siding", desc: "Vinyl and fiber cement siding that protects your home and transforms its curb appeal.", href: "/services/siding" },
+];
+
 export default function SeamlessEavestroughPage() {
   return (
     <>
@@ -125,14 +136,12 @@ export default function SeamlessEavestroughPage() {
       <section className="relative py-24 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg)" }}
+          style={{ backgroundImage: "url(/seamless-eavestrough-installation-windsor-ontario.jpg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
             <Link href="/" className="hover:text-copper transition-colors">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/service-areas" className="hover:text-copper transition-colors">Services</Link>
             <span className="mx-2">/</span>
             <span className="text-copper">Seamless Eavestrough</span>
           </nav>
@@ -192,7 +201,7 @@ export default function SeamlessEavestroughPage() {
             <AnimatedSection delay={0.15}>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg"
+                  src="/seamless-eavestrough-installation-windsor-ontario.jpg"
                   alt="Seamless eavestrough installation Windsor Ontario"
                   fill
                   className="object-cover"
@@ -280,8 +289,29 @@ export default function SeamlessEavestroughPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-16 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="mb-8">
+            <h2 className="font-heading font-extrabold text-2xl text-text mb-2">Related Services</h2>
+            <p className="text-muted">Other exterior services we provide across Windsor-Essex.</p>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {RELATED_SERVICES.map((svc, i) => (
+              <AnimatedSection key={svc.href} delay={i * 0.08}>
+                <Link href={svc.href} className="group block bg-surface-2 rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
+                  <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
+                  <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
+                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
-      <section id="faq" className="py-20 bg-surface">
+      <section id="faq" className="py-20 bg-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="font-heading font-extrabold text-3xl text-text mb-3">
@@ -294,7 +324,7 @@ export default function SeamlessEavestroughPage() {
           <div className="space-y-3">
             {faqSchema.mainEntity.map((faq, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
-                <details className="group bg-surface-2 rounded-xl border border-[#E8E4DF] overflow-hidden">
+                <details className="group bg-surface rounded-xl border border-[#E8E4DF] overflow-hidden">
                   <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none text-text font-semibold hover:text-copper transition-colors">
                     {faq.name}
                     <svg
@@ -317,14 +347,14 @@ export default function SeamlessEavestroughPage() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-14 bg-bg">
+      <section className="py-14 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading font-bold text-xl text-text mb-4">
             Seamless Eavestrough Installation Across Windsor-Essex
           </h2>
           <div className="flex flex-wrap justify-center gap-2">
             {ALL_AREAS.map((area) => (
-              <span key={area} className="bg-surface border border-[#E8E4DF] text-muted text-sm px-3 py-1.5 rounded-full">
+              <span key={area} className="bg-bg border border-[#E8E4DF] text-muted text-sm px-3 py-1.5 rounded-full">
                 {area}
               </span>
             ))}

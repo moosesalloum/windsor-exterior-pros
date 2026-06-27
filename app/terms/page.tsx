@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Terms of Service | Windsor Exterior Pros",
   description: "Terms of service for Windsor Exterior Pros exterior contracting services.",
   alternates: { canonical: "https://windsorexteriorpros.ca/terms" },
+  robots: { index: false, follow: false },
 };
 
 export default function TermsPage() {
@@ -99,8 +100,8 @@ export default function TermsPage() {
             <h2 className="font-heading font-bold text-xl text-text mb-3">9. Contact</h2>
             <p>
               Questions about these terms can be directed to{" "}
-              <a href="mailto:info@windsorexteriorpros.com" className="text-copper hover:text-copper-light">
-                info@windsorexteriorpros.com
+              <a href="mailto:info@windsorexteriorpros.ca" className="text-copper hover:text-copper-light">
+                info@windsorexteriorpros.ca
               </a>.
             </p>
           </div>

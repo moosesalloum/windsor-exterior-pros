@@ -5,31 +5,42 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors LaSalle Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors Windsor Ontario | Windsor Exterior Pros",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in LaSalle Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/lasalle" },
+    "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in Windsor Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
+  alternates: { canonical: "https://windsorexteriorpros.ca/service-areas/windsor" },
+  openGraph: {
+    title: "Exterior Contractors Windsor Ontario | Windsor Exterior Pros",
+    description: "Windsor's trusted exterior contractors. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
+    images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Exterior Contractors Windsor Ontario | Windsor Exterior Pros",
+    description: "Windsor's trusted exterior contractors. Free estimates, licensed & insured.",
+    images: ["/windsor-exterior-pros-social.jpg"],
+  },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in LaSalle Ontario including seamless eavestrough, siding, soffit and fascia, roofing, and more.",
-  url: "https://windsorexteriorpros.ca/service-areas/lasalle",
+  description: "Exterior contracting services in Windsor Ontario including seamless eavestrough, siding, soffit and fascia, roofing, and more.",
+  url: "https://windsorexteriorpros.ca/service-areas/windsor",
   email: "info@windsorexteriorpros.ca",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "LaSalle",
+    addressLocality: "Windsor",
     addressRegion: "Ontario",
     addressCountry: "CA",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 42.2198,
-    longitude: -83.0716,
+    latitude: 42.3149,
+    longitude: -83.0364,
   },
-  areaServed: "LaSalle, Ontario",
+  areaServed: "Windsor, Ontario",
 };
 
 const breadcrumbSchema = {
@@ -38,7 +49,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.ca" },
     { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.ca/service-areas" },
-    { "@type": "ListItem", position: 3, name: "LaSalle", item: "https://windsorexteriorpros.ca/service-areas/lasalle" },
+    { "@type": "ListItem", position: 3, name: "Windsor", item: "https://windsorexteriorpros.ca/service-areas/windsor" },
   ],
 };
 
@@ -51,13 +62,12 @@ const SERVICES = [
   { name: "Windows & Doors", href: "/services/windows-doors" },
 ];
 
-export default function LaSallePage() {
+export default function WindsorPage() {
   return (
     <>
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={breadcrumbSchema} />
 
-      {/* Hero */}
       <section className="py-20 bg-surface border-b border-[#E8E4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-muted mb-6">
@@ -65,20 +75,21 @@ export default function LaSallePage() {
             <span className="mx-2">/</span>
             <Link href="/service-areas" className="hover:text-copper transition-colors">Service Areas</Link>
             <span className="mx-2">/</span>
-            <span className="text-copper">LaSalle</span>
+            <span className="text-copper">Windsor</span>
           </nav>
           <h1 className="font-heading font-extrabold text-4xl sm:text-5xl text-text max-w-2xl leading-tight mb-4">
             Exterior Contractors in{" "}
-            <span className="text-copper">LaSalle, Ontario</span>
+            <span className="text-copper">Windsor, Ontario</span>
           </h1>
           <p className="text-muted text-lg max-w-2xl mb-6">
-            Windsor Exterior Pros proudly serves LaSalle homeowners with the same premium exterior
-            contracting that&rsquo;s built our reputation across Windsor-Essex County. Free estimates,
-            no subcontractors on core work, and a workmanship guarantee on every job.
+            Windsor Exterior Pros is based right here in Windsor - we know the city's diverse
+            neighbourhoods, older housing stock, and what Windsor winters do to eavestroughs,
+            rooflines, and siding. Free estimates, no subcontractors on core work, and a workmanship
+            guarantee on every job.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/contact" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors">
-              Get a Free LaSalle Estimate
+              Get a Free Windsor Estimate
             </Link>
             <Link href="/services/seamless-eavestrough" className="border border-text/30 hover:border-copper text-text hover:text-copper font-semibold px-6 py-3 rounded-lg transition-colors">
               Our Primary Service
@@ -87,35 +98,35 @@ export default function LaSallePage() {
         </div>
       </section>
 
-      {/* Local Content */}
       <section className="py-20 bg-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
             <AnimatedSection>
               <h2 className="font-heading font-extrabold text-3xl text-text mb-5">
-                Serving LaSalle Homeowners
+                Serving Windsor Homeowners
               </h2>
               <div className="space-y-4 text-muted leading-relaxed">
                 <p>
-                  LaSalle is one of the fastest-growing communities in Essex County, and the homes
-                  here - from established neighborhoods like Laurier Parkway to newer developments -
-                  all share the same need for quality exterior maintenance and improvement.
+                  Windsor is our home base, and we work across all of the city - from South Windsor
+                  and Walkerville to Forest Glade and Riverside. Whether your home is a postwar bungalow
+                  near the waterfront or a newer build in the east end, we bring the same quality
+                  workmanship to every job.
                 </p>
                 <p>
-                  Our team works regularly in LaSalle on seamless eavestrough installations, soffit
-                  and fascia replacements, and siding projects. We know the housing styles common to
-                  the area and can give you a realistic, honest assessment of what your home needs.
+                  Windsor homes face a unique combination of challenges: high humidity off the Detroit
+                  River, freeze-thaw winters, and summer heat that ages exterior materials faster than
+                  many homeowners expect. Our team understands what local conditions demand from
+                  eavestrough systems, rooflines, and siding.
                 </p>
                 <p>
-                  Whether you&rsquo;re in older LaSalle near the waterfront or in a newer subdivision
-                  off Malden Road, we come to you with the same commitment to quality work and fair
-                  pricing. Licensed, insured, and WSIB compliant - always.
+                  Licensed, insured, and WSIB compliant - always. We give you a written estimate with
+                  no obligation and show up when we say we will.
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.1}>
-              <h2 className="font-heading font-bold text-xl text-text mb-5">Services in LaSalle</h2>
+              <h2 className="font-heading font-bold text-xl text-text mb-5">Services in Windsor</h2>
               <div className="space-y-3">
                 {SERVICES.map((svc) => (
                   <Link
@@ -124,7 +135,7 @@ export default function LaSallePage() {
                     className="flex items-center justify-between p-4 bg-surface rounded-lg border border-[#E8E4DF] hover:border-copper group transition-all"
                   >
                     <span className="font-semibold text-text group-hover:text-copper transition-colors">
-                      {svc.name} - LaSalle
+                      {svc.name} - Windsor
                     </span>
                     <svg className="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -148,7 +159,7 @@ export default function LaSallePage() {
       </section>
 
       <LeadForm
-        heading="Free Estimate for LaSalle Homeowners"
+        heading="Free Estimate for Windsor Homeowners"
         subheading="Request a free, written estimate with no obligation. We come to you."
       />
     </>

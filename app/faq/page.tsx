@@ -74,7 +74,7 @@ const FAQS = [
   },
   {
     q: "How do I get a quote?",
-    a: "The easiest way is to request a free estimate through our website or by email at info@windsorexteriorpros.com. We'll schedule a time to come to your property, assess what's needed, and leave you with a written, itemized quote. No obligation to proceed.",
+    a: "The easiest way is to request a free estimate through our website or by email at info@windsorexteriorpros.ca. We'll schedule a time to come to your property, assess what's needed, and leave you with a written, itemized quote. No obligation to proceed.",
   },
 ];
 

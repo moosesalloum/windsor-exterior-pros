@@ -10,6 +10,17 @@ export const metadata: Metadata = {
   description:
     "Professional roofing services in Windsor Ontario. Shingle replacement, repairs, and inspections. Free estimates from licensed & insured roofers serving all of Essex County.",
   alternates: { canonical: "https://windsorexteriorpros.ca/services/roofing" },
+  openGraph: {
+    title: "Roofing Services Windsor Ontario | Windsor Exterior Pros",
+    description: "Shingle replacement, repairs, and honest inspections from experienced local roofers in Windsor-Essex. Free estimates.",
+    images: [{ url: "/asphalt-shingle-roofing-windsor-ontario.jpg", width: 1920, height: 1080, alt: "Roofing services Windsor Ontario" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing Services Windsor Ontario | Windsor Exterior Pros",
+    description: "Shingle replacement, repairs, and inspections from licensed Windsor-Essex roofers. Free estimates.",
+    images: ["/asphalt-shingle-roofing-windsor-ontario.jpg"],
+  },
 };
 
 const breadcrumbSchema = {
@@ -30,9 +41,78 @@ const serviceSchema = {
   description: "Professional roofing services including shingle replacement, repairs, and inspections across Windsor and Essex County.",
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How long do asphalt shingle roofs last in Windsor Ontario?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Standard 3-tab asphalt shingles typically last 15-20 years in Windsor's climate. Architectural (dimensional) shingles, which most homes use today, last 25-30 years. Windsor's freeze-thaw cycles, summer heat, and the occasional ice storm can shorten shingle life if the roof wasn't installed with proper ventilation and ice & water shield. Premium shingles with longer manufacturer warranties are worth considering for long-term ownership.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are signs I need a new roof in Windsor?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Warning signs include: shingles that are curling, cracking, or missing granules (you'll see dark spots and granules in your eavestroughs); shingles that are buckling or cupping; visible sagging or soft spots on the deck; daylight visible through the attic; water stains on ceilings or walls after rain; and a roof that's 20+ years old. If you're seeing any of these, get an inspection before the next Windsor winter.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need an ice and water shield on my Windsor roof?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes - ice and water shield is essential for Windsor homes. Ontario Building Code requires it along the eaves, and we apply it in all vulnerable areas including valleys, around skylights, and at roof penetrations. Windsor gets ice damming conditions every winter - ice and water shield is what protects your roof deck and attic when melting ice backs up under shingles.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you install a new roof over existing shingles?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Some jurisdictions allow one layer of shingles over existing, but we generally recommend a full tear-off. Layering adds weight to the structure, traps heat, and hides problems on the deck below - if there's rot or damaged sheathing, you'll pay to cover it up and then uncover it again in a few years. A proper tear-off lets us inspect and replace the deck where needed, install fresh underlayment, and give you a warranty-backed installation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does a roof replacement take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most Windsor residential roof replacements are completed in one to two days. Larger homes, complex rooflines, or roofs needing significant deck repair may take an additional day. We work efficiently and clean up debris daily so your property is left tidy. We'll give you a clear timeline during the estimate.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What roofing warranties do you offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We install shingles from reputable manufacturers with product warranties of 25 to 50 years depending on the line. Our workmanship warranty covers the installation itself. We'll walk you through both warranties in detail during the estimate so you understand exactly what's covered and for how long.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Windsor weather affect my roof?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Windsor is one of Canada's most weather-diverse cities - we get humid summers that bake shingles, cold winters with freeze-thaw cycles that stress flashing and seals, ice storms that load up eaves, and wind events that can lift poorly fastened shingles. Proper installation with correct nailing patterns, quality underlayment, ice & water shield at the eaves, and proper attic ventilation is what makes a Windsor roof last.",
+      },
+    },
+  ],
+};
+
 const ALL_AREAS = [
   "Windsor", "LaSalle", "Tecumseh", "Amherstburg", "Essex",
   "Lakeshore", "Leamington", "Kingsville",
+];
+
+const RELATED_SERVICES = [
+  { name: "Seamless Eavestrough", desc: "Custom-fabricated on-site. Zero seams means zero leak points on Windsor homes.", href: "/services/seamless-eavestrough" },
+  { name: "Soffit & Fascia", desc: "Protect your roofline and improve attic ventilation with new aluminum soffit and fascia.", href: "/services/soffit-fascia" },
+  { name: "Siding", desc: "Vinyl and fiber cement siding that protects your home and transforms its curb appeal.", href: "/services/siding" },
 ];
 
 export default function RoofingPage() {
@@ -40,12 +120,13 @@ export default function RoofingPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
 
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg)" }}
+          style={{ backgroundImage: "url(/asphalt-shingle-roofing-windsor-ontario.jpg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,7 +192,7 @@ export default function RoofingPage() {
             <AnimatedSection delay={0.15}>
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="https://images.pexels.com/photos/7418277/pexels-photo-7418277.jpeg"
+                  src="/asphalt-shingle-roofing-windsor-ontario.jpg"
                   alt="Roofing services Windsor Ontario"
                   fill
                   className="object-cover"
@@ -132,6 +213,61 @@ export default function RoofingPage() {
                 ))}
               </div>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-16 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="mb-8">
+            <h2 className="font-heading font-extrabold text-2xl text-text mb-2">Related Services</h2>
+            <p className="text-muted">Other exterior services we provide across Windsor-Essex.</p>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {RELATED_SERVICES.map((svc, i) => (
+              <AnimatedSection key={svc.href} delay={i * 0.08}>
+                <Link href={svc.href} className="group block bg-surface-2 rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
+                  <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
+                  <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
+                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-20 bg-bg">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-12">
+            <h2 className="font-heading font-extrabold text-3xl text-text mb-3">
+              Roofing FAQ - Windsor Ontario
+            </h2>
+            <p className="text-muted">Common questions from Windsor homeowners about roofing replacement and repairs.</p>
+          </AnimatedSection>
+          <div className="space-y-3">
+            {faqSchema.mainEntity.map((faq, i) => (
+              <AnimatedSection key={i} delay={i * 0.05}>
+                <details className="group bg-surface rounded-xl border border-[#E8E4DF] overflow-hidden">
+                  <summary className="flex items-center justify-between gap-4 p-5 cursor-pointer list-none text-text font-semibold hover:text-copper transition-colors">
+                    {faq.name}
+                    <svg
+                      className="w-5 h-5 flex-shrink-0 text-copper transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-5 text-muted text-sm leading-relaxed border-t border-[#E8E4DF] pt-4">
+                    {faq.acceptedAnswer.text}
+                  </div>
+                </details>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>

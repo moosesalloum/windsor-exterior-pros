@@ -17,7 +17,7 @@ const localBusinessSchema = {
   name: "Windsor Exterior Pros",
   description: "Exterior contracting services in Leamington Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
   url: "https://windsorexteriorpros.ca/service-areas/leamington",
-  email: "info@windsorexteriorpros.com",
+  email: "info@windsorexteriorpros.ca",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Leamington",
