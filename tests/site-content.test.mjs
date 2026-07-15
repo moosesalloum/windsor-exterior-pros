@@ -109,7 +109,9 @@ test("recent work uses client-owned local assets without unknown project metadat
     "white-vertical-siding-exterior.webp",
     "exterior-preparation-in-progress.webp",
     "soffit-fascia-window-detail.webp",
-    "window-installation-in-progress.webp",
+    "dark-exterior-roofline-detail.webp",
+    "siding-windows-eavestrough-detail.webp",
+    "covered-roof-framing-in-progress.webp",
   ];
 
   assert.match(home, /id="recent-work"/);
@@ -125,6 +127,16 @@ test("recent work uses client-owned local assets without unknown project metadat
 
   const galleryData = home.slice(home.indexOf("const RECENT_WORK"), home.indexOf("const WHY_US"));
   assert.doesNotMatch(galleryData, /Windsor|Essex|before|after|20\d{2}/i);
+
+  const video = fs.readFileSync(path.join(root, "public", "recent-work", "covered-patio-roofline-walkthrough.mp4"));
+  const poster = fs.readFileSync(path.join(root, "public", "recent-work", "covered-patio-roofline-walkthrough-poster.webp"));
+  assert.ok(video.length > 500_000 && video.length < 2_000_000, "gallery video is missing or not web-optimized");
+  assert.equal(video.subarray(4, 8).toString("ascii"), "ftyp", "gallery video is not an MP4 file");
+  assert.ok(poster.length > 20_000, "gallery video poster is unexpectedly small");
+  assert.equal(poster.subarray(0, 4).toString("ascii"), "RIFF", "gallery video poster is not WebP");
+  assert.match(home, /<video[\s\S]*muted[\s\S]*playsInline[\s\S]*preload="none"/);
+  assert.match(home, /covered-patio-roofline-walkthrough\.mp4/);
+  assert.match(home, /covered-patio-roofline-walkthrough-poster\.webp/);
 });
 
 test("site no longer publishes the placeholder per-foot price range", () => {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Window & Door Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Energy-efficient replacement windows and entry doors. Improve comfort, security, and curb appeal in Windsor-Essex. Free estimates.",
-    images: [{ url: "/windows-doors-installation-windsor-ontario.jpg", width: 1600, height: 900, alt: "Black-framed window installation in progress" }],
+    images: [{ url: "/windows-doors-installation-windsor-ontario.jpg", width: 1600, height: 900, alt: "Black-framed windows with grey vertical siding and dark roofline trim" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -185,7 +185,7 @@ export default function WindowsDoorsPage() {
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
                   src="/windows-doors-installation-windsor-ontario.jpg"
-                  alt="Black-framed window installation in progress"
+                  alt="Black-framed windows with grey vertical siding and dark roofline trim"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
