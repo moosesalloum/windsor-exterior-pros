@@ -1,12 +1,32 @@
-# Service image sources
+# Image sources
 
-All six service images are free-stock assets downloaded on 2026-07-14, cropped to 1600×900, compressed, and visually checked against the service they represent.
+## Client-owned project photography
 
-- Seamless eavestrough: [Pixabay photo 7434695](https://pixabay.com/photos/house-rain-gutter-architecture-7434695/), Pixabay Content License
-- Siding: [Pexels photo 1688505](https://www.pexels.com/photo/1688505/), Pexels License
+The following production assets were created from photos supplied by the client and confirmed by Moose as genuine Windsor Exterior Pros work. Exact project names, locations, dates, products, and scopes were not supplied, so the site uses factual visual descriptions only.
+
+All derivatives were decoded and re-encoded to remove embedded metadata. Gallery images are optimized WebP files. Service images are 1600×900 JPEG crops that preserve the existing production filenames.
+
+### Recent work gallery
+
+- `public/recent-work/eavestrough-downspout-detail.webp` from `img_5017544a2f8d.jpeg`
+- `public/recent-work/vertical-siding-roofline-detail.webp` from `img_06992c48c51e.jpeg`
+- `public/recent-work/white-vertical-siding-exterior.webp` from `img_f2e6f45e8dd7.jpeg`
+- `public/recent-work/exterior-preparation-in-progress.webp` from `img_9f444d9470b3.jpeg`
+- `public/recent-work/soffit-fascia-window-detail.webp` from `img_efc6ba025a09.jpeg`
+- `public/recent-work/window-installation-in-progress.webp` from `img_93f90054e9c1.jpeg`
+
+### Service image replacements
+
+- `public/seamless-eavestrough-installation-windsor-ontario.jpg` from `img_5017544a2f8d.jpeg`
+- `public/vinyl-siding-installation-windsor-ontario.jpg` from `img_f2e6f45e8dd7.jpeg`
+- `public/soffit-fascia-installation-windsor-ontario.jpg` from `img_efc6ba025a09.jpeg`
+- `public/windows-doors-installation-windsor-ontario.jpg` from `img_93f90054e9c1.jpeg`
+
+## Stock service illustrations
+
+The following services still use free-stock illustrations because the supplied project photos did not clearly depict those trades:
+
 - Roofing: [Pixabay photo 1499438](https://pixabay.com/photos/shingle-roof-rooftop-1499438/), Pixabay Content License
-- Soffit and fascia: [Pexels photo 347152](https://www.pexels.com/photo/347152/), Pexels License
-- Windows and doors: [Pexels photo 5691531](https://www.pexels.com/photo/5691531/), Pexels License
 - Landscaping and hardscaping: [Pexels photo 16239801](https://www.pexels.com/photo/16239801/), Pexels License
 
-These images are generic service illustrations and are not represented as Windsor Exterior Pros project photography.
+These two images are generic service illustrations and are not represented as Windsor Exterior Pros project photography.

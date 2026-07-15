@@ -100,6 +100,33 @@ test("service images are valid non-placeholder JPEGs", () => {
   }
 });
 
+test("recent work uses client-owned local assets without unknown project metadata", () => {
+  const home = read("app/page.tsx");
+  const assetSources = read("ASSET-SOURCES.md");
+  const galleryImages = [
+    "eavestrough-downspout-detail.webp",
+    "vertical-siding-roofline-detail.webp",
+    "white-vertical-siding-exterior.webp",
+    "exterior-preparation-in-progress.webp",
+    "soffit-fascia-window-detail.webp",
+    "window-installation-in-progress.webp",
+  ];
+
+  assert.match(home, /id="recent-work"/);
+  assert.match(assetSources, /Client-owned project photography/);
+
+  for (const image of galleryImages) {
+    assert.match(home, new RegExp(image.replaceAll(".", "\\.")));
+    const file = fs.readFileSync(path.join(root, "public", "recent-work", image));
+    assert.ok(file.length > 50_000, `${image} is unexpectedly small`);
+    assert.equal(file.subarray(0, 4).toString("ascii"), "RIFF", `${image} is not a WebP file`);
+    assert.equal(file.subarray(8, 12).toString("ascii"), "WEBP", `${image} is not a WebP file`);
+  }
+
+  const galleryData = home.slice(home.indexOf("const RECENT_WORK"), home.indexOf("const WHY_US"));
+  assert.doesNotMatch(galleryData, /Windsor|Essex|before|after|20\d{2}/i);
+});
+
 test("site no longer publishes the placeholder per-foot price range", () => {
   assert.doesNotMatch(source, /\$8\s+to\s+\$20/);
 });

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roofing Services Windsor Ontario | Windsor Exterior Pros",
     description: "Shingle replacement, repairs, and honest inspections from experienced local roofers in Windsor-Essex. Free estimates.",
-    images: [{ url: "/asphalt-shingle-roofing-windsor-ontario.jpg", width: 1920, height: 1080, alt: "Roofing services Windsor Ontario" }],
+    images: [{ url: "/asphalt-shingle-roofing-windsor-ontario.jpg", width: 1600, height: 900, alt: "Roofing services Windsor Ontario" }],
   },
   twitter: {
     card: "summary_large_image",

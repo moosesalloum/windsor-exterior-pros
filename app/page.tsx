@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import ServiceCard from "@/components/ServiceCard";
@@ -104,6 +105,39 @@ const SERVICES = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18" />
       </svg>
     ),
+  },
+];
+
+const RECENT_WORK = [
+  {
+    src: "/recent-work/eavestrough-downspout-detail.webp",
+    alt: "Dark eavestrough and downspout beside white vertical siding",
+    caption: "Eavestrough and downspout detail",
+  },
+  {
+    src: "/recent-work/vertical-siding-roofline-detail.webp",
+    alt: "White vertical siding below a dark eavestrough and soffit",
+    caption: "Vertical siding and roofline detail",
+  },
+  {
+    src: "/recent-work/white-vertical-siding-exterior.webp",
+    alt: "White vertical siding with dark trim on a residential exterior",
+    caption: "Exterior siding and trim",
+  },
+  {
+    src: "/recent-work/exterior-preparation-in-progress.webp",
+    alt: "Detached structure wrapped in housewrap during exterior preparation",
+    caption: "Exterior preparation in progress",
+  },
+  {
+    src: "/recent-work/soffit-fascia-window-detail.webp",
+    alt: "Dark soffit and fascia above black-framed windows on white brick",
+    caption: "Soffit, fascia, and window detail",
+  },
+  {
+    src: "/recent-work/window-installation-in-progress.webp",
+    alt: "Black-framed window installation in progress with ladders nearby",
+    caption: "Window installation in progress",
   },
 ];
 
@@ -227,6 +261,44 @@ export default function HomePage() {
               <ServiceCard key={svc.title} {...svc} />
             ))}
           </ServicesGrid>
+        </div>
+      </section>
+
+      {/* Recent Work */}
+      <section id="recent-work" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-12">
+            <SectionEyebrow label="Recent Work" />
+            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">
+              Exterior Work in the Field
+            </h2>
+            <SectionAccent />
+            <p className="text-[#6B6560] max-w-2xl mx-auto text-lg leading-relaxed">
+              A closer look at exterior details and installation work completed or in progress by
+              Windsor Exterior Pros.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {RECENT_WORK.map((item, index) => (
+              <AnimatedSection key={item.src} delay={index * 0.06}>
+                <figure className="group h-full overflow-hidden rounded-xl border border-[#E8E4DF] bg-[#F2F0ED] shadow-sm">
+                  <div className="relative aspect-[3/4] overflow-hidden">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <figcaption className="border-t border-[#E8E4DF] px-5 py-4 font-heading font-semibold text-[#2C2C2C]">
+                    {item.caption}
+                  </figcaption>
+                </figure>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 

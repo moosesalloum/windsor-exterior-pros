@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Landscaping & Hardscaping Windsor Ontario | Windsor Exterior Pros",
     description: "Interlocking, patios, stone work, and lawn care across Windsor and Essex County. Free estimates.",
-    images: [{ url: "/landscaping-hardscaping-interlocking-windsor-ontario.jpg", width: 1920, height: 1080, alt: "Landscaping and hardscaping Windsor Ontario" }],
+    images: [{ url: "/landscaping-hardscaping-interlocking-windsor-ontario.jpg", width: 1600, height: 900, alt: "Landscaping and hardscaping Windsor Ontario" }],
   },
   twitter: {
     card: "summary_large_image",

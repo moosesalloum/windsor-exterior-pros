@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Professional Siding Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Vinyl, fiber cement, and board & batten siding that protects your home and transforms curb appeal. Free estimates across Windsor-Essex.",
-    images: [{ url: "/vinyl-siding-installation-windsor-ontario.jpg", width: 1920, height: 1080, alt: "Vinyl siding installation Windsor Ontario" }],
+    images: [{ url: "/vinyl-siding-installation-windsor-ontario.jpg", width: 1600, height: 900, alt: "White vertical siding with dark roofline trim" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -208,7 +208,7 @@ export default function SidingPage() {
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
                   src="/vinyl-siding-installation-windsor-ontario.jpg"
-                  alt="Professional siding installation Windsor Ontario"
+                  alt="White vertical siding with dark roofline trim"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

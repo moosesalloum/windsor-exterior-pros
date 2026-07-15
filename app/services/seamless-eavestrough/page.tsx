@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Seamless Eavestrough Installation Windsor Ontario | Windsor Exterior Pros",
     description:
       "Windsor's seamless eavestrough specialists. Custom-formed on-site, zero joints, zero leaks. Free estimates across Windsor and Essex County.",
-    images: [{ url: "/seamless-eavestrough-installation-windsor-ontario.jpg", width: 1920, height: 1080, alt: "Seamless eavestrough installation Windsor Ontario" }],
+    images: [{ url: "/seamless-eavestrough-installation-windsor-ontario.jpg", width: 1600, height: 900, alt: "Dark eavestrough and downspout beside white vertical siding" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -202,7 +202,7 @@ export default function SeamlessEavestroughPage() {
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
                   src="/seamless-eavestrough-installation-windsor-ontario.jpg"
-                  alt="Seamless eavestrough installation Windsor Ontario"
+                  alt="Dark eavestrough and downspout beside white vertical siding"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
