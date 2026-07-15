@@ -45,8 +45,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed"
         >
-          Seamless eavestroughs, siding, roofing and complete exterior transformations across Windsor
-          and Essex County. Serving Windsor and Essex County.
+          Seamless eavestroughs, siding, roofing, and complete exterior transformations across Windsor
+          and Essex County.
         </motion.p>
 
         <motion.div
