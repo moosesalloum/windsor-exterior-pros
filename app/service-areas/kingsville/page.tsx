@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors Kingsville Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors in Kingsville, Ontario",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, and roofing in Kingsville Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/kingsville" },
+    "Seamless eavestrough, siding, soffit & fascia, and roofing in Kingsville Ontario. Windsor Exterior Pros - free estimates, serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/service-areas/kingsville" },
   openGraph: {
     title: "Exterior Contractors Kingsville Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Kingsville. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -17,35 +17,37 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Exterior Contractors Kingsville Ontario | Windsor Exterior Pros",
-    description: "Exterior contracting services in Kingsville. Free estimates, licensed & insured.",
+    description: "Exterior contracting services in Kingsville. Free estimates, serving Windsor-Essex.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
 };
 
-const localBusinessSchema = {
+const serviceAreaSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in Kingsville Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.com/service-areas/kingsville",
-  email: "info@windsorexteriorpros.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Kingsville",
-    addressRegion: "Ontario",
-    addressCountry: "CA",
+  "@type": "Service",
+  name: "Exterior Contracting in Kingsville, Ontario",
+  serviceType: "Exterior contracting services",
+  url: "https://www.windsorexteriorpros.com/service-areas/kingsville",
+  provider: {
+    "@type": "HomeAndConstructionBusiness",
+    name: "Windsor Exterior Pros",
+    url: "https://www.windsorexteriorpros.com",
+    telephone: "226-605-6894",
+    email: "info@windsorexteriorpros.com",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 42.0369, longitude: -82.7276 },
-  areaServed: "Kingsville, Ontario",
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Kingsville, Ontario",
+  },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Kingsville", item: "https://windsorexteriorpros.com/service-areas/kingsville" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Kingsville", item: "https://www.windsorexteriorpros.com/service-areas/kingsville" },
   ],
 };
 
@@ -61,7 +63,7 @@ const SERVICES = [
 export default function KingsvillePage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={serviceAreaSchema} />
       <JsonLd data={breadcrumbSchema} />
 
       <section className="py-20 bg-surface border-b border-[#E8E4DF]">
@@ -107,8 +109,8 @@ export default function KingsvillePage() {
                   a newer subdivision home, we bring the same quality approach and honest pricing.
                 </p>
                 <p>
-                  Licensed, insured, WSIB compliant. Free written estimates with no pressure.
-                  No subcontractors on any of our core work.
+                  Local Windsor-Essex service. Free written estimates with no pressure.
+                  Clear project communication on any of our core work.
                 </p>
               </div>
             </AnimatedSection>

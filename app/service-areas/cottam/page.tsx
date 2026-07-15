@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors Cottam Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors in Cottam, Ontario",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in Cottam Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/cottam" },
+    "Seamless eavestrough, siding, soffit & fascia, roofing, and exterior services in Cottam Ontario. Windsor Exterior Pros - free estimates, serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/service-areas/cottam" },
   openGraph: {
     title: "Exterior Contractors Cottam Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Cottam. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -17,39 +17,37 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Exterior Contractors Cottam Ontario | Windsor Exterior Pros",
-    description: "Exterior contracting services in Cottam. Free estimates, licensed & insured.",
+    description: "Exterior contracting services in Cottam. Free estimates, serving Windsor-Essex.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
 };
 
-const localBusinessSchema = {
+const serviceAreaSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in Cottam Ontario including seamless eavestrough, siding, soffit and fascia, roofing, and more.",
-  url: "https://windsorexteriorpros.com/service-areas/cottam",
-  email: "info@windsorexteriorpros.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Cottam",
-    addressRegion: "Ontario",
-    addressCountry: "CA",
+  "@type": "Service",
+  name: "Exterior Contracting in Cottam, Ontario",
+  serviceType: "Exterior contracting services",
+  url: "https://www.windsorexteriorpros.com/service-areas/cottam",
+  provider: {
+    "@type": "HomeAndConstructionBusiness",
+    name: "Windsor Exterior Pros",
+    url: "https://www.windsorexteriorpros.com",
+    telephone: "226-605-6894",
+    email: "info@windsorexteriorpros.com",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 42.1167,
-    longitude: -82.6833,
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Cottam, Ontario",
   },
-  areaServed: "Cottam, Ontario",
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Cottam", item: "https://windsorexteriorpros.com/service-areas/cottam" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Cottam", item: "https://www.windsorexteriorpros.com/service-areas/cottam" },
   ],
 };
 
@@ -65,7 +63,7 @@ const SERVICES = [
 export default function CottamPage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={serviceAreaSchema} />
       <JsonLd data={breadcrumbSchema} />
 
       <section className="py-20 bg-surface border-b border-[#E8E4DF]">
@@ -112,9 +110,8 @@ export default function CottamPage() {
                   seamless eavestrough installation to siding, soffit and fascia, and roofing.
                 </p>
                 <p>
-                  Our team provides free on-site estimates, written quotes with no obligation, and
-                  we stand behind every job with a workmanship guarantee. Licensed, insured, and
-                  WSIB compliant.
+                  Our team provides free on-site estimates and written quotes with no obligation.
+                  The proposed scope and project details are explained before you decide whether to proceed.
                 </p>
               </div>
             </AnimatedSection>
@@ -140,7 +137,7 @@ export default function CottamPage() {
 
               <div className="mt-6 p-5 bg-surface rounded-xl border border-[#E8E4DF]">
                 <div className="flex flex-wrap gap-3">
-                  {["Licensed & Insured", "Free Estimates", "No Subcontractors", "Workmanship Guarantee"].map((badge) => (
+                  {["Windsor-Essex Service", "Free Estimates", "Clear Project Scope", "Written Project Scope"].map((badge) => (
                     <span key={badge} className="text-xs text-copper border border-copper/30 px-3 py-1 rounded-full">
                       {badge}
                     </span>

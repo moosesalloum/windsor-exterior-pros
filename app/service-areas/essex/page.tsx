@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors Essex Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors in Essex, Ontario",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, and roofing in Essex Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/essex" },
+    "Seamless eavestrough, siding, soffit & fascia, and roofing in Essex Ontario. Windsor Exterior Pros - free estimates, serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/service-areas/essex" },
   openGraph: {
     title: "Exterior Contractors Essex Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Essex. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -17,35 +17,37 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Exterior Contractors Essex Ontario | Windsor Exterior Pros",
-    description: "Exterior contracting services in Essex. Free estimates, licensed & insured.",
+    description: "Exterior contracting services in Essex. Free estimates, serving Windsor-Essex.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
 };
 
-const localBusinessSchema = {
+const serviceAreaSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in Essex Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.com/service-areas/essex",
-  email: "info@windsorexteriorpros.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Essex",
-    addressRegion: "Ontario",
-    addressCountry: "CA",
+  "@type": "Service",
+  name: "Exterior Contracting in Essex, Ontario",
+  serviceType: "Exterior contracting services",
+  url: "https://www.windsorexteriorpros.com/service-areas/essex",
+  provider: {
+    "@type": "HomeAndConstructionBusiness",
+    name: "Windsor Exterior Pros",
+    url: "https://www.windsorexteriorpros.com",
+    telephone: "226-605-6894",
+    email: "info@windsorexteriorpros.com",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 42.1751, longitude: -82.8316 },
-  areaServed: "Essex, Ontario",
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Essex, Ontario",
+  },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Essex", item: "https://windsorexteriorpros.com/service-areas/essex" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Essex", item: "https://www.windsorexteriorpros.com/service-areas/essex" },
   ],
 };
 
@@ -61,7 +63,7 @@ const SERVICES = [
 export default function EssexPage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={serviceAreaSchema} />
       <JsonLd data={breadcrumbSchema} />
 
       <section className="py-20 bg-surface border-b border-[#E8E4DF]">
@@ -106,9 +108,8 @@ export default function EssexPage() {
                   and exposure to open fields that accelerate wear on siding and exterior surfaces.
                 </p>
                 <p>
-                  We provide the same licensed, insured, no-subcontractor service to Essex homeowners
-                  as we do to every other community in our service area. Free written estimates,
-                  no pressure, no obligation.
+                  We provide exterior service to Essex homeowners throughout our service area.
+                  Free written estimates, no pressure, and no obligation.
                 </p>
               </div>
             </AnimatedSection>

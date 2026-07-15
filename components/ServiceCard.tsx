@@ -33,9 +33,9 @@ export default function ServiceCard({
         featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
       }`}
     >
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#C87A20] opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#A85E12] opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
       <div className={`p-6 flex flex-col h-full ${featured ? "lg:p-8" : ""}`}>
-        <div className="w-12 h-12 rounded-lg bg-[#C87A20] flex items-center justify-center text-white mb-4 flex-shrink-0">
+        <div className="w-12 h-12 rounded-lg bg-[#A85E12] flex items-center justify-center text-white mb-4 flex-shrink-0">
           {icon}
         </div>
         <h3
@@ -50,9 +50,9 @@ export default function ServiceCard({
         </p>
         <Link
           href={href}
-          className="mt-5 inline-flex items-center gap-2 text-[#C87A20] font-semibold text-sm hover:text-[#E09030] transition-colors group/link"
+          className="mt-5 inline-flex items-center gap-2 text-[#A85E12] font-semibold text-sm hover:text-[#8F4C0E] transition-colors group/link"
         >
-          Learn More
+          Learn more about {title}
           <svg
             className="w-4 h-4 translate-x-0 group-hover/link:translate-x-1 transition-transform"
             fill="none"

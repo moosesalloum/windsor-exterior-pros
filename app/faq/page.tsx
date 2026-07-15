@@ -7,8 +7,8 @@ import LeadForm from "@/components/LeadForm";
 export const metadata: Metadata = {
   title: "FAQ - Eavestrough & Exterior Contracting Windsor Ontario",
   description:
-    "Frequently asked questions about eavestrough, siding, soffit & fascia, and exterior contracting in Windsor Ontario. Pricing, materials, timelines, and more.",
-  alternates: { canonical: "https://windsorexteriorpros.com/faq" },
+    "Frequently asked questions about eavestrough, siding, soffit & fascia, roofing, and exterior contracting in Windsor, Ontario.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/faq" },
 };
 
 const FAQS = [
@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "How much does eavestrough installation cost in Windsor?",
-    a: "Seamless aluminum eavestrough installation in Windsor typically ranges from $8 to $20 per linear foot, depending on the size (5\" vs 6\"), accessibility, and complexity of the job. The best way to get an accurate price is a free on-site estimate - we provide written, itemized quotes with no obligation.",
+    a: "The cost depends on the home, eavestrough size, accessibility, downspout layout, removal needs, and project complexity. We provide a free on-site assessment and a written, itemized estimate so you can make an informed decision with no obligation.",
   },
   {
     q: "What is the difference between seamless and sectional eavestroughs?",
@@ -37,8 +37,8 @@ const FAQS = [
     a: "Yes, always. We provide free, on-site estimates with a written, itemized quote. There is no obligation to proceed and no pressure from our end. We believe every homeowner deserves to know exactly what they're getting and what it costs before making any decision.",
   },
   {
-    q: "Are you licensed and insured?",
-    a: "Yes. Windsor Exterior Pros is fully licensed to operate as a contractor in Ontario, carries comprehensive general liability insurance, and is WSIB (Workplace Safety and Insurance Board) compliant. We can provide proof of all three on request before any work begins.",
+    q: "What information is included with an estimate?",
+    a: "We explain the recommended scope, material options, and expected next steps. Ask us to include any project-specific documentation or terms you need before deciding whether to proceed.",
   },
   {
     q: "How long does eavestrough installation take?",
@@ -65,16 +65,16 @@ const FAQS = [
     a: "We work year-round when weather permits. Cold temperatures affect aluminum installation (the material is less flexible), so we typically schedule eavestrough work from early spring through late fall. Certain jobs like soffit, fascia, and some siding work can be done in winter. Contact us and we'll let you know what's feasible.",
   },
   {
-    q: "What warranty do you offer?",
-    a: "We back our workmanship with a guarantee - if something we installed isn't performing correctly due to our work, we'll come back and make it right. Material warranties vary by product and manufacturer. We'll walk you through the specifics for your job at estimate time.",
+    q: "Are product or workmanship warranties available?",
+    a: "Warranty terms vary by product and project scope. Any manufacturer or workmanship warranty that applies to your project will be documented in the written agreement before work begins.",
   },
   {
-    q: "Do you use subcontractors?",
-    a: "No, not on core work. The team that gives you the estimate is the team that shows up to do the job. This is important because it ensures continuity of quality and accountability. We don't hand your home off to an unknown crew.",
+    q: "Who should I contact about the project crew?",
+    a: "Ask during the estimate who will perform the work and who your point of contact will be. Crew details and project responsibilities should be clear before work begins.",
   },
   {
     q: "How do I get a quote?",
-    a: "The easiest way is to request a free estimate through our website or by email at info@windsorexteriorpros.com. We'll schedule a time to come to your property, assess what's needed, and leave you with a written, itemized quote. No obligation to proceed.",
+    a: "Call 226-605-6894 or email info@windsorexteriorpros.com. We'll arrange a time to assess your property and provide a written, itemized estimate with no obligation to proceed.",
   },
 ];
 
@@ -95,8 +95,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "FAQ", item: "https://windsorexteriorpros.com/faq" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "FAQ", item: "https://www.windsorexteriorpros.com/faq" },
   ],
 };
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Service Areas - Windsor & Essex County Exterior Contractors",
   description:
     "Windsor Exterior Pros serves all of Windsor and Essex County. Seamless eavestrough, siding, roofing, soffit & fascia across LaSalle, Tecumseh, Amherstburg, Leamington and more.",
-  alternates: { canonical: "https://windsorexteriorpros.com/service-areas" },
+  alternates: { canonical: "https://www.windsorexteriorpros.com/service-areas" },
   openGraph: {
     title: "Service Areas - Windsor & Essex County Exterior Contractors",
     description: "Windsor Exterior Pros serves all of Windsor and Essex County. Seamless eavestrough, siding, roofing, soffit & fascia. Free estimates.",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Service Areas - Windsor & Essex County Exterior Contractors",
-    description: "Windsor Exterior Pros serves all of Windsor and Essex County. Free estimates, licensed & insured.",
+    description: "Windsor Exterior Pros serves all of Windsor and Essex County. Free estimates, serving Windsor-Essex.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
 };
@@ -26,8 +26,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.windsorexteriorpros.com/service-areas" },
   ],
 };
 
@@ -47,7 +47,7 @@ const LINKED_AREAS = [
   {
     name: "Amherstburg",
     href: "/service-areas/amherstburg",
-    desc: "Premium exterior services for Amherstburg homeowners. Free estimates, no subcontractors.",
+    desc: "Premium exterior services for Amherstburg homeowners. Free estimates, clear project communication.",
     pop: "~23,000",
   },
   {
@@ -195,7 +195,7 @@ export default function ServiceAreasPage() {
 
       <LeadForm
         heading="Get a Free Estimate in Your Area"
-        subheading="Licensed & insured. Serving Windsor and all of Essex County. No obligation."
+        subheading="Serving Windsor-Essex. Serving Windsor and all of Essex County. No obligation."
       />
     </>
   );

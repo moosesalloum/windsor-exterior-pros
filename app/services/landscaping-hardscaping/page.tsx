@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Landscaping & Hardscaping Windsor Ontario",
   description:
     "Professional landscaping and hardscaping in Windsor Ontario. Interlocking, patios, stone work, and lawn care across Essex County. Free estimates.",
-  alternates: { canonical: "https://windsorexteriorpros.com/services/landscaping-hardscaping" },
+  alternates: { canonical: "https://www.windsorexteriorpros.com/services/landscaping-hardscaping" },
   openGraph: {
     title: "Landscaping & Hardscaping Windsor Ontario | Windsor Exterior Pros",
     description: "Interlocking, patios, stone work, and lawn care across Windsor and Essex County. Free estimates.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Landscaping & Hardscaping Windsor Ontario | Windsor Exterior Pros",
-    description: "Interlocking, patios, stone work, and lawn care in Windsor-Essex. Free estimates, licensed & insured.",
+    description: "Interlocking, patios, stone work, and lawn care in Windsor-Essex. Free estimates, serving Windsor-Essex.",
     images: ["/landscaping-hardscaping-interlocking-windsor-ontario.jpg"],
   },
 };
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Landscaping & Hardscaping", item: "https://windsorexteriorpros.com/services/landscaping-hardscaping" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Landscaping & Hardscaping", item: "https://www.windsorexteriorpros.com/services/landscaping-hardscaping" },
   ],
 };
 
@@ -214,7 +214,7 @@ export default function LandscapingPage() {
                 <Link href={svc.href} className="group block bg-surface-2 rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
                   <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
                   <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
-                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                  <span className="text-copper text-sm font-semibold">Explore {svc.name} &rsaquo;</span>
                 </Link>
               </AnimatedSection>
             ))}

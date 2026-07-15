@@ -3,7 +3,6 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import PopupForm from "@/components/PopupForm";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -18,17 +17,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Windsor Exterior Pros | Seamless Eavestrough & Exterior Contractors Windsor Ontario",
+    default: "Exterior Contractors in Windsor, Ontario | Windsor Exterior Pros",
     template: "%s | Windsor Exterior Pros",
   },
   description:
     "Windsor's trusted exterior contractors. Seamless eavestrough installation, siding, soffit & fascia, roofing and more across Windsor and Essex County. Free estimates.",
-  metadataBase: new URL("https://windsorexteriorpros.com"),
+  metadataBase: new URL("https://www.windsorexteriorpros.com"),
   openGraph: {
-    title: "Windsor Exterior Pros | Seamless Eavestrough & Exterior Contractors Windsor Ontario",
+    title: "Exterior Contractors in Windsor, Ontario | Windsor Exterior Pros",
     description:
       "Windsor's trusted exterior contractors. Seamless eavestrough installation, siding, soffit & fascia, roofing and more across Windsor and Essex County. Free estimates.",
-    url: "https://windsorexteriorpros.com",
+    url: "https://www.windsorexteriorpros.com",
     siteName: "Windsor Exterior Pros",
     locale: "en_CA",
     type: "website",
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Windsor Exterior Pros | Seamless Eavestrough & Exterior Contractors Windsor Ontario",
+    title: "Exterior Contractors in Windsor, Ontario | Windsor Exterior Pros",
     description:
       "Windsor's trusted exterior contractors. Seamless eavestrough installation, siding, soffit & fascia, roofing and more across Windsor and Essex County. Free estimates.",
     images: ["/windsor-exterior-pros-social.jpg"],
@@ -62,7 +61,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://windsorexteriorpros.com",
+    canonical: "https://www.windsorexteriorpros.com",
   },
 };
 
@@ -77,7 +76,6 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow pt-16">{children}</main>
         <Footer />
-        <PopupForm />
       </body>
     </html>
   );

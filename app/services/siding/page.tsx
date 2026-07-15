@@ -8,8 +8,8 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Professional Siding Installation Windsor Ontario",
   description:
-    "Vinyl, fiber cement, and board & batten siding installation in Windsor Ontario. Expert craftsmanship, free estimates, licensed & insured. Serving all of Essex County.",
-  alternates: { canonical: "https://windsorexteriorpros.com/services/siding" },
+    "Vinyl, fiber cement, and board & batten siding installation in Windsor Ontario. Expert craftsmanship, free estimates, serving Windsor-Essex. Serving all of Essex County.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/services/siding" },
   openGraph: {
     title: "Professional Siding Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Vinyl, fiber cement, and board & batten siding that protects your home and transforms curb appeal. Free estimates across Windsor-Essex.",
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Siding", item: "https://windsorexteriorpros.com/services/siding" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Siding", item: "https://www.windsorexteriorpros.com/services/siding" },
   ],
 };
 
@@ -197,7 +197,7 @@ export default function SidingPage() {
                 </p>
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                {["Licensed & Insured", "Free Written Estimates", "No Subcontractors", "Workmanship Guarantee"].map((badge) => (
+                {["Windsor-Essex Service", "Free Written Estimates", "Clear Project Scope", "Written Project Scope"].map((badge) => (
                   <span key={badge} className="bg-surface border border-[#E8E4DF] text-muted text-xs font-semibold px-3 py-1.5 rounded-full">
                     {badge}
                   </span>
@@ -267,7 +267,7 @@ export default function SidingPage() {
                 <Link href={svc.href} className="group block bg-surface rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
                   <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
                   <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
-                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                  <span className="text-copper text-sm font-semibold">Explore {svc.name} &rsaquo;</span>
                 </Link>
               </AnimatedSection>
             ))}
@@ -322,7 +322,7 @@ export default function SidingPage() {
               </span>
             ))}
           </div>
-          <p className="text-muted text-sm mt-4">Licensed &amp; insured. Free estimates. No obligation.</p>
+          <p className="text-muted text-sm mt-4">Serving Windsor-Essex. Free estimates. No obligation.</p>
         </div>
       </section>
 

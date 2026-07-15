@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors Leamington Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors in Leamington, Ontario",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, and roofing in Leamington Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/leamington" },
+    "Seamless eavestrough, siding, soffit & fascia, and roofing in Leamington Ontario. Windsor Exterior Pros - free estimates, serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/service-areas/leamington" },
   openGraph: {
     title: "Exterior Contractors Leamington Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Leamington. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -17,35 +17,37 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Exterior Contractors Leamington Ontario | Windsor Exterior Pros",
-    description: "Exterior contracting services in Leamington. Free estimates, licensed & insured.",
+    description: "Exterior contracting services in Leamington. Free estimates, serving Windsor-Essex.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
 };
 
-const localBusinessSchema = {
+const serviceAreaSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in Leamington Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.com/service-areas/leamington",
-  email: "info@windsorexteriorpros.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Leamington",
-    addressRegion: "Ontario",
-    addressCountry: "CA",
+  "@type": "Service",
+  name: "Exterior Contracting in Leamington, Ontario",
+  serviceType: "Exterior contracting services",
+  url: "https://www.windsorexteriorpros.com/service-areas/leamington",
+  provider: {
+    "@type": "HomeAndConstructionBusiness",
+    name: "Windsor Exterior Pros",
+    url: "https://www.windsorexteriorpros.com",
+    telephone: "226-605-6894",
+    email: "info@windsorexteriorpros.com",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 42.0569, longitude: -82.599 },
-  areaServed: "Leamington, Ontario",
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Leamington, Ontario",
+  },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Leamington", item: "https://windsorexteriorpros.com/service-areas/leamington" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Leamington", item: "https://www.windsorexteriorpros.com/service-areas/leamington" },
   ],
 };
 
@@ -61,7 +63,7 @@ const SERVICES = [
 export default function LeamingtonPage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={serviceAreaSchema} />
       <JsonLd data={breadcrumbSchema} />
 
       <section className="py-20 bg-surface border-b border-[#E8E4DF]">
@@ -107,8 +109,8 @@ export default function LeamingtonPage() {
                   critical to protecting your home through wet springs and cold winters.
                 </p>
                 <p>
-                  All work is performed by our own crew. We don&rsquo;t subcontract. Licensed, insured,
-                  and WSIB compliant. Free written estimates with no pressure.
+                  Leamington homeowners can request a free written estimate with no pressure.
+                  We explain the proposed scope and project details before work begins.
                 </p>
               </div>
             </AnimatedSection>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { BUSINESS } from "@/lib/business";
 
 const SERVICES = [
   { name: "Seamless Eavestrough", href: "/services/seamless-eavestrough" },
@@ -44,13 +45,13 @@ export default function Footer() {
               Windsor&rsquo;s Premier Exterior Contracting. Seamless eavestroughs, siding, soffit, fascia, roofing and more across Windsor and Essex County.
             </p>
             <p className="text-xs text-[#4a4540] text-center md:text-left">
-              Licensed &amp; Insured &bull; WSIB Compliant
+              Serving Windsor &amp; Essex County
             </p>
           </div>
 
           {/* Services column */}
           <div>
-            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
+            <h3 className="font-heading font-bold text-[#A85E12] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
               Services
             </h3>
             <ul className="space-y-2.5 flex flex-col items-center md:items-start">
@@ -69,7 +70,7 @@ export default function Footer() {
 
           {/* Service Areas column */}
           <div>
-            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
+            <h3 className="font-heading font-bold text-[#A85E12] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
               Service Areas
             </h3>
             <ul className="space-y-2.5 flex flex-col items-center md:items-start">
@@ -96,7 +97,7 @@ export default function Footer() {
 
           {/* Company + Contact column */}
           <div>
-            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
+            <h3 className="font-heading font-bold text-[#A85E12] text-sm uppercase tracking-wider mb-4 text-center md:text-left">
               Company
             </h3>
             <ul className="space-y-2.5 mb-6 flex flex-col items-center md:items-start">
@@ -117,23 +118,24 @@ export default function Footer() {
               </li>
             </ul>
 
-            <h3 className="font-heading font-bold text-[#C87A20] text-sm uppercase tracking-wider mb-3 text-center md:text-left">
+            <h3 className="font-heading font-bold text-[#A85E12] text-sm uppercase tracking-wider mb-3 text-center md:text-left">
               Contact
             </h3>
             <ul className="space-y-2 flex flex-col items-center md:items-start">
               <li className="text-center md:text-left w-full">
-                <Link href="/contact" className="block text-[#C87A20] hover:text-[#E09030] text-sm font-semibold transition-colors">
-                  Free Estimates, Call Today
-                </Link>
+                <a href={`tel:${BUSINESS.phoneHref}`} className="block text-copper hover:text-copper-dark text-sm font-semibold transition-colors">
+                  {BUSINESS.phoneDisplay}
+                </a>
               </li>
               <li className="text-center md:text-left w-full">
                 <a
-                  href="mailto:info@windsorexteriorpros.com"
+                  href={`mailto:${BUSINESS.email}`}
                   className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left"
                 >
-                  info@windsorexteriorpros.com
+                  {BUSINESS.email}
                 </a>
               </li>
+              <li className="text-[#4a4540] text-sm text-center md:text-left w-full">Mon-Sat, 9:00 AM-6:00 PM</li>
               <li className="text-[#4a4540] text-sm text-center md:text-left w-full">Windsor, Ontario</li>
             </ul>
           </div>

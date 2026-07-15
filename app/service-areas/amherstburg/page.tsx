@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors Amherstburg Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors in Amherstburg, Ontario",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, and roofing in Amherstburg Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/amherstburg" },
+    "Seamless eavestrough, siding, soffit & fascia, and roofing in Amherstburg Ontario. Windsor Exterior Pros - free estimates, serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/service-areas/amherstburg" },
   openGraph: {
     title: "Exterior Contractors Amherstburg Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Amherstburg. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -17,39 +17,37 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Exterior Contractors Amherstburg Ontario | Windsor Exterior Pros",
-    description: "Exterior contracting services in Amherstburg. Free estimates, licensed & insured.",
+    description: "Exterior contracting services in Amherstburg. Free estimates, serving Windsor-Essex.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
 };
 
-const localBusinessSchema = {
+const serviceAreaSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in Amherstburg Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.com/service-areas/amherstburg",
-  email: "info@windsorexteriorpros.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Amherstburg",
-    addressRegion: "Ontario",
-    addressCountry: "CA",
+  "@type": "Service",
+  name: "Exterior Contracting in Amherstburg, Ontario",
+  serviceType: "Exterior contracting services",
+  url: "https://www.windsorexteriorpros.com/service-areas/amherstburg",
+  provider: {
+    "@type": "HomeAndConstructionBusiness",
+    name: "Windsor Exterior Pros",
+    url: "https://www.windsorexteriorpros.com",
+    telephone: "226-605-6894",
+    email: "info@windsorexteriorpros.com",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 42.1011,
-    longitude: -83.1168,
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Amherstburg, Ontario",
   },
-  areaServed: "Amherstburg, Ontario",
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Amherstburg", item: "https://windsorexteriorpros.com/service-areas/amherstburg" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Amherstburg", item: "https://www.windsorexteriorpros.com/service-areas/amherstburg" },
   ],
 };
 
@@ -65,7 +63,7 @@ const SERVICES = [
 export default function AmherstburgPage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={serviceAreaSchema} />
       <JsonLd data={breadcrumbSchema} />
 
       <section className="py-20 bg-surface border-b border-[#E8E4DF]">
@@ -112,7 +110,7 @@ export default function AmherstburgPage() {
                   foundations, preserving landscaping, and eliminating maintenance headaches.
                 </p>
                 <p>
-                  Licensed, insured, and WSIB compliant. We provide free, written estimates with no
+                  Local service throughout Windsor-Essex. We provide free, written estimates with no
                   pressure and no obligation.
                 </p>
               </div>

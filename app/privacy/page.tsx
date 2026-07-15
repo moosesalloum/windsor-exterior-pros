@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Windsor Exterior Pros",
+  title: "Privacy Policy",
   description: "Privacy policy for Windsor Exterior Pros. How we collect, use, and protect your personal information.",
-  alternates: { canonical: "https://windsorexteriorpros.com/privacy" },
+  alternates: { canonical: "https://www.windsorexteriorpros.com/privacy" },
   robots: { index: false, follow: false },
 };
 

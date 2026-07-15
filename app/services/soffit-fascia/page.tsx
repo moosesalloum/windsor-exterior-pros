@@ -8,8 +8,8 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Soffit & Fascia Installation Windsor Ontario",
   description:
-    "Professional soffit and fascia installation in Windsor Ontario. Protect your roofline from moisture, pests, and rot. Free estimates. Licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/services/soffit-fascia" },
+    "Professional soffit and fascia installation in Windsor Ontario. Protect your roofline from moisture, pests, and rot. Free estimates. Serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/services/soffit-fascia" },
   openGraph: {
     title: "Soffit & Fascia Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Aluminum soffit and fascia installation to protect your roofline and improve attic ventilation. Free estimates across Windsor-Essex.",
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Soffit & Fascia", item: "https://windsorexteriorpros.com/services/soffit-fascia" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Soffit & Fascia", item: "https://www.windsorexteriorpros.com/services/soffit-fascia" },
   ],
 };
 
@@ -249,7 +249,7 @@ export default function SoffitFasciaPage() {
                 <Link href={svc.href} className="group block bg-surface rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
                   <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
                   <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
-                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                  <span className="text-copper text-sm font-semibold">Explore {svc.name} &rsaquo;</span>
                 </Link>
               </AnimatedSection>
             ))}
@@ -304,7 +304,7 @@ export default function SoffitFasciaPage() {
               </span>
             ))}
           </div>
-          <p className="text-muted text-sm mt-4">Licensed &amp; insured. Free estimates. No obligation.</p>
+          <p className="text-muted text-sm mt-4">Serving Windsor-Essex. Free estimates. No obligation.</p>
         </div>
       </section>
 

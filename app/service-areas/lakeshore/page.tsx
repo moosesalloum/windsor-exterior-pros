@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors Lakeshore Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors in Lakeshore, Ontario",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, and roofing in Lakeshore Ontario including Belle River. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/lakeshore" },
+    "Seamless eavestrough, siding, soffit & fascia, and roofing in Lakeshore Ontario including Belle River. Windsor Exterior Pros - free estimates, serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/service-areas/lakeshore" },
   openGraph: {
     title: "Exterior Contractors Lakeshore Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Lakeshore including Belle River. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -17,35 +17,37 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Exterior Contractors Lakeshore Ontario | Windsor Exterior Pros",
-    description: "Exterior contracting services in Lakeshore. Free estimates, licensed & insured.",
+    description: "Exterior contracting services in Lakeshore. Free estimates, serving Windsor-Essex.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
 };
 
-const localBusinessSchema = {
+const serviceAreaSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in Lakeshore Ontario including Belle River. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.com/service-areas/lakeshore",
-  email: "info@windsorexteriorpros.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Lakeshore",
-    addressRegion: "Ontario",
-    addressCountry: "CA",
+  "@type": "Service",
+  name: "Exterior Contracting in Lakeshore, Ontario",
+  serviceType: "Exterior contracting services",
+  url: "https://www.windsorexteriorpros.com/service-areas/lakeshore",
+  provider: {
+    "@type": "HomeAndConstructionBusiness",
+    name: "Windsor Exterior Pros",
+    url: "https://www.windsorexteriorpros.com",
+    telephone: "226-605-6894",
+    email: "info@windsorexteriorpros.com",
   },
-  geo: { "@type": "GeoCoordinates", latitude: 42.2434, longitude: -82.648 },
-  areaServed: "Lakeshore, Ontario",
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Lakeshore, Ontario",
+  },
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Lakeshore", item: "https://windsorexteriorpros.com/service-areas/lakeshore" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Lakeshore", item: "https://www.windsorexteriorpros.com/service-areas/lakeshore" },
   ],
 };
 
@@ -61,7 +63,7 @@ const SERVICES = [
 export default function LakeshorePage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={serviceAreaSchema} />
       <JsonLd data={breadcrumbSchema} />
 
       <section className="py-20 bg-surface border-b border-[#E8E4DF]">
@@ -106,8 +108,8 @@ export default function LakeshorePage() {
                   and landscape damage before it starts.
                 </p>
                 <p>
-                  All Lakeshore jobs are done by our own crew - no subcontractors. We carry full
-                  liability insurance and WSIB coverage. Free written estimates with no obligation.
+                  Lakeshore homeowners can request a free written estimate with no obligation.
+                  We explain the proposed scope and project details before work begins.
                 </p>
               </div>
             </AnimatedSection>

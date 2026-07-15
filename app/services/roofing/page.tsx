@@ -8,8 +8,8 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Roofing Services Windsor Ontario",
   description:
-    "Professional roofing services in Windsor Ontario. Shingle replacement, repairs, and inspections. Free estimates from licensed & insured roofers serving all of Essex County.",
-  alternates: { canonical: "https://windsorexteriorpros.com/services/roofing" },
+    "Professional roofing services in Windsor Ontario. Shingle replacement, repairs, and inspections. Free estimates from serving Windsor-Essex roofers serving all of Essex County.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/services/roofing" },
   openGraph: {
     title: "Roofing Services Windsor Ontario | Windsor Exterior Pros",
     description: "Shingle replacement, repairs, and honest inspections from experienced local roofers in Windsor-Essex. Free estimates.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Roofing Services Windsor Ontario | Windsor Exterior Pros",
-    description: "Shingle replacement, repairs, and inspections from licensed Windsor-Essex roofers. Free estimates.",
+    description: "Shingle replacement, repairs, and inspections from local Windsor-Essex roofers. Free estimates.",
     images: ["/asphalt-shingle-roofing-windsor-ontario.jpg"],
   },
 };
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Roofing", item: "https://windsorexteriorpros.com/services/roofing" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Roofing", item: "https://www.windsorexteriorpros.com/services/roofing" },
   ],
 };
 
@@ -74,7 +74,7 @@ const faqSchema = {
       name: "Can you install a new roof over existing shingles?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Some jurisdictions allow one layer of shingles over existing, but we generally recommend a full tear-off. Layering adds weight to the structure, traps heat, and hides problems on the deck below - if there's rot or damaged sheathing, you'll pay to cover it up and then uncover it again in a few years. A proper tear-off lets us inspect and replace the deck where needed, install fresh underlayment, and give you a warranty-backed installation.",
+        text: "Some jurisdictions allow one layer of shingles over existing, but a full tear-off makes it possible to inspect the roof deck, replace damaged sheathing where needed, and install fresh underlayment. The right approach depends on the existing roof and applicable local requirements.",
       },
     },
     {
@@ -90,7 +90,7 @@ const faqSchema = {
       name: "What roofing warranties do you offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We install shingles from reputable manufacturers with product warranties of 25 to 50 years depending on the line. Our workmanship warranty covers the installation itself. We'll walk you through both warranties in detail during the estimate so you understand exactly what's covered and for how long.",
+        text: "Manufacturer warranty terms vary by shingle product. Any manufacturer or workmanship warranty that applies to your project will be identified in the written estimate or project agreement before work begins.",
       },
     },
     {
@@ -202,9 +202,9 @@ export default function RoofingPage() {
               <div className="mt-6 grid grid-cols-2 gap-4">
                 {[
                   { label: "Free Estimates", sub: "Written, detailed quotes" },
-                  { label: "Licensed & Insured", sub: "WSIB compliant" },
+                  { label: "Local Service", sub: "Windsor and Essex County" },
                   { label: "Quality Materials", sub: "No cut-rate products" },
-                  { label: "Workmanship Guarantee", sub: "We stand behind our work" },
+                  { label: "Written Project Scope", sub: "Clear work details" },
                 ].map((badge) => (
                   <div key={badge.label} className="bg-surface p-3 rounded-lg border border-[#E8E4DF]">
                     <p className="font-heading font-bold text-text text-sm">{badge.label}</p>
@@ -230,7 +230,7 @@ export default function RoofingPage() {
                 <Link href={svc.href} className="group block bg-surface-2 rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
                   <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
                   <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
-                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                  <span className="text-copper text-sm font-semibold">Explore {svc.name} &rsaquo;</span>
                 </Link>
               </AnimatedSection>
             ))}

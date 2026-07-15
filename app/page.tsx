@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
-import StatsStrip from "@/components/StatsStrip";
 import ServiceCard from "@/components/ServiceCard";
 import ServicesGrid from "@/components/ServicesGrid";
-import TestimonialCard from "@/components/TestimonialCard";
 import LeadForm from "@/components/LeadForm";
 import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
+import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Windsor Exterior Pros | Seamless Eavestrough & Exterior Contractors Windsor Ontario",
+  title: { absolute: "Exterior Contractors in Windsor, Ontario | Windsor Exterior Pros" },
   description:
     "Windsor's trusted exterior contractors. Seamless eavestrough installation, siding, soffit & fascia, roofing and more across Windsor and Essex County. Free estimates.",
-  alternates: { canonical: "https://windsorexteriorpros.com" },
+  alternates: { canonical: "https://www.windsorexteriorpros.com" },
 };
 
 const homepageSchema = {
@@ -22,21 +21,9 @@ const homepageSchema = {
   name: "Windsor Exterior Pros",
   description:
     "Windsor's premium exterior contracting specialists. Seamless eavestrough installation, siding, soffit and fascia, roofing, landscaping, and windows and doors across Windsor and Essex County, Ontario.",
-  url: "https://windsorexteriorpros.com",
-  telephone: "[PLACEHOLDER]",
-  email: "info@windsorexteriorpros.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Windsor",
-    addressRegion: "Ontario",
-    addressCountry: "CA",
-    postalCode: "N8X",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 42.3149,
-    longitude: -83.0364,
-  },
+  url: BUSINESS.siteUrl,
+  telephone: BUSINESS.phoneDisplay,
+  email: BUSINESS.email,
   areaServed: [
     "Windsor", "LaSalle", "Tecumseh", "Amherstburg", "Essex",
     "Lakeshore", "Leamington", "Kingsville", "Belle River", "Harrow", "Tilbury",
@@ -44,18 +31,16 @@ const homepageSchema = {
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    opens: "08:00",
+    opens: "09:00",
     closes: "18:00",
   },
-  sameAs: [],
-  priceRange: "$$",
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Windsor Exterior Pros",
-  url: "https://windsorexteriorpros.com",
+  url: "https://www.windsorexteriorpros.com",
 };
 
 const SERVICES = [
@@ -139,8 +124,8 @@ const WHY_US = [
     ),
   },
   {
-    title: "No Subcontractors",
-    desc: "Your home gets our crew, the same experienced team that quoted you. We never hand off core exterior work to unknown third parties.",
+    title: "Clear Project Scope",
+    desc: "We explain the recommended work, materials, and project boundaries before you decide whether to proceed.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
@@ -157,8 +142,8 @@ const WHY_US = [
     ),
   },
   {
-    title: "Workmanship Guarantee",
-    desc: "We stand behind every installation. If something isn't right, we come back and make it right. That's the Windsor Exterior Pros commitment.",
+    title: "Written Project Scope",
+    desc: "Project details and any applicable product or workmanship terms are documented in writing before work begins.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -166,8 +151,8 @@ const WHY_US = [
     ),
   },
   {
-    title: "Licensed and Insured",
-    desc: "Fully licensed and WSIB compliant. You're protected every step of the way when you work with Windsor Exterior Pros.",
+    title: "Exterior Service Focus",
+    desc: "Focused service for roofing, eavestrough, siding, soffit, fascia, windows, doors, and hardscaping.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -175,8 +160,8 @@ const WHY_US = [
     ),
   },
   {
-    title: "Local Windsor-Essex Owned",
-    desc: "We live and work in this community. Our reputation is built here, and we stand behind every job with local pride and accountability.",
+    title: "Windsor-Essex Service Area",
+    desc: "We serve homeowners in Windsor and communities throughout Essex County with exterior project assessments and estimates.",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -186,26 +171,6 @@ const WHY_US = [
   },
 ];
 
-const TESTIMONIALS = [
-  {
-    quote:
-      "The team was professional, efficient, and cleaned up after themselves completely. My eavestroughs look fantastic and I haven't had a single issue since installation. Best decision I made for my Windsor home.",
-    name: "Sarah M.",
-    location: "Windsor, Ontario",
-  },
-  {
-    quote:
-      "Fair pricing, excellent work quality, and they actually showed up when they said they would. If you're in LaSalle looking for eavestrough or soffit work, these are your guys.",
-    name: "Mike T.",
-    location: "LaSalle, Ontario",
-  },
-  {
-    quote:
-      "Had them do soffit, fascia, and all new seamless eavestroughs on my home in Tecumseh. They explained every step, the price matched the quote, and the result is outstanding.",
-    name: "Jennifer R.",
-    location: "Tecumseh, Ontario",
-  },
-];
 
 const ALL_AREAS = [
   { name: "Windsor", slug: "windsor" },
@@ -227,17 +192,17 @@ const ALL_AREAS = [
 function SectionEyebrow({ label }: { label: string }) {
   return (
     <div className="mb-3 flex items-center justify-center gap-3">
-      <span className="w-8 h-px bg-[#C87A20]" aria-hidden="true" />
-      <span className="text-[#C87A20] text-sm font-semibold tracking-widest uppercase">
+      <span className="w-8 h-px bg-[#A85E12]" aria-hidden="true" />
+      <span className="text-[#A85E12] text-sm font-semibold tracking-widest uppercase">
         {label}
       </span>
-      <span className="w-8 h-px bg-[#C87A20]" aria-hidden="true" />
+      <span className="w-8 h-px bg-[#A85E12]" aria-hidden="true" />
     </div>
   );
 }
 
 function SectionAccent() {
-  return <div className="w-16 h-1 bg-[#C87A20] mt-3 mb-6 mx-auto" />;
+  return <div className="w-16 h-1 bg-[#A85E12] mt-3 mb-6 mx-auto" />;
 }
 
 export default function HomePage() {
@@ -248,7 +213,6 @@ export default function HomePage() {
 
       <HeroSection />
 
-      <StatsStrip />
 
       {/* Services Grid */}
       <section id="services" className="py-20 bg-[#F2F0ED]">
@@ -289,7 +253,7 @@ export default function HomePage() {
             {WHY_US.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.08}>
                 <div className="flex gap-4 p-6 bg-[#F2F0ED] rounded-xl h-full">
-                  <div className="w-10 h-10 rounded-lg bg-[#C87A20] flex items-center justify-center text-white flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-[#A85E12] flex items-center justify-center text-white flex-shrink-0">
                     {item.icon}
                   </div>
                   <div>
@@ -303,26 +267,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-[#F2F0ED]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-12">
-            <SectionEyebrow label="Customer Reviews" />
-            <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">
-              What Windsor Homeowners Say
-            </h2>
-            <SectionAccent />
-            <p className="text-[#6B6560] text-lg leading-relaxed">Real customers, real results across Windsor-Essex.</p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TESTIMONIALS.map((t, i) => (
-              <AnimatedSection key={t.name} delay={i * 0.1}>
-                <TestimonialCard {...t} />
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Service Areas */}
       <section className="py-20 bg-white">
@@ -344,19 +288,19 @@ export default function HomePage() {
                 <Link
                   key={area.slug}
                   href={`/service-areas/${area.slug}`}
-                  className="group flex flex-col items-center gap-1.5 p-3 bg-white rounded-lg border border-[#E8E4DF] hover:border-[#C87A20] hover:shadow-sm transition-all duration-200 text-center"
+                  className="group flex flex-col items-center gap-1.5 p-3 bg-white rounded-lg border border-[#E8E4DF] hover:border-[#A85E12] hover:shadow-sm transition-all duration-200 text-center"
                 >
-                  <svg className="w-4 h-4 text-[#C87A20] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-4 h-4 text-[#A85E12] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-xs font-semibold text-[#2C2C2C] group-hover:text-[#C87A20] transition-colors leading-tight">{area.name}</span>
+                  <span className="text-xs font-semibold text-[#2C2C2C] group-hover:text-[#A85E12] transition-colors leading-tight">{area.name}</span>
                 </Link>
               ))}
             </div>
             <p className="text-center mt-8">
               <Link
                 href="/service-areas"
-                className="text-[#C87A20] hover:text-[#E09030] font-semibold transition-colors"
+                className="text-[#A85E12] hover:text-[#8F4C0E] font-semibold transition-colors"
               >
                 View all service area details &rsaquo;
               </Link>

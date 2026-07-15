@@ -8,8 +8,8 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Window & Door Installation Windsor Ontario",
   description:
-    "Energy-efficient replacement windows and entry doors in Windsor Ontario. Improve comfort, security, and curb appeal. Free estimates. Licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/services/windows-doors" },
+    "Energy-efficient replacement windows and entry doors in Windsor Ontario. Improve comfort, security, and curb appeal. Free estimates. Serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/services/windows-doors" },
   openGraph: {
     title: "Window & Door Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Energy-efficient replacement windows and entry doors. Improve comfort, security, and curb appeal in Windsor-Essex. Free estimates.",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Window & Door Installation Windsor Ontario | Windsor Exterior Pros",
-    description: "Energy-efficient replacement windows and entry doors in Windsor-Essex. Free estimates, licensed & insured.",
+    description: "Energy-efficient replacement windows and entry doors in Windsor-Essex. Free estimates, serving Windsor-Essex.",
     images: ["/windows-doors-installation-windsor-ontario.jpg"],
   },
 };
@@ -27,8 +27,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Windows & Doors", item: "https://windsorexteriorpros.com/services/windows-doors" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Windows & Doors", item: "https://www.windsorexteriorpros.com/services/windows-doors" },
   ],
 };
 
@@ -222,7 +222,7 @@ export default function WindowsDoorsPage() {
                 <Link href={svc.href} className="group block bg-surface-2 rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
                   <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
                   <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
-                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                  <span className="text-copper text-sm font-semibold">Explore {svc.name} &rsaquo;</span>
                 </Link>
               </AnimatedSection>
             ))}

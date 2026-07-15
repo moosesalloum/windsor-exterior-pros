@@ -1,27 +1,54 @@
 import type { Metadata } from "next";
 import ContactForm from "./ContactForm";
+import JsonLd from "@/components/JsonLd";
+import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Get a Free Estimate | Windsor Exterior Pros",
+  title: "Free Exterior Estimate",
   description:
-    "Request a free, no-obligation estimate for eavestrough, siding, roofing, soffit & fascia, windows, or landscaping in Windsor and Essex County. We respond within 24 hours.",
+    "Call or email Windsor Exterior Pros for a free exterior estimate in Windsor and Essex County. Eavestrough, siding, roofing, soffit, windows, doors, and hardscaping.",
   openGraph: {
-    title: "Get a Free Estimate | Windsor Exterior Pros",
+    title: "Free Exterior Estimate | Windsor Exterior Pros",
     description:
-      "Request a free estimate for exterior work in Windsor-Essex. Eavestrough, siding, roofing, soffit & fascia, windows & doors, landscaping.",
-    url: "https://windsorexteriorpros.com/contact",
+      "Call or email for a free exterior estimate in Windsor-Essex.",
+    url: `${BUSINESS.siteUrl}/contact`,
     images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros - Free Estimate" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Get a Free Estimate | Windsor Exterior Pros",
-    description:
-      "Free estimates for eavestrough, siding, roofing, and more in Windsor-Essex Ontario.",
+    title: "Free Exterior Estimate | Windsor Exterior Pros",
+    description: "Free estimates for exterior services in Windsor-Essex, Ontario.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
-  alternates: { canonical: "https://windsorexteriorpros.com/contact" },
+  alternates: { canonical: `${BUSINESS.siteUrl}/contact` },
+};
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Windsor Exterior Pros",
+  url: `${BUSINESS.siteUrl}/contact`,
+  mainEntity: {
+    "@type": "HomeAndConstructionBusiness",
+    name: BUSINESS.name,
+    url: BUSINESS.siteUrl,
+    telephone: BUSINESS.phoneDisplay,
+    email: BUSINESS.email,
+    areaServed: "Windsor and Essex County, Ontario",
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  },
 };
 
 export default function ContactPage() {
-  return <ContactForm />;
+  return (
+    <>
+      <JsonLd data={contactSchema} />
+      <ContactForm />
+    </>
+  );
 }

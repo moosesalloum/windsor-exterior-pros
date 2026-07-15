@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { BUSINESS } from "@/lib/business";
 
 const SERVICES = [
   { name: "Seamless Eavestrough", href: "/services/seamless-eavestrough" },
@@ -150,6 +151,12 @@ export default function Navbar() {
           <Link href="/faq" className="text-[#1A1A1A] hover:text-copper transition-colors text-sm font-semibold">
             FAQ
           </Link>
+          <a
+            href={`tel:${BUSINESS.phoneHref}`}
+            className="text-sm font-bold text-copper transition-colors hover:text-copper-dark"
+          >
+            {BUSINESS.phoneDisplay}
+          </a>
           <Link
             href="/contact"
             className="bg-copper hover:bg-copper-light text-white font-heading font-bold text-sm px-5 py-2.5 rounded-lg transition-colors duration-200"
@@ -245,6 +252,13 @@ export default function Navbar() {
               FAQ
             </Link>
             <div className="pt-2 pb-4">
+              <a
+                href={`tel:${BUSINESS.phoneHref}`}
+                className="mb-3 block rounded-lg border border-copper py-3 text-center text-sm font-bold text-copper transition-colors hover:bg-copper hover:text-white"
+                onClick={closeMobile}
+              >
+                Call {BUSINESS.phoneDisplay}
+              </a>
               <Link
                 href="/contact"
                 className="block bg-copper hover:bg-copper-light text-white font-heading font-bold text-sm text-center py-3.5 rounded-lg transition-colors"

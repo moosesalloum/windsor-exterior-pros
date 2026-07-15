@@ -4,15 +4,15 @@
   --color-bg: #FAFAF8;
   --color-surface: #FFFFFF;
   --color-surface-2: #F2F0ED;
-  --color-copper: #C87A20;
-  --color-copper-light: #E09030;
-  --color-copper-dark: #A86010;
+  --color-copper: #A85E12;
+  --color-copper-light: #8F4C0E;
+  --color-copper-dark: #7A3F0A;
   --color-text: #1A1A1A;
   --color-charcoal: #1A1A1A;
   --color-charcoal-2: #2E2E2E;
   --color-muted: #6B6560;
   --color-border: #E8E4DF;
-  --color-border-copper: rgba(200, 122, 32, 0.25);
+  --color-border-copper: rgba(168, 94, 18, 0.25);
   --font-heading: var(--font-montserrat);
   --font-body: var(--font-inter);
 }

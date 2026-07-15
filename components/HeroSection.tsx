@@ -21,7 +21,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="inline-flex items-center gap-2 bg-[#C87A20] rounded-full px-4 py-1.5 mb-6"
+          className="inline-flex items-center gap-2 bg-[#A85E12] rounded-full px-4 py-1.5 mb-6"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
           <span className="text-white text-sm font-semibold tracking-wide uppercase">
@@ -36,7 +36,7 @@ export default function HeroSection() {
           className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight mb-5"
         >
           Windsor&rsquo;s Premium Exterior Contracting{" "}
-          <span className="text-[#E09030]">Specialists</span>
+          <span className="text-[#8F4C0E]">Specialists</span>
         </motion.h1>
 
         <motion.p
@@ -46,7 +46,7 @@ export default function HeroSection() {
           className="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed"
         >
           Seamless eavestroughs, siding, roofing and complete exterior transformations across Windsor
-          and Essex County. Licensed, insured, and locally owned.
+          and Essex County. Serving Windsor and Essex County.
         </motion.p>
 
         <motion.div
@@ -59,7 +59,7 @@ export default function HeroSection() {
             href="/contact"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-[#C87A20] hover:bg-[#E09030] text-white font-heading font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg inline-block"
+            className="bg-[#A85E12] hover:bg-[#8F4C0E] text-white font-heading font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg inline-block"
           >
             Get a Free Quote
           </motion.a>

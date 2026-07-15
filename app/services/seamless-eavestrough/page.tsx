@@ -8,8 +8,8 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Seamless Eavestrough Installation Windsor Ontario",
   description:
-    "Professional seamless eavestrough installation in Windsor Ontario. Custom on-site fabrication, 20+ colors, 5\" and 6\" K-style aluminum. Free estimates. Licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/services/seamless-eavestrough" },
+    "Professional seamless eavestrough installation in Windsor Ontario. Custom on-site fabrication, 20+ colors, 5\" and 6\" K-style aluminum. Free estimates. Serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/services/seamless-eavestrough" },
   openGraph: {
     title: "Seamless Eavestrough Installation Windsor Ontario | Windsor Exterior Pros",
     description:
@@ -28,8 +28,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Seamless Eavestrough", item: "https://windsorexteriorpros.com/services/seamless-eavestrough" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Seamless Eavestrough", item: "https://www.windsorexteriorpros.com/services/seamless-eavestrough" },
   ],
 };
 
@@ -302,7 +302,7 @@ export default function SeamlessEavestroughPage() {
                 <Link href={svc.href} className="group block bg-surface-2 rounded-xl border border-[#E8E4DF] hover:border-copper p-5 transition-all">
                   <h3 className="font-heading font-bold text-text group-hover:text-copper transition-colors mb-1.5">{svc.name}</h3>
                   <p className="text-muted text-sm leading-relaxed mb-3">{svc.desc}</p>
-                  <span className="text-copper text-sm font-semibold">Learn More &rsaquo;</span>
+                  <span className="text-copper text-sm font-semibold">Explore {svc.name} &rsaquo;</span>
                 </Link>
               </AnimatedSection>
             ))}
@@ -360,7 +360,7 @@ export default function SeamlessEavestroughPage() {
             ))}
           </div>
           <p className="text-muted text-sm mt-4">
-            Licensed &amp; insured. Free estimates. Call or request online.
+            Serving Windsor-Essex. Free estimates. Call or request online.
           </p>
         </div>
       </section>

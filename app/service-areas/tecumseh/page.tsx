@@ -5,10 +5,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Exterior Contractors Tecumseh Ontario | Windsor Exterior Pros",
+  title: "Exterior Contractors in Tecumseh, Ontario",
   description:
-    "Seamless eavestrough, siding, soffit & fascia, and roofing in Tecumseh Ontario. Windsor Exterior Pros - free estimates, licensed & insured.",
-  alternates: { canonical: "https://windsorexteriorpros.com/service-areas/tecumseh" },
+    "Seamless eavestrough, siding, soffit & fascia, and roofing in Tecumseh Ontario. Windsor Exterior Pros - free estimates, serving Windsor-Essex.",
+  alternates: { canonical: "https://www.windsorexteriorpros.com/service-areas/tecumseh" },
   openGraph: {
     title: "Exterior Contractors Tecumseh Ontario | Windsor Exterior Pros",
     description: "Trusted exterior contractors serving Tecumseh. Eavestrough, siding, soffit, roofing, and more. Free estimates.",
@@ -17,39 +17,37 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Exterior Contractors Tecumseh Ontario | Windsor Exterior Pros",
-    description: "Exterior contracting services in Tecumseh. Free estimates, licensed & insured.",
+    description: "Exterior contracting services in Tecumseh. Free estimates, serving Windsor-Essex.",
     images: ["/windsor-exterior-pros-social.jpg"],
   },
 };
 
-const localBusinessSchema = {
+const serviceAreaSchema = {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: "Windsor Exterior Pros",
-  description: "Exterior contracting services in Tecumseh Ontario. Seamless eavestrough, siding, soffit, fascia, and roofing.",
-  url: "https://windsorexteriorpros.com/service-areas/tecumseh",
-  email: "info@windsorexteriorpros.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Tecumseh",
-    addressRegion: "Ontario",
-    addressCountry: "CA",
+  "@type": "Service",
+  name: "Exterior Contracting in Tecumseh, Ontario",
+  serviceType: "Exterior contracting services",
+  url: "https://www.windsorexteriorpros.com/service-areas/tecumseh",
+  provider: {
+    "@type": "HomeAndConstructionBusiness",
+    name: "Windsor Exterior Pros",
+    url: "https://www.windsorexteriorpros.com",
+    telephone: "226-605-6894",
+    email: "info@windsorexteriorpros.com",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 42.3168,
-    longitude: -82.9196,
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Tecumseh, Ontario",
   },
-  areaServed: "Tecumseh, Ontario",
 };
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://windsorexteriorpros.com" },
-    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://windsorexteriorpros.com/service-areas" },
-    { "@type": "ListItem", position: 3, name: "Tecumseh", item: "https://windsorexteriorpros.com/service-areas/tecumseh" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.windsorexteriorpros.com" },
+    { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://www.windsorexteriorpros.com/service-areas" },
+    { "@type": "ListItem", position: 3, name: "Tecumseh", item: "https://www.windsorexteriorpros.com/service-areas/tecumseh" },
   ],
 };
 
@@ -65,7 +63,7 @@ const SERVICES = [
 export default function TecumsehPage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={serviceAreaSchema} />
       <JsonLd data={breadcrumbSchema} />
 
       <section className="py-20 bg-surface border-b border-[#E8E4DF]">
@@ -108,11 +106,10 @@ export default function TecumsehPage() {
                 <p>
                   Whether your home is a newer build east of Manning Road or an established property
                   in older Tecumseh, our approach is the same: assess honestly, quote fairly, and
-                  install correctly the first time. No subcontractors, no shortcuts.
+                  install correctly the first time. Clear project communication, no shortcuts.
                 </p>
                 <p>
-                  We carry full liability insurance and WSIB coverage on all jobs in Tecumseh. Your
-                  free estimate includes a written, itemized breakdown with no hidden fees.
+                  Your free estimate includes a written breakdown of the proposed scope and project details.
                 </p>
               </div>
             </AnimatedSection>

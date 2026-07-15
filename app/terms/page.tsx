@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Windsor Exterior Pros",
+  title: "Terms of Service",
   description: "Terms of service for Windsor Exterior Pros exterior contracting services.",
-  alternates: { canonical: "https://windsorexteriorpros.com/terms" },
+  alternates: { canonical: "https://www.windsorexteriorpros.com/terms" },
   robots: { index: false, follow: false },
 };
 
@@ -61,21 +61,20 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="font-heading font-bold text-xl text-text mb-3">5. Workmanship Warranty</h2>
+            <h2 className="font-heading font-bold text-xl text-text mb-3">5. Project Warranties</h2>
             <p>
-              Windsor Exterior Pros warrants its workmanship against defects for a period specified
-              in the project agreement. This warranty covers installation errors but does not cover
-              damage caused by acts of nature, improper maintenance, or third-party modifications.
-              Material warranties are as provided by the respective manufacturers.
+              Any manufacturer or workmanship warranty applicable to a project will be identified in
+              the written project agreement. Terms, exclusions, and claim procedures are governed by
+              that agreement and the applicable manufacturer documentation.
             </p>
           </div>
 
           <div>
             <h2 className="font-heading font-bold text-xl text-text mb-3">6. Liability</h2>
             <p>
-              Windsor Exterior Pros carries comprehensive general liability insurance and WSIB coverage.
-              Our liability is limited to the cost of the contracted work. We are not responsible for
-              pre-existing conditions not disclosed during the estimate process.
+              Responsibility for project work is governed by the written project agreement and
+              applicable law. Windsor Exterior Pros is not responsible for pre-existing conditions
+              that were not reasonably visible or disclosed during the estimate process.
             </p>
           </div>
 
