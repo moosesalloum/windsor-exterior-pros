@@ -58,6 +58,8 @@ test("business contact details are centralized and verified", () => {
   const business = read("lib/business.ts");
   assert.match(business, /226-605-6894/);
   assert.match(business, /9:00 AM-6:00 PM/);
+  assert.match(business, /Call to confirm availability/);
+  assert.doesNotMatch(source, /dayOfWeek|openingHoursSpecification/);
   assert.match(business, /https:\/\/www\.windsorexteriorpros\.com/);
 });
 

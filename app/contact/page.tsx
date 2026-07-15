@@ -35,12 +35,6 @@ const contactSchema = {
     telephone: BUSINESS.phoneDisplay,
     email: BUSINESS.email,
     areaServed: "Windsor and Essex County, Ontario",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
   },
 };
 

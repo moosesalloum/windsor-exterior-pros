@@ -28,12 +28,6 @@ const homepageSchema = {
     "Windsor", "LaSalle", "Tecumseh", "Amherstburg", "Essex",
     "Lakeshore", "Leamington", "Kingsville", "Belle River", "Harrow", "Tilbury",
   ],
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    opens: "09:00",
-    closes: "18:00",
-  },
 };
 
 const websiteSchema = {
