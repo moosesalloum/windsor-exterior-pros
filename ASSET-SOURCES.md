@@ -11,7 +11,6 @@ All derivatives were decoded and re-encoded to remove embedded metadata. Gallery
 - `public/recent-work/eavestrough-downspout-detail.webp` from `img_5017544a2f8d.jpeg`
 - `public/recent-work/vertical-siding-roofline-detail.webp` from `img_06992c48c51e.jpeg`
 - `public/recent-work/white-vertical-siding-exterior.webp` from `img_f2e6f45e8dd7.jpeg`
-- `public/recent-work/exterior-preparation-in-progress.webp` from `img_9f444d9470b3.jpeg`
 - `public/recent-work/soffit-fascia-window-detail.webp` from `img_efc6ba025a09.jpeg`
 - `public/recent-work/dark-exterior-roofline-detail.webp` from `img_c3afd195eade.jpeg`
 - `public/recent-work/siding-windows-eavestrough-detail.webp` from `img_134a2195846e.jpeg`

@@ -107,7 +107,6 @@ test("recent work uses client-owned local assets without unknown project metadat
     "eavestrough-downspout-detail.webp",
     "vertical-siding-roofline-detail.webp",
     "white-vertical-siding-exterior.webp",
-    "exterior-preparation-in-progress.webp",
     "soffit-fascia-window-detail.webp",
     "dark-exterior-roofline-detail.webp",
     "siding-windows-eavestrough-detail.webp",

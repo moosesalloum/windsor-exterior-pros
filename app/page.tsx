@@ -125,11 +125,6 @@ const RECENT_WORK = [
     caption: "Exterior siding and trim",
   },
   {
-    src: "/recent-work/exterior-preparation-in-progress.webp",
-    alt: "Detached structure wrapped in housewrap during exterior preparation",
-    caption: "Exterior preparation in progress",
-  },
-  {
     src: "/recent-work/soffit-fascia-window-detail.webp",
     alt: "Dark soffit and fascia above black-framed windows on white brick",
     caption: "Soffit, fascia, and window detail",
