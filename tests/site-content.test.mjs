@@ -50,7 +50,7 @@ test("GHL chat widget is mounted with its approved configuration", () => {
   const layout = read("app/layout.tsx");
   const config = read("next.config.ts");
   assert.match(layout, /https:\/\/widgets\.leadconnectorhq\.com\/loader\.js/);
-  assert.match(layout, /6a5eadea6802349a33a6a2f1/);
+  assert.match(layout, /6a5eaeabc6e06ac8e8eb7612/);
   assert.match(layout, /data-source="WEB_USER"/);
   assert.match(config, /script-src[^;]*https:\/\/\*\.leadconnectorhq\.com/);
   assert.match(config, /connect-src[^;]*https:\/\/\*\.leadconnectorhq\.com/);
