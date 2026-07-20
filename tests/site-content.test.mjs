@@ -46,6 +46,12 @@ test("unconnected popup form is not mounted", () => {
   assert.doesNotMatch(layout, /PopupForm/);
 });
 
+test("footer credits NeuroDesk with a direct link", () => {
+  const footer = read("components/Footer.tsx");
+  assert.match(footer, /Powered by/);
+  assert.match(footer, /href="https:\/\/neurodesk\.io"/);
+});
+
 test("canonical sitemap and robots use the www .com host", () => {
   const sitemap = read("public/sitemap.xml");
   const robots = read("public/robots.txt");

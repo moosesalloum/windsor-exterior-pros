@@ -155,6 +155,14 @@ export default function Footer() {
             <Link href="/terms" className="text-[#4a4540] hover:text-copper text-xs transition-colors">
               Terms of Service
             </Link>
+            <a
+              href="https://neurodesk.io"
+              target="_blank"
+              rel="noopener"
+              className="text-[#4a4540] hover:text-copper text-xs transition-colors"
+            >
+              Powered by <span className="font-semibold">NeuroDesk</span>
+            </a>
           </div>
         </div>
       </div>
