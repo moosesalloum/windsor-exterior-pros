@@ -6,11 +6,11 @@ import { BUSINESS } from "@/lib/business";
 export const metadata: Metadata = {
   title: "Free Exterior Estimate",
   description:
-    "Call or email Windsor Exterior Pros for a free exterior estimate in Windsor and Essex County. Eavestrough, siding, roofing, soffit, windows, doors, and hardscaping.",
+    "Request a free exterior estimate online from Windsor Exterior Pros. Serving Windsor and Essex County for eavestrough, siding, roofing, soffit, windows, doors, and hardscaping.",
   openGraph: {
     title: "Free Exterior Estimate | Windsor Exterior Pros",
     description:
-      "Call or email for a free exterior estimate in Windsor-Essex.",
+      "Request a free exterior estimate online in Windsor-Essex.",
     url: `${BUSINESS.siteUrl}/contact`,
     images: [{ url: "/windsor-exterior-pros-social.jpg", width: 1200, height: 630, alt: "Windsor Exterior Pros - Free Estimate" }],
   },

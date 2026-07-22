@@ -52,9 +52,9 @@ test("GHL chat widget is mounted with its approved configuration", () => {
   assert.match(layout, /https:\/\/widgets\.leadconnectorhq\.com\/loader\.js/);
   assert.match(layout, /6a5eaeabc6e06ac8e8eb7612/);
   assert.match(layout, /data-source="WEB_USER"/);
-  assert.match(config, /script-src[^;]*https:\/\/\*\.leadconnectorhq\.com/);
-  assert.match(config, /connect-src[^;]*https:\/\/\*\.leadconnectorhq\.com/);
-  assert.match(config, /frame-src[^;]*https:\/\/\*\.leadconnectorhq\.com/);
+  assert.match(config, /script-src[^;]*https:\/\/widgets\.leadconnectorhq\.com/);
+  assert.match(config, /connect-src[^;]*https:\/\/services\.leadconnectorhq\.com/);
+  assert.match(config, /frame-src[^;]*https:\/\/challenges\.cloudflare\.com/);
 });
 
 test("footer credits NeuroDesk with a direct link", () => {
@@ -157,4 +157,61 @@ test("recent work uses client-owned local assets without unknown project metadat
 
 test("site no longer publishes the placeholder per-foot price range", () => {
   assert.doesNotMatch(source, /\$8\s+to\s+\$20/);
+});
+
+test("approved GHL Free Estimate Form is implemented once through the shared form component", () => {
+  const form = read("components/GhlEstimateForm.tsx");
+  const leadForm = read("components/LeadForm.tsx");
+  const contactForm = read("app/contact/ContactForm.tsx");
+
+  assert.match(form, /https:\/\/neurodesk\.windsorexteriorpros\.com\/widget\/form\/I72UixqHGUzhnhvkQVSh/);
+  assert.match(form, /id="inline-I72UixqHGUzhnhvkQVSh"/);
+  assert.match(form, /data-layout="\{'id':'INLINE'\}"/);
+  assert.match(form, /data-trigger-type="alwaysShow"/);
+  assert.match(form, /data-activation-type="alwaysActivated"/);
+  assert.match(form, /data-deactivation-type="neverDeactivate"/);
+  assert.match(form, /data-form-name="Free Estimate Form"/);
+  assert.match(form, /data-height="1227"/);
+  assert.match(form, /title="Free Estimate Form"/);
+  assert.match(form, /https:\/\/neurodesk\.windsorexteriorpros\.com\/js\/form_embed\.js/);
+  assert.match(form, /strategy="afterInteractive"/);
+  assert.match(form, /IntersectionObserver/);
+  assert.match(form, /querySelector<HTMLElement>\("chat-widget"\)/);
+  assert.match(leadForm, /<GhlEstimateForm/);
+  assert.match(contactForm, /<GhlEstimateForm/);
+  assert.doesNotMatch(contactForm, /<ContactActions/);
+});
+
+test("every quote and estimate navigation CTA uses the canonical form destination", () => {
+  for (const file of sourceFiles) {
+    const contents = fs.readFileSync(file, "utf8");
+    assert.doesNotMatch(contents, /href=["']\/contact["']/, `${path.relative(root, file)} still links to the top of /contact`);
+  }
+
+  for (const file of [
+    "components/HeroSection.tsx",
+    "components/Navbar.tsx",
+    "components/Footer.tsx",
+    "app/services/roofing/page.tsx",
+    "app/service-areas/windsor/page.tsx",
+  ]) {
+    assert.match(read(file), /\/contact#estimate-form/, `${file} does not use the canonical form destination`);
+  }
+});
+
+test("CSP narrowly permits the approved form and observed chat runtime hosts", () => {
+  const config = read("next.config.ts");
+  assert.doesNotMatch(config, /\*\.leadconnectorhq\.com/);
+  assert.match(config, /script-src[^;]*https:\/\/neurodesk\.windsorexteriorpros\.com/);
+  assert.match(config, /frame-src[^;]*https:\/\/neurodesk\.windsorexteriorpros\.com/);
+  assert.match(config, /script-src[^;]*https:\/\/widgets\.leadconnectorhq\.com/);
+  assert.match(config, /connect-src[^;]*https:\/\/services\.leadconnectorhq\.com/);
+  assert.match(config, /frame-src[^;]*https:\/\/challenges\.cloudflare\.com/);
+});
+
+test("privacy policy discloses CRM processing for online estimate requests", () => {
+  const privacy = read("app/privacy/page.tsx");
+  assert.match(privacy, /GoHighLevel|LeadConnector/);
+  assert.match(privacy, /online estimate form/i);
+  assert.match(privacy, /consent/i);
 });

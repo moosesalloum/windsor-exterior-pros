@@ -1,6 +1,6 @@
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
-import ContactActions from "@/components/ContactActions";
+import GhlEstimateForm from "@/components/GhlEstimateForm";
 import { BUSINESS } from "@/lib/business";
 
 export default function ContactForm() {
@@ -17,16 +17,20 @@ export default function ContactForm() {
             Get Your <span className="text-copper">Free Quote</span>
           </h1>
           <p className="max-w-2xl text-lg text-muted">
-            Call or email us to arrange a free on-site estimate. No obligation and no pressure.
+            Tell us about your property and project using the form below. We will follow up to arrange a free on-site estimate.
           </p>
         </div>
       </section>
 
-      <section className="bg-bg py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
-            <AnimatedSection className="lg:col-span-2">
-              <h2 className="mb-5 font-heading text-2xl font-bold text-text">Contact Information</h2>
+      <section id="estimate-form" className="scroll-mt-20 bg-bg py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
+            <AnimatedSection className="lg:col-span-4 lg:sticky lg:top-24">
+              <h2 className="mb-3 font-heading text-2xl font-bold text-text">Request an Estimate</h2>
+              <p className="mb-7 text-muted">
+                Complete the secure online form and we will follow up to arrange an on-site visit and written estimate.
+              </p>
+              <h3 className="mb-4 font-heading text-lg font-bold text-text">Contact Information</h3>
               <dl className="space-y-5">
                 <div>
                   <dt className="text-sm font-semibold text-text">Phone</dt>
@@ -47,14 +51,8 @@ export default function ContactForm() {
               </dl>
             </AnimatedSection>
 
-            <AnimatedSection className="lg:col-span-3" delay={0.1}>
-              <div className="rounded-xl border border-[#E8E4DF] bg-surface p-6 shadow-sm md:p-8">
-                <h2 className="mb-3 font-heading text-2xl font-bold text-text">Request an Estimate</h2>
-                <p className="mb-7 text-muted">
-                  Tell us what your property needs by phone or email. We will arrange an on-site visit and provide a written estimate.
-                </p>
-                <ContactActions />
-              </div>
+            <AnimatedSection className="lg:col-span-8" delay={0.1}>
+              <GhlEstimateForm className="shadow-sm ring-1 ring-black/5" />
             </AnimatedSection>
           </div>
         </div>

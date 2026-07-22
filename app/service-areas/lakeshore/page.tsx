@@ -83,7 +83,7 @@ export default function LakeshorePage() {
             Serving Lakeshore including Belle River and all surrounding communities. Seamless
             eavestrough, siding, soffit & fascia, roofing, and more. Free estimates.
           </p>
-          <Link href="/contact" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors inline-block">
+          <Link href="/contact#estimate-form" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors inline-block">
             Get a Free Lakeshore Estimate
           </Link>
         </div>

@@ -83,7 +83,7 @@ export default function AmherstburgPage() {
             Premium exterior contracting for Amherstburg homeowners. Seamless eavestrough, siding,
             soffit & fascia, roofing, and more. Free estimates, no obligation.
           </p>
-          <Link href="/contact" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors inline-block">
+          <Link href="/contact#estimate-form" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors inline-block">
             Get a Free Amherstburg Estimate
           </Link>
         </div>

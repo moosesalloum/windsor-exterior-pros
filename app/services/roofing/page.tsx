@@ -144,7 +144,7 @@ export default function RoofingPage() {
             We&rsquo;ll tell you what your roof actually needs - not just what makes us the most money.
           </p>
           <Link
-            href="/contact"
+            href="/contact#estimate-form"
             className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors inline-block"
           >
             Get a Free Roof Estimate

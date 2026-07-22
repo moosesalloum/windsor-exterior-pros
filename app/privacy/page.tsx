@@ -20,7 +20,7 @@ export default function PrivacyPage() {
         <h1 className="font-heading font-extrabold text-3xl sm:text-4xl text-text mb-2">
           Privacy Policy
         </h1>
-        <p className="text-muted text-sm mb-10">Last updated: June 2025</p>
+        <p className="text-muted text-sm mb-10">Last updated: July 2026</p>
 
         <div className="prose prose-invert max-w-none space-y-8 text-muted leading-relaxed">
           <div>
@@ -46,8 +46,13 @@ export default function PrivacyPage() {
               <li>Improve our website and services</li>
             </ul>
             <p className="mt-3">
+              Information submitted through our online estimate form is processed by LeadConnector,
+              also known as GoHighLevel, as a customer relationship management service provider. The
+              form records any communication consent choices separately from the estimate request.
+            </p>
+            <p className="mt-3">
               We do not sell, rent, or share your personal information with third parties for
-              marketing purposes.
+              their own marketing purposes.
             </p>
           </div>
 

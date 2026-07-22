@@ -74,7 +74,7 @@ const FAQS = [
   },
   {
     q: "How do I get a quote?",
-    a: "Call 226-605-6894 or email info@windsorexteriorpros.com. We'll arrange a time to assess your property and provide a written, itemized estimate with no obligation to proceed.",
+    a: "Use the Free Estimate Form on our contact page, or call 226-605-6894 if you prefer. We'll follow up to arrange a property assessment and provide a written, itemized estimate with no obligation to proceed.",
   },
 ];
 
@@ -156,7 +156,7 @@ export default function FAQPage() {
           <AnimatedSection delay={0.2} className="mt-10 text-center">
             <p className="text-muted mb-4">Have a question not answered here?</p>
             <Link
-              href="/contact"
+              href="/contact#estimate-form"
               className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors inline-block"
             >
               Contact Us

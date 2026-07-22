@@ -1,4 +1,4 @@
-import ContactActions from "@/components/ContactActions";
+import GhlEstimateForm from "@/components/GhlEstimateForm";
 
 interface LeadFormProps {
   heading?: string;
@@ -8,7 +8,7 @@ interface LeadFormProps {
 
 export default function LeadForm({
   heading = "Get Your Free Estimate",
-  subheading = "Call or email Windsor Exterior Pros for a free, written estimate.",
+  subheading = "Tell us about your property and project. We will follow up to arrange a free, written estimate.",
   dark = true,
 }: LeadFormProps) {
   const sectionClass = dark ? "bg-[#1A1A1A]" : "bg-[#F2F0ED]";
@@ -16,15 +16,15 @@ export default function LeadForm({
   const subheadingClass = dark ? "text-white/75" : "text-muted";
 
   return (
-    <section id="estimate" className={`${sectionClass} py-20`}>
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <div className="mb-8 text-center">
+    <section id="estimate-form" className={`${sectionClass} scroll-mt-20 py-16 md:py-20`}>
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="mx-auto mb-8 max-w-3xl text-center">
           <h2 className={`mb-3 font-heading text-3xl font-extrabold md:text-4xl ${headingClass}`}>
             {heading}
           </h2>
           <p className={subheadingClass}>{subheading}</p>
         </div>
-        <ContactActions dark={dark} />
+        <GhlEstimateForm className="shadow-xl ring-1 ring-black/5" />
       </div>
     </section>
   );

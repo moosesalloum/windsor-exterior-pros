@@ -155,7 +155,7 @@ export default function SeamlessEavestroughPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href="/contact#estimate-form"
               className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors"
             >
               Get a Free Estimate

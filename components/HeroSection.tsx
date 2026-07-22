@@ -56,7 +56,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <motion.a
-            href="/contact"
+            href="/contact#estimate-form"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="bg-[#A85E12] hover:bg-[#8F4C0E] text-white font-heading font-bold text-base px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg inline-block"

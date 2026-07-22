@@ -108,7 +108,7 @@ export default function Footer() {
                 <Link href="/faq" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">FAQ</Link>
               </li>
               <li className="text-center md:text-left w-full">
-                <Link href="/contact" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">Get a Quote</Link>
+                <Link href="/contact#estimate-form" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">Get a Quote</Link>
               </li>
               <li className="text-center md:text-left w-full">
                 <Link href="/privacy" className="block text-[#4a4540] hover:text-copper text-sm transition-colors text-center md:text-left">Privacy Policy</Link>

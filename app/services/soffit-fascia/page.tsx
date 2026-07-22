@@ -156,7 +156,7 @@ export default function SoffitFasciaPage() {
             health.
           </p>
           <Link
-            href="/contact"
+            href="/contact#estimate-form"
             className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors inline-block"
           >
             Get a Free Estimate

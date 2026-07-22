@@ -85,7 +85,7 @@ export default function TilburyPage() {
             clear project communication on core work, and a written project scope on every job.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Link href="/contact" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors">
+            <Link href="/contact#estimate-form" className="bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors">
               Get a Free Tilbury Estimate
             </Link>
             <Link href="/services/seamless-eavestrough" className="border border-text/30 hover:border-copper text-text hover:text-copper font-semibold px-6 py-3 rounded-lg transition-colors">

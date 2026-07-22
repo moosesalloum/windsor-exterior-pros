@@ -4,7 +4,7 @@ export async function POST() {
   return NextResponse.json(
     {
       success: false,
-      message: "Online quote requests are temporarily unavailable. Please call 226-605-6894 or email info@windsorexteriorpros.com.",
+      message: "This legacy endpoint does not accept estimate requests. Please use the secure Free Estimate Form at /contact#estimate-form.",
     },
     {
       status: 503,

@@ -158,7 +158,7 @@ export default function Navbar() {
             {BUSINESS.phoneDisplay}
           </a>
           <Link
-            href="/contact"
+            href="/contact#estimate-form"
             className="bg-copper hover:bg-copper-light text-white font-heading font-bold text-sm px-5 py-2.5 rounded-lg transition-colors duration-200"
           >
             Get a Quote
@@ -260,7 +260,7 @@ export default function Navbar() {
                 Call {BUSINESS.phoneDisplay}
               </a>
               <Link
-                href="/contact"
+                href="/contact#estimate-form"
                 className="block bg-copper hover:bg-copper-light text-white font-heading font-bold text-sm text-center py-3.5 rounded-lg transition-colors"
                 onClick={closeMobile}
               >
