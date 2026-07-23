@@ -97,6 +97,7 @@ test("security headers and .ca host redirects are configured", () => {
   for (const header of ["Content-Security-Policy", "X-Content-Type-Options", "Referrer-Policy", "Permissions-Policy"]) {
     assert.match(config, new RegExp(header));
   }
+  assert.match(config, /connect-src[^\n]*https:\/\/fonts\.bunny\.net/);
   assert.match(config, /windsorexteriorpros\.ca/);
   assert.match(config, /www\.windsorexteriorpros\.com/);
 });
@@ -125,8 +126,6 @@ test("recent work uses client-owned local assets without unknown project metadat
     "vertical-siding-roofline-detail.webp",
     "white-vertical-siding-exterior.webp",
     "soffit-fascia-window-detail.webp",
-    "dark-exterior-roofline-detail.webp",
-    "siding-windows-eavestrough-detail.webp",
     "covered-roof-framing-in-progress.webp",
   ];
 
@@ -144,15 +143,31 @@ test("recent work uses client-owned local assets without unknown project metadat
   const galleryData = home.slice(home.indexOf("const RECENT_WORK"), home.indexOf("const WHY_US"));
   assert.doesNotMatch(galleryData, /Windsor|Essex|before|after|20\d{2}/i);
 
-  const video = fs.readFileSync(path.join(root, "public", "recent-work", "covered-patio-roofline-walkthrough.mp4"));
-  const poster = fs.readFileSync(path.join(root, "public", "recent-work", "covered-patio-roofline-walkthrough-poster.webp"));
-  assert.ok(video.length > 500_000 && video.length < 2_000_000, "gallery video is missing or not web-optimized");
-  assert.equal(video.subarray(4, 8).toString("ascii"), "ftyp", "gallery video is not an MP4 file");
-  assert.ok(poster.length > 20_000, "gallery video poster is unexpectedly small");
-  assert.equal(poster.subarray(0, 4).toString("ascii"), "RIFF", "gallery video poster is not WebP");
+  const galleryVideos = [
+    ["covered-patio-roofline-walkthrough.mp4", "covered-patio-roofline-walkthrough-poster.webp"],
+    ["gutter-guard-installation-closeup.mp4", "gutter-guard-installation-closeup-poster.webp"],
+  ];
+  for (const [videoName, posterName] of galleryVideos) {
+    const video = fs.readFileSync(path.join(root, "public", "recent-work", videoName));
+    const poster = fs.readFileSync(path.join(root, "public", "recent-work", posterName));
+    assert.ok(video.length > 500_000 && video.length < 2_000_000, `${videoName} is missing or not web-optimized`);
+    assert.equal(video.subarray(4, 8).toString("ascii"), "ftyp", `${videoName} is not an MP4 file`);
+    assert.ok(poster.length > 20_000, `${posterName} is unexpectedly small`);
+    assert.equal(poster.subarray(0, 4).toString("ascii"), "RIFF", `${posterName} is not WebP`);
+    assert.match(home, new RegExp(videoName.replaceAll(".", "\\.")));
+    assert.match(home, new RegExp(posterName.replaceAll(".", "\\.")));
+  }
   assert.match(home, /<video[\s\S]*muted[\s\S]*playsInline[\s\S]*preload="none"/);
-  assert.match(home, /covered-patio-roofline-walkthrough\.mp4/);
-  assert.match(home, /covered-patio-roofline-walkthrough-poster\.webp/);
+
+  for (const retired of ["dark-exterior-roofline-detail.webp", "siding-windows-eavestrough-detail.webp"]) {
+    assert.doesNotMatch(home, new RegExp(retired.replaceAll(".", "\\.")));
+    assert.equal(fs.existsSync(path.join(root, "public", "recent-work", retired)), false);
+  }
+
+  const eavestroughPage = read("app/services/seamless-eavestrough/page.tsx");
+  assert.match(eavestroughPage, /Gutter Guard Installation/);
+  assert.match(eavestroughPage, /gutter-guard-installation-closeup\.mp4/);
+  assert.match(eavestroughPage, /gutter-guard-installation-closeup-poster\.webp/);
 });
 
 test("site no longer publishes the placeholder per-foot price range", () => {

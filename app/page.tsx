@@ -130,16 +130,6 @@ const RECENT_WORK = [
     caption: "Soffit, fascia, and window detail",
   },
   {
-    src: "/recent-work/dark-exterior-roofline-detail.webp",
-    alt: "Dark roofline trim and soffit above large black-framed windows",
-    caption: "Roofline, soffit, and window detail",
-  },
-  {
-    src: "/recent-work/siding-windows-eavestrough-detail.webp",
-    alt: "Grey vertical siding, black-framed windows, and a dark downspout",
-    caption: "Siding, windows, and eavestrough detail",
-  },
-  {
     src: "/recent-work/covered-roof-framing-in-progress.webp",
     alt: "Exposed timber framing beneath a covered roof extension",
     caption: "Covered roof framing in progress",
@@ -303,6 +293,29 @@ export default function HomePage() {
                 </figure>
               </AnimatedSection>
             ))}
+            <AnimatedSection delay={RECENT_WORK.length * 0.06}>
+              <figure className="h-full overflow-hidden rounded-xl border border-[#E8E4DF] bg-[#F2F0ED] shadow-sm">
+                <div className="relative aspect-[3/4] overflow-hidden bg-[#1A1A1A]">
+                  <video
+                    className="h-full w-full object-cover"
+                    controls
+                    muted
+                    playsInline
+                    preload="none"
+                    poster="/recent-work/gutter-guard-installation-closeup-poster.webp"
+                    aria-label="Close-up video of a perforated gutter guard installed along a shingle roof edge"
+                  >
+                    <source
+                      src="/recent-work/gutter-guard-installation-closeup.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <figcaption className="border-t border-[#E8E4DF] px-5 py-4 font-heading font-semibold text-[#2C2C2C]">
+                  Gutter guard installation detail
+                </figcaption>
+              </figure>
+            </AnimatedSection>
             <AnimatedSection delay={RECENT_WORK.length * 0.06}>
               <figure className="h-full overflow-hidden rounded-xl border border-[#E8E4DF] bg-[#F2F0ED] shadow-sm">
                 <div className="relative aspect-[3/4] overflow-hidden bg-[#1A1A1A]">

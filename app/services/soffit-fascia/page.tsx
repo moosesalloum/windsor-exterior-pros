@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Soffit & Fascia Installation Windsor Ontario | Windsor Exterior Pros",
     description: "Aluminum soffit and fascia installation to protect your roofline and improve attic ventilation. Free estimates across Windsor-Essex.",
-    images: [{ url: "/soffit-fascia-installation-windsor-ontario.jpg", width: 1600, height: 900, alt: "Dark soffit and fascia above black-framed windows" }],
+    images: [{ url: "/soffit-fascia-installation-windsor-ontario.jpg", width: 1600, height: 900, alt: "Roofline fascia and soffit detail beneath a gable" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -204,7 +204,7 @@ export default function SoffitFasciaPage() {
               <div className="relative rounded-xl overflow-hidden aspect-[4/3]">
                 <Image
                   src="/soffit-fascia-installation-windsor-ontario.jpg"
-                  alt="Dark soffit and fascia above black-framed windows"
+                  alt="Roofline fascia and soffit detail beneath a gable"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

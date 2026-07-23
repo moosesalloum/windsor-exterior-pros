@@ -289,6 +289,63 @@ export default function SeamlessEavestroughPage() {
         </div>
       </section>
 
+      {/* Gutter Guard Detail */}
+      <section className="py-20 bg-surface">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] gap-12 items-center">
+            <AnimatedSection>
+              <figure className="mx-auto max-w-md overflow-hidden rounded-xl border border-[#E8E4DF] bg-[#1A1A1A] shadow-sm">
+                <div className="aspect-[3/4]">
+                  <video
+                    className="h-full w-full object-cover"
+                    controls
+                    muted
+                    playsInline
+                    preload="none"
+                    poster="/recent-work/gutter-guard-installation-closeup-poster.webp"
+                    aria-label="Close-up video of a perforated gutter guard installed along a shingle roof edge"
+                  >
+                    <source
+                      src="/recent-work/gutter-guard-installation-closeup.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <figcaption className="border-t border-[#E8E4DF] bg-bg px-5 py-4 font-heading font-semibold text-text">
+                  Perforated gutter guard installation detail
+                </figcaption>
+              </figure>
+            </AnimatedSection>
+            <AnimatedSection delay={0.12}>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-copper">
+                Gutter Guard Installation
+              </p>
+              <h2 className="font-heading font-extrabold text-3xl text-text mb-5">
+                Reduce the Debris Entering Your Eavestroughs
+              </h2>
+              <div className="space-y-4 text-muted leading-relaxed">
+                <p>
+                  Eavestrough guards cover the gutter opening while leaving space for rainwater to
+                  drain through. The perforated guard shown here sits below the roof edge and above
+                  the eavestrough.
+                </p>
+                <p>
+                  Guards can reduce how often leaves and larger debris collect in the system, but
+                  the right option depends on the roof, surrounding trees, and existing eavestroughs.
+                  We inspect the setup and explain the available options before installation.
+                </p>
+              </div>
+              <Link
+                href="/contact#estimate-form"
+                className="mt-7 inline-flex bg-copper hover:bg-copper-light text-white font-heading font-bold px-6 py-3 rounded-lg transition-colors"
+              >
+                Request a Gutter Guard Estimate
+              </Link>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Related Services */}
       <section className="py-16 bg-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
