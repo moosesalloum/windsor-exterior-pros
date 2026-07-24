@@ -60,7 +60,7 @@ test("GHL chat widget is mounted with its approved configuration", () => {
 test("footer credits NeuroDesk with a direct link", () => {
   const footer = read("components/Footer.tsx");
   assert.match(footer, /Powered by/);
-  assert.match(footer, /href="https:\/\/neurodesk\.io"/);
+  assert.match(footer, /href="https:\/\/neurodesk\.co"/);
 });
 
 test("canonical sitemap and robots use the www .com host", () => {
