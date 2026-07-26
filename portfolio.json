@@ -1,0 +1,13 @@
+{
+  "slug": "windsor-exterior-pros",
+  "name": "Windsor Exterior Pros",
+  "url": "https://www.windsorexteriorpros.com",
+  "category": "LeadEngine Site",
+  "description": "Conversion focused exterior contracting website with service area content, structured estimates, and a connected lead system.",
+  "portfolio": true,
+  "imageAlt": "Windsor Exterior Pros contractor website homepage",
+  "browserLabel": "windsorexteriorpros.com",
+  "showOnHomepage": true,
+  "showOnLeadEngine": true,
+  "projectRoot": "."
+}

@@ -1,0 +1,68 @@
+name: Notify NeuroDesk portfolio after production deployment
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    if: >-
+      github.event.deployment_status.state == 'success' &&
+      (github.event.deployment.environment == 'Production' || github.event.deployment.environment == 'production')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out deployed source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+          persist-credentials: false
+
+      - name: Validate source manifest
+        run: |
+          jq -e '
+            .portfolio == true and
+            (.slug | type == "string" and test("^[a-z0-9-]{3,80}$")) and
+            (.name | type == "string" and length > 2) and
+            (.url | type == "string" and startswith("https://")) and
+            (.category | type == "string" and length > 2) and
+            (.description | type == "string" and length > 2) and
+            (.imageAlt | type == "string" and length > 2) and
+            (.browserLabel | type == "string" and length > 2) and
+            (.showOnHomepage | type == "boolean") and
+            (.showOnLeadEngine | type == "boolean") and
+            (.projectRoot | type == "string" and (contains("..") | not) and startswith("/") == false)
+          ' portfolio.json >/dev/null
+
+      - name: Sign and dispatch production evidence
+        env:
+          GH_TOKEN: ${{ secrets.NEURODESK_PORTFOLIO_TOKEN }}
+          SIGNING_KEY: ${{ secrets.NEURODESK_PORTFOLIO_SIGNING_KEY }}
+          DEPLOYMENT_URL: ${{ github.event.deployment_status.environment_url || github.event.deployment_status.target_url }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.event.deployment.sha }}
+        run: |
+          test -n "$GH_TOKEN"
+          test -n "$SIGNING_KEY"
+          test -n "$DEPLOYMENT_URL"
+          DEPLOYMENT_URL=$(jq -r '.url' portfolio.json)
+          DEPLOYMENT_URL="$DEPLOYMENT_URL" node -e 'const u=new URL(process.env.DEPLOYMENT_URL); if(u.protocol!=="https:" || u.username || u.password || (u.port && u.port!=="443")) throw new Error("Approved manifest URL is unsafe")'
+          test "${#SOURCE_SHA}" -eq 40
+          slug=$(jq -r '.slug' portfolio.json)
+          signature=$(DEPLOYMENT_URL="$DEPLOYMENT_URL" SLUG="$slug" SOURCE_REPOSITORY="$SOURCE_REPOSITORY" SOURCE_SHA="$SOURCE_SHA" node -e 'const c=require("node:crypto"); const v={deploymentUrl:process.env.DEPLOYMENT_URL,slug:process.env.SLUG,sourceRepository:process.env.SOURCE_REPOSITORY,sourceSha:process.env.SOURCE_SHA}; process.stdout.write(c.createHmac("sha256",process.env.SIGNING_KEY).update(JSON.stringify(v)).digest("hex"))')
+          jq -n \
+            --arg event_type "portfolio-production-ready" \
+            --arg deploymentUrl "$DEPLOYMENT_URL" \
+            --arg slug "$slug" \
+            --arg sourceRepository "$SOURCE_REPOSITORY" \
+            --arg sourceSha "$SOURCE_SHA" \
+            --arg signature "$signature" \
+            '{event_type: $event_type, client_payload: {deploymentUrl: $deploymentUrl, slug: $slug, sourceRepository: $sourceRepository, sourceSha: $sourceSha, signature: $signature}}' \
+            > "$RUNNER_TEMP/portfolio-dispatch.json"
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            repos/moosesalloum/neurodesk/dispatches \
+            --input "$RUNNER_TEMP/portfolio-dispatch.json"
